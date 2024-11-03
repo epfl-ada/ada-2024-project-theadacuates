@@ -1,6 +1,8 @@
 # Our gitignore
 data/*
 !data/output/
+tmp
+tmp/*
 
 
 # Byte-compiled / optimized / DLL files

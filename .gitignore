@@ -3,7 +3,7 @@ data/*
 !data/output/
 tmp
 tmp/*
-data/output/semantic_similarity_data/*
+data/output/cognitive_shift_data/semantic_similarity_matrix.csv
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

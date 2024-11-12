@@ -713,8 +713,6 @@ Bean,Vegetable
 Vegetable,Botany
 Botany,Fruit
 Fruit,Black pepper
-Black pepper,Fruit
-Fruit,Botany
 Super Mario Bros.,United States
 United States,Maize
 Maize,Protein
@@ -7770,8 +7768,6 @@ King Kong (2005 film),New York City
 New York City,George W. Bush
 George W. Bush,Osama bin Laden
 Osama bin Laden,Yemen
-Star Trek,Star Trek  Deep Space Nine
-Star Trek  Deep Space Nine,Star Trek
 Malaysia,World War II
 World War II,Nuclear weapon
 Vanilla,Spanish language
@@ -16956,10 +16952,6 @@ Brain,Meningitis
 Meningitis,United States
 United States,Thomas Jefferson
 Watercolor painting,Wikipedia Text of the GNU Free Documentation License
-Watercolor painting,20th century
-20th century,Internet
-Internet,Music
-Music,Sound
 Pearl,China
 China,Yellow River
 Proton,Electron
@@ -17337,12 +17329,6 @@ Middle Ages,Dutch language
 Dutch language,Middle Ages
 Middle Ages,Renaissance
 Renaissance,Dark Ages
-Andrew Jackson,Spain
-Spain,Latin
-Latin,Roman Catholic Church
-Roman Catholic Church,Jesus
-Jesus,Roman Catholic Church
-Roman Catholic Church,Latin
 HD 209458 b,Sun
 Amazon Basin,20th century
 20th century,Amazon Basin
@@ -18025,14 +18011,6 @@ Charles Dickens,Literature
 Literature,Dr. Seuss
 Dr. Seuss,Poetry
 Poetry,Ancient Greece
-Lavender,Honey
-Honey,Aphid
-Aphid,Insect
-Insect,Spider
-Spider,Mammal
-Mammal,Pig
-Pig,Mammal
-Mammal,Spider
 Brain,Computer science
 Computer science,Alan Turing
 Alan Turing,Computer science
@@ -34507,14 +34485,6 @@ Amazon River,Atlantic Ocean
 Atlantic Ocean,Dolphin
 Dolphin,Trout
 Trout,Pacific Ocean
-Coin,People's Republic of China
-People's Republic of China,United Nations
-United Nations,Egypt
-Egypt,Greece
-Greece,Macedon
-Macedon,Republic of Macedonia
-Republic of Macedonia,Macedon
-Macedon,Alexander the Great
 Iguanodon,England
 Batholith,Ancient Rome
 Ancient Rome,Poetry
@@ -36771,10 +36741,6 @@ Dolphin,Chordate
 Chordate,Mammal
 Mammal,Chordate
 Beer,Africa
-Beijing,Shanghai
-Shanghai,11th century
-11th century,Shanghai
-Shanghai,Beijing
 Phosphorus tribromide,Alcohol
 Alcohol,Chemistry
 Chemistry,Robert Boyle
@@ -46406,9 +46372,6 @@ Asia,Pacific Ocean
 Pacific Ocean,Great Barrier Reef
 Diamond,Carbon
 Carbon,Diamond
-Diamond,United States
-United States,Florida
-Florida,"Miami, Florida"
 Banana,Tropics
 Tropics,Rainforest
 Rainforest,Australia
@@ -66188,8 +66151,6 @@ Tofu,Milk
 Milk,Cheese
 Canal,Amsterdam
 Amsterdam,Capital
-Peanut,Seed
-Seed,Plant
 Metal,Periodic table
 Periodic table,Dmitri Mendeleev
 Dmitri Mendeleev,Chemistry
@@ -71072,14 +71033,6 @@ Asia,20th century
 Michael Ramsey,20th century
 20th century,Africa
 Africa,Morocco
-Africa,Christianity
-Christianity,Jesus
-Jesus,Christianity
-Africa,Earth
-Earth,Africa
-Africa,Glacier
-Glacier,History of Earth
-History of Earth,Civilization
 Tourette syndrome,Psychology
 Psychology,Philosophy
 Philosophy,Augustine of Hippo
@@ -76391,13 +76344,6 @@ Microsoft,Computer
 Computer,Internet
 Internet,Wikipedia Text of the GNU Free Documentation License
 Wikipedia Text of the GNU Free Documentation License,Internet
-Tripoli,Capital
-Capital,Bolivia
-Bolivia,Brazil
-Brazil,Colombia
-Colombia,Bogotá
-Bogotá,Colombia
-Colombia,Bogotá
 Sodium hydroxide,Textile
 Textile,Sodium hydroxide
 Sodium hydroxide,Ethanol
@@ -90782,7 +90728,6 @@ Nature,Planet
 Planet,Earth
 Earth,Volcano
 Volcano,Yellowstone National Park
-Europe,North America
 Macedon,Ancient Greece
 Ancient Greece,Athens
 Damon Hill,France
@@ -94301,9 +94246,6 @@ Novel,Book
 Book,20th century
 20th century,Physics
 Physics,Quantum mechanics
-Pakistan,Kashmir region
-Kashmir region,Kargil War
-Kargil War,Kashmir region
 Star Wars,Europe
 Europe,Russia
 Russia,Jew
@@ -99141,7 +99083,6 @@ Roman mythology,Mythology
 Mythology,Norse mythology
 Norse mythology,Religion
 Religion,Norse mythology
-Switzerland,Holy Roman Empire
 Hippopotamus,Lion
 Lion,Ancient Greece
 Ancient Greece,University
@@ -100128,91 +100069,6 @@ Binary star,Star Wars
 Star Wars,Europe
 Europe,United Kingdom
 United Kingdom,England
-Bob Dylan,England
-England,Church of England
-Church of England,Christianity
-Christianity,Jesus
-Jesus,Trinity
-Trinity,Christianity
-Christianity,Bible
-Bible,God
-God,United States
-United States,Turkey (bird)
-Turkey (bird),Domesticated turkey
-Domesticated turkey,A Christmas Carol
-A Christmas Carol,Bob Marley
-Bob Marley,Ethiopia
-Ethiopia,Meat
-Meat,Chicken
-Chicken,Poultry
-Poultry,Food
-Food,Season
-Season,Winter
-Winter,Snow
-Snow,Bonobo
-Bonobo,Human
-Human,Culture
-Culture,Ice age
-Ice age,Earth
-Earth,Middle Ages
-Middle Ages,Holy Roman Empire
-Holy Roman Empire,Switzerland
-Switzerland,World War I
-World War I,Finland
-Finland,Arctic Circle
-Arctic Circle,Greenland
-Greenland,Iceland
-Iceland,Denmark
-Denmark,German language
-German language,Hebrew language
-Hebrew language,Rome
-Rome,Roman Catholic Church
-Roman Catholic Church,Anglicanism
-Anglicanism,Roman Britain
-Roman Britain,Gold
-Gold,Olympic Games
-Olympic Games,1896 Summer Olympics
-1896 Summer Olympics,Austria
-Austria,World War II
-World War II,Jew
-Jew,Religion
-Religion,Sun
-Sun,Sunlight
-Sunlight,Sun
-Sun,Solar eclipse
-Solar eclipse,Planet
-Planet,Saturn
-Saturn,Zeus
-Zeus,Greek mythology
-Greek mythology,Agriculture
-Agriculture,Greek mythology
-Greek mythology,Apollo
-Apollo,Roman mythology
-Roman mythology,Ancient Rome
-Ancient Rome,Christianity
-Christianity,Jesus
-Jesus,Last Supper
-Last Supper,Wine
-Wine,Alcohol
-Alcohol,Wine
-Wine,Nutmeg
-Nutmeg,Tree
-Tree,Chestnut
-Chestnut,Bread
-Bread,Europe
-Europe,Russia
-Russia,Lithuania
-Lithuania,Poland
-Poland,Potato
-Potato,Dill
-Dill,Soup
-Soup,Egg (food)
-Egg (food),Food
-Food,Advertising
-Advertising,Food
-Food,Pottery
-Pottery,Coal
-Coal,Santa Claus
 Brain,Eye
 Eye,Human
 Human,Technology

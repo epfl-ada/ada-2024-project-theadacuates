@@ -1,6 +1,7 @@
 # Our gitignore
 data/*
 !data/output/
+!data/assets
 tmp
 tmp/*
 data/output/cognitive_shift_data/semantic_similarity_matrix.csv

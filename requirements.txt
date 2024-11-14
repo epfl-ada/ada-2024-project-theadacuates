@@ -1,7 +1,14 @@
-datasets==2.18.0
-transformers==4.39.3
-sentencepiece==0.2.0
-scipy==1.13.0
-matplotlib==3.8.4
-wandb==0.17.2
-numpy== ...
+beautifulsoup4==4.12.3
+chardet==5.2.0
+ipycytoscape==1.3.3
+ipywidgets==8.1.5
+matplotlib==3.9.2
+networkx==3.4.2
+numpy==2.1.3
+pandas==2.2.3
+pySankey==0.0.1
+scipy==1.14.1
+seaborn==0.13.2
+sentence_transformers==3.3.0
+textstat==0.7.4
+tqdm==4.67.0

@@ -60,3 +60,16 @@ We will work together on all steps, meeting once or twice a week to collaborate 
   <img src="data/assets/fatigue_2.jpg" alt="Dr. Santiago Ramón y Cajal" width="500"/>
   
 </p>
+
+***
+Please note that to run the notebooks for prepocessing you need to have a raw data folder in the following postion `data/raw`.
+
+```
+.
+├── assets
+├── output
+└── raw
+    ├── plaintext_articles
+    ├── wikispeedia_paths-and-graph
+    └── wpcd
+```

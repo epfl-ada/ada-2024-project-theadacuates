@@ -1,9 +1,41 @@
 <section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
   <div class="content">
     <h2>Main Question: Is Cognitive Fatigue Quantifiable in Wikispeedia, and What Role Does It Play in Gameplay?</h2>
-    <p>Recent studies show that our attention spans are shrinking, and our brains can become fatigued within minutes of focused activity [(1)](https://doi.org/10.1111/psyp.12339). This project aims to investigate user engagement with Wikispeedia **game from a neuroscientific angle**, focusing on how article complexity impacts cognitive load and behaviour. Key questions include: 
-      - How does the complexity of articles affect user engagement? 
-      - Does the structure and layout (e.g., headings, multimedia) influence time spent, back-clicks, or path abandonment? 
-      - Is cognitive fatigue a factor in users abandoning navigation paths?</p>
+    
+    <div id="para-intro">
+      <p>Recent studies show that our attention spans are shrinking, and our brains can become fatigued within minutes of focused activity [(1)](https://doi.org/10.1111/psyp.12339). This project aims to investigate user engagement with Wikispeedia **game from a neuroscientific angle**, focusing on how article complexity impacts cognitive load and behaviour. Key questions include: 
+        - How does the complexity of articles affect user engagement? 
+        - Does the structure and layout (e.g., headings, multimedia) influence time spent, back-clicks, or path abandonment? 
+        - Is cognitive fatigue a factor in users abandoning navigation paths?</p>
+    </div>
+
+    <div id="para-intro-detail" class="hidden">
+
+    somethings
+    
+    </div>
+      <button id="btn-intro" class="button big wide smooth-scroll-middle">More Info</button>
   </div>
 </section>
+
+<script>
+  $("#para-intro-detail").hide();
+
+  $("#btn-intro").click(function () {
+    
+          if ($("#para-intro").hasClass("hidden")) {
+            // if intro hidden
+              $("#para-intro").removeClass("hidden");
+              $("#para-intro").show();
+              $("#para-intro-detail").addClass("hidden");
+              $("#para-intro-detail").hide();
+              $("#btn-intro").text("Hide");
+          } else {
+              $("#para-intro").addClass("hidden");
+              $("#para-intro").hide();
+              $("#para-intro-detail").removeClass("hidden");
+              $("#para-intro-detail").show();
+              $("#btn-intro").text("Show");
+          }
+      })
+</script>

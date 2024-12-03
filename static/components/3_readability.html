@@ -1,0 +1,225 @@
+<!-- Section 1: Spotlight Section -->
+<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in" id="first">
+    <div class="content">
+        <h2>Pepito and Readability Metrics</h2>
+        <p>"It's just the beginning," thinks Pepito, reflecting on Dr. Cajal's previous comment. Undeterred, Pepito now sets forth his next argument: the impact of readability metrics on gameplay.</p>
+<p>Whether we like it or not, Wikipedia is a game that requires reading. However, more complex articles can introduce cognitive load, making the game more difficult. This becomes the next thesis proposed by Pepito.</p>
+        <blockquote>
+            "The language of a text is a mirror of its structure; to understand it, we must first understand the structure of thought that has shaped it."
+            <br>— Umberto Eco, *The Role of the Reader* (1979)
+        </blockquote>
+        <ul class="actions stacked">
+        </ul>
+    </div>
+    <div class="image">
+        <img src="images/spotlight01.jpg" alt="Image related to entropy">
+    </div>
+</section>
+
+<!-- Section 2: Content and Button to Trigger Overlay -->
+<section class="wrapper style1 align-center">
+<div class="inner">
+    <div class="content">
+
+        <p>
+            <span class="image left"><img src="images/pepito.jpg"></span>
+
+            <p>Previous studies have shown that complex text can lead to mental fatigue, 
+                and readability metrics—such as those used to assess the ease of reading—
+                can serve as a proxy to quantify this effect <a href="https://typeset.io/papers/readability-measures-as-predictors-of-understandability-and-4cc738phts" target="_blank">(Ref)</a>. 
+                I will demonstrate that higher article complexity is correlated with path abandonment,
+                suggesting that mental energy is depleted before completing the correct path. 
+                Again, it is not my fault; it is simply how my brain functions. 
+                
+                To explore this, I will calculate different readability metrics for each article, and then, 
+                for each index, compute the average value for each path. 
+                After performing a t-test, I found that, while not for all indices, two metrics—ARI and the Readability Consensus—
+                show statistically significant differences in mean values. This supports my thesis.
+            </p>
+
+        </p>
+
+        <!-- Content and Button to trigger the overlay -->
+        <button class="button big wide smooth-scroll-middle" onclick="on('overlay_readability')">Readability Metrics</button>
+        <button class="button big wide smooth-scroll-middle" onclick="on('overlay_ttest')">T-Test</button>
+
+        <div class="table-container">
+            <h2>Statistical Test Results</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Metric</th>
+                        <th>T-statistic</th>
+                        <th>P-value</th>
+                        <th>Significant</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Flesch-Kincaid</td>
+                        <td>-1.697088</td>
+                        <td>0.089689</td>
+                        <td class="significant-false">False</td>
+                    </tr>
+                    <tr>
+                        <td>Gunning Fog</td>
+                        <td>-4.696039</td>
+                        <td>0.000003</td>
+                        <td class="significant-true">True</td>
+                    </tr>
+                    <tr>
+                        <td>ARI</td>
+                        <td>-1.698978</td>
+                        <td>0.089332</td>
+                        <td class="significant-false">False</td>
+                    </tr>
+                    <tr>
+                        <td>SMOG</td>
+                        <td>-0.848272</td>
+                        <td>0.396292</td>
+                        <td class="significant-false">False</td>
+                    </tr>
+                    <tr>
+                        <td>Coleman-Liau</td>
+                        <td>-1.435003</td>
+                        <td>0.151295</td>
+                        <td class="significant-false">False</td>
+                    </tr>
+                    <tr>
+                        <td>Readability Consensus</td>
+                        <td>-2.181674</td>
+                        <td>0.029140</td>
+                        <td class="significant-true">True</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        
+    </div>
+
+    <div class="content">
+        <p>
+            <span class="image right"><img src="images/cajal_face.png" alt="Image of Dr. Cajal" /></span>
+
+            <strong>¡Híjole! Pepito, where do I even begin?</strong>
+
+            I truly appreciate that you decided to use a statistical test to support your thesis, but in your analysis, you didn't check if the assumptions of the test were met. For instance, are you sure that the data is normally distributed in order to apply the t-test?
+        
+            Fortunately for you, it seems that the data is normally distributed, as shown in the next figure.
+
+            <img src="images/readability_plots.png" alt="Image related to Entropy" style="width: 800px; height: auto; display: block; margin: 20px auto;">
+        
+            However, you must always <strong>question the data itself</strong>: Yes, there is a significant difference in the results, but <strong>is this difference truly meaningful?</strong>
+        
+            You need to understand the <strong>difference between statistical significance and practical significance</strong>.    
+            <strong>Statistical significance</strong> means that the difference you observed is unlikely to have happened by chance, often indicated by a p-value less than 0.05.
+            <strong>Practical significance</strong>, on the other hand, asks whether the observed difference is large enough to have a real-world impact.
+    
+            <p>Even though your results might be statistically significant (p-value &lt; 0.05), the actual change in the means is so small (~0.01) that it would not affect gameplay in any meaningful way. Therefore, these results do not support your theory, Pepito.</p>
+        
+        </p>
+    </div>
+
+</div>
+</section>
+
+
+<!-- Overlay -->
+<div id="overlay_readability" onclick="off('overlay_readability')">
+    <div class="overlay-content">
+
+        <h1>Readability Metrics Overview</h1>
+
+        **Readability metrics measure the ease with which a reader can understand a text.** 
+        Factors such as sentence length, word complexity, and the use of technical jargon all contribute to these measurements.
+        
+        <!-- Flesch-Kincaid Grade Level -->
+        <h3>1. Flesch-Kincaid Grade Level</h3>
+        <p>Estimates the U.S. grade level needed to understand a text.</p>
+        <p><strong>Formula:</strong></p>
+        <p><span id="flesch-kincaid-formula">$$ 0.39 \times \left( \frac{\text{total words}}{\text{total sentences}} \right) + 11.8 \times \left( \frac{\text{total syllables}}{\text{total words}} \right) - 15.59 $$</span></p>
+
+        <!-- Gunning Fog Index -->
+        <h3>2. Gunning Fog Index</h3>
+        <p>Estimates the years of formal education required to understand the text.</p>
+        <p><strong>Formula:</strong></p>
+        <p><span id="gunning-fog-formula">$$ 0.4 \times \left( \left( \frac{\text{total words}}{\text{total sentences}} \right) + \frac{\text{complex words}}{\text{total words}} \times 100 \right) $$</span></p>
+
+        <!-- Automated Readability Index -->
+        <h3>3. Automated Readability Index (ARI)</h3>
+        <p>Estimates the U.S. grade level needed based on sentence and word length.</p>
+        <p><strong>Formula:</strong></p>
+        <p><span id="ari-formula">$$ 4.71 \times \left( \frac{\text{total characters}}{\text{total words}} \right) + 0.5 \times \left( \frac{\text{total words}}{\text{total sentences}} \right) - 21.43 $$</span></p>
+
+        <!-- SMOG Index -->
+        <h3>4. SMOG Index</h3>
+        <p>Estimates the years of education needed to understand a text, focusing on the number of polysyllabic words.</p>
+        <p><strong>Formula:</strong></p>
+        <p><span id="smog-formula">$$ 1.0430 \times \sqrt{\text{polysyllabic words} \times \left( \frac{30}{\text{total sentences}} \right)} + 3.1291 $$</span></p>
+
+        <!-- Coleman-Liau Index -->
+        <h3>5. Coleman-Liau Index</h3>
+        <p>Estimates the U.S. grade level required to understand a text, based on characters per word and sentences per text.</p>
+        <p><strong>Formula:</strong></p>
+        <p><span id="coleman-liau-formula">$$ 0.0588 \times \text{L} - 0.296 \times \text{S} - 15.8 $$</span></p>
+        <p>Where L = (total letters / total words) * 100, S = (total sentences / total words) * 100.</p>
+
+        <!-- Readability Consensus Index -->
+        <h3>6. Readability Consensus Index</h3>
+        <p>Averages the results from various readability formulas to provide an overall score.</p>
+        <p><strong>Formula:</strong></p>
+        <p><span id="readability-consensus-formula">$$ \text{Average of (Flesch-Kincaid, Gunning Fog, ARI, SMOG, Coleman-Liau)} $$</span></p>
+
+
+
+        Naturally, Pepito wanted to calculate a more reliable metric for each path, rather than just for individual articles. 
+        To do this, he created an overall readability metric by averaging the scores of the readability metrics for each article that made up a given path.
+    </div>
+</div>
+
+
+<!-- Overlay -->
+<div id="overlay_ttest" onclick="off('overlay_ttest')">
+    <div class="overlay-content">
+
+        <h1>What is the T-test?</h1>
+        <p>The T-test is a statistical test used to compare the means (averages) of two groups to determine if there is a significant difference between them. It's often used in research to see if a new treatment or condition has an effect compared to a control group.</p>
+
+        <h2>Why is it important?</h2>
+        <p>The T-test helps us answer questions like:</p>
+        <ul>
+            <li>Does a new drug have a different effect compared to a placebo?</li>
+            <li>Is there a difference in test scores between two classes?</li>
+            <li>Are two machines producing products with different quality levels?</li>
+        </ul>
+
+        <h2>How does it work?</h2>
+        <p>The T-test calculates a value called the <strong>t-statistic</strong>, which tells us how different the two groups are. The larger the t-statistic, the greater the difference. The test also considers the variation within each group and the number of samples.</p>
+        <p>The formula for calculating the t-statistic depends on the type of T-test, but it generally follows this structure:</p>
+        <div class="formula">
+            $$ t = \frac{\bar{X}_1 - \bar{X}_2}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}} $$
+        </div>
+        <p>Where:</p>
+        <ul>
+            <li><strong><i>t</i>:</strong> T-statistic value</li>
+            <li><strong><i>&#x0305;X<sub>1</sub></i> and <i>&#x0305;X<sub>2</sub></i>:</strong> The sample means of the two groups</li>
+            <li><strong><i>s<sub>1</sub><sup>2</sup></i> and <i>s<sub>2</sub><sup>2</sup></i>:</strong> The variances of the two groups</li>
+            <li><strong><i>n<sub>1</sub></i> and <i>n<sub>2</sub></i>:</strong> The sample sizes of the two groups</li>
+        </ul>
+
+        <h2>What does the result mean?</h2>
+        <p>The result of the T-test will give us a value called the <strong>p-value</strong>. If the p-value is low (typically below 0.05), it means the difference between the two groups is likely not due to chance, and we can conclude there is a significant difference. If the p-value is high, it suggests there is no significant difference.</p>
+
+        <h2>Assumptions of the T-test</h2>
+        <p>There are a few assumptions that need to be met for the T-test to be valid:</p>
+        <ul>
+            <li><strong>Independence:</strong> The observations in each group must be independent of each other.</li>
+            <li><strong>Normality:</strong> The data in each group should follow a normal distribution. This is especially important for small sample sizes.</li>
+            <li><strong>Equal variance:</strong> The variance of the two groups should be approximately equal. If the variances are unequal, a variation of the T-test, such as Welch’s T-test, should be used.</li>
+        </ul>
+
+    </div>
+        
+    </div>
+</div>

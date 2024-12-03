@@ -38,7 +38,7 @@
         </p>
 
         <!-- Content and Button to trigger the overlay -->
-        <button class="button big wide smooth-scroll-middle" onclick="on()">Know More About Entropy</button>
+        <button class="button big wide smooth-scroll-middle" onclick="on('overlay_entropy')">Know More About Entropy</button>
     </div>
 
     <div>
@@ -74,62 +74,62 @@
 </section>
 
 <!-- Overlay -->
-<div id="overlay" onclick="off()">
-<div class="overlay-content">
+<div id="overlay_entropy" onclick="off('overlay_entropy')">
+    <div class="overlay-content">
 
-    <div id="text">Shannon Entropy</div>
+        <h1>Shannon Entropy</h1>
 
-    <p>
-        Entropy can be described as the level of uncertainty along a path in the game. It can be easily assumed as a good proxy for indecision or a lack of clear direction. When an article leads to multiple subsequent articles with similar probabilities, its entropy will be high. This means that when a user is on such an article, it might be difficult for them to decide where to go next.
-    </p>
-    
-    <p>
-        Formally, we define entropy for a single article as:
-    </p>
-    
-    <div class="formula">
-        $$ H(X) = -\sum_{i=1}^{n} p(x_i) \log_2 p(x_i) $$
+        <p>
+            Entropy can be described as the level of uncertainty along a path in the game. It can be easily assumed as a good proxy for indecision or a lack of clear direction. When an article leads to multiple subsequent articles with similar probabilities, its entropy will be high. This means that when a user is on such an article, it might be difficult for them to decide where to go next.
+        </p>
+        
+        <p>
+            Formally, we define entropy for a single article as:
+        </p>
+        
+        <div class="formula">
+            $$ H(X) = -\sum_{i=1}^{n} p(x_i) \log_2 p(x_i) $$
+        </div>
+        
+        <p>
+            Where:
+            <ul>
+                <li><strong>H(X)</strong> represents the Shannon entropy of the article X <strong>X</strong>.</li>
+                <li><strong>p(x<sub>i</sub>)</strong> is the the probability of transitioning to a specific subsequent article</li>
+                <li><strong>n</strong> is the total number of possible next articles.</li>
+            </ul>
+        </p>
+        
+        <p>
+            To calculate entropy, we need probabilities that weigh each possible next article. These probabilities have been derived using data from played games rather than from the static connectivity of the articles.
+        </p>
+        
+        <p>
+            For example, consider the article "Dante Alighieri." It has a high entropy because many different paths can be taken from it, each with similar probabilities.
+        </p>
+        
+        <img src="images/dante_entropy.png" alt="Image related to Entropy">
+        
+        <p>
+            After calculating the entropy for each article, the entropy for the entire path (i.e., the mean of the single entropies of the articles that make up the path) was determined. Pepito’s hypothesis is that paths with higher entropy are more likely to remain unfinished, suggesting that increased randomness and indecision can negatively influence a player’s experience.
+        </p>
+
     </div>
-    
-    <p>
-        Where:
-        <ul>
-            <li><strong>H(X)</strong> represents the Shannon entropy of the article X <strong>X</strong>.</li>
-            <li><strong>p(x<sub>i</sub>)</strong> is the the probability of transitioning to a specific subsequent article</li>
-            <li><strong>n</strong> is the total number of possible next articles.</li>
-        </ul>
-    </p>
-    
-    <p>
-        To calculate entropy, we need probabilities that weigh each possible next article. These probabilities have been derived using data from played games rather than from the static connectivity of the articles.
-    </p>
-    
-    <p>
-        For example, consider the article "Dante Alighieri." It has a high entropy because many different paths can be taken from it, each with similar probabilities.
-    </p>
-    
-    <img src="images/dante_entropy.png" alt="Image related to Entropy">
-    
-    <p>
-        After calculating the entropy for each article, the entropy for the entire path (i.e., the mean of the single entropies of the articles that make up the path) was determined. Pepito’s hypothesis is that paths with higher entropy are more likely to remain unfinished, suggesting that increased randomness and indecision can negatively influence a player’s experience.
-    </p>
-
-</div>
 </div>
 
 <!-- ############################################################## -->
 
 <!-- JavaScript to control overlay -->
 <script>
-// Function to show the overlay with text
-function on() {
-  document.getElementById("overlay").style.display = "flex"; // Show overlay
-}
-
-// Function to hide the overlay when clicked
-function off() {
-  document.getElementById("overlay").style.display = "none"; // Hide overlay
-}
+    // Function to show the specific overlay with the given ID
+    function on(overlayId) {
+      document.getElementById(overlayId).style.display = "flex"; // Show specific overlay
+    }
+    
+    // Function to hide the specific overlay when clicked
+    function off(overlayId) {
+      document.getElementById(overlayId).style.display = "none"; // Hide specific overlay
+    }
 </script>
 
 <!-- Style of overlay -->

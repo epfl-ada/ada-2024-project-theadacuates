@@ -1,0 +1,150 @@
+
+<!-- Include MathJax -->
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<!-- Section 1: Spotlight Section -->
+<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
+<div class="content">
+    <h2>Dr. Cajal's Counterargument: Entropy</h2>
+    <p>Dr. Cajal grows increasingly frustrated with the weak thesis presented by Pepito and decides to launch a counterattack.</p>
+    <p>He is clever, he devises a plan to exploit Pepito’s own argument. He aims to turn 
+       <span class="highlight"><strong>entropy</strong></span>, 
+       a concept that should ostensibly support Pepito’s ideas, into evidence that will ultimately discredit him.</p>
+    <blockquote class="quote">
+        "In the world of arguments, the cleverest tactic is to wield your opponent's weapons against them."
+    </blockquote>
+    <ul class="actions stacked">
+    </ul>
+</div>
+<div class="image">
+    <img src="images/spotlight01.jpg" alt="Image related to entropy">
+</div>
+</section>
+
+<!-- Section 2: Content and Button to Trigger Overlay -->
+<section class="wrapper style1 align-center">
+<div class="inner">
+    <div class="content">
+        <p>
+            <span class="image left"><img src="images/cajal_face.png" alt="Image of Dr. Cajal" /></span>
+            <strong>Dear Pepito,</strong> let’s examine a more complex metric—<strong>the entropy of a path</strong>. 
+                Entropy, you could say, serves <strong>as an index of indecisiveness and uncertainty</strong>. 
+                It helps us understand why some paths are abandoned mid-journey. 
+                <strong>High entropy</strong> suggests that users are navigating across many different articles without a clear direction, likely due to <strong>cognitive overload or confusion</strong>. 
+                In essence, entropy quantifies <strong>decision-making uncertainty</strong> and can act as a proxy for cognitive load, revealing the challenges that players face as they attempt to complete paths. 
+                If this theory holds—if entropy indeed impacts gameplay—then we should observe <strong>higher average entropy per path in unfinished journeys</strong> compared to completed ones.
+                <strong>I will show you that this is not the case.</strong>
+        </p>
+
+        <!-- Content and Button to trigger the overlay -->
+        <button class="button big wide smooth-scroll-middle" onclick="on()">Know More About Entropy</button>
+    </div>
+</div>
+</section>
+
+<!-- Overlay -->
+<div id="overlay" onclick="off()">
+<div class="overlay-content">
+
+    <div id="text">Shannon Entropy</div>
+
+    <p>Entropy can  When an article leads to multiple different subsequent articles with similar probabilities, its entropy will be high. Formally, we define entropy for <strong>a single article</strong> as:</p>
+    
+    <div class="formula">
+        $$ H(X) = -\sum_{i=1}^{n} p(x_i) \log_2 p(x_i) $$
+    </div>
+    
+    <p>Where:
+        <ul>
+            <li><strong>H(X)</strong> represents the Shannon entropy of the random variable <strong>X</strong>.</li>
+            <li><strong>p(x_i)</strong> is the probability of each possible outcome <strong>x_i</strong> (e.g., the probability of transitioning to a specific subsequent article).</li>
+            <li><strong>n</strong> is the total number of possible outcomes (next articles).</li>
+        </ul>
+    </p>
+    
+    <p>Naturally, the Entropy metric will derive from played games and not from the static connectivity of the articles.</p>
+
+    <img src="images/pic02.jpg" alt="Image related to Entropy">
+
+</div>
+</div>
+
+<!-- ############################################################## -->
+
+<!-- JavaScript to control overlay -->
+<script>
+// Function to show the overlay with text
+function on() {
+  document.getElementById("overlay").style.display = "flex"; // Show overlay
+}
+
+// Function to hide the overlay when clicked
+function off() {
+  document.getElementById("overlay").style.display = "none"; // Hide overlay
+}
+</script>
+
+<!-- Style of overlay -->
+<style>
+    /* Overlay Style */
+    #overlay {
+        position: fixed;
+        display: none; /* Initially hidden */
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+        z-index: 2;
+        cursor: pointer;
+        display: flex; /* Use flexbox to center content */
+        justify-content: center; /* Center content horizontally */
+        align-items: center; /* Center content vertically */
+    }
+
+    /* Content Box inside the overlay */
+    .overlay-content {
+        width: 80%;
+        max-width: 800px;
+        background-color: white;
+        color: black;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        font-family: Arial, sans-serif;
+        text-align: center;
+        overflow-y: auto; /* Allow scrolling if content is too large */
+        max-height: 80vh; /* Limit the box height */
+    }
+
+    /* Image inside the overlay */
+    .overlay-content img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+
+    /* Math formula styling */
+    .formula {
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+        margin-top: 10px;
+    }
+
+    /* Button Style */
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        color: white;
+        background-color: #007BFF;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+</style>

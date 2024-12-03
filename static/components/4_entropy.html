@@ -25,6 +25,7 @@
 <section class="wrapper style1 align-center">
 <div class="inner">
     <div class="content">
+
         <p>
             <span class="image left"><img src="images/cajal_face.png" alt="Image of Dr. Cajal" /></span>
             <strong>Dear Pepito,</strong> let’s examine a more complex metric—<strong>the entropy of a path</strong>. 
@@ -39,6 +40,36 @@
         <!-- Content and Button to trigger the overlay -->
         <button class="button big wide smooth-scroll-middle" onclick="on()">Know More About Entropy</button>
     </div>
+
+    <div>
+        Firstly, if entropy and, thus, the consequent cognitive load play a significant role in the path and outcome of the game, I should observe that unfinished paths are correlated with paths that have higher mean entropy. 
+        However, this is not the case. Using <strong>Point-Biserial Correlation</strong>, which measures the strength and direction of the relationship between a binary categorical variable and a continuous variable, the coefficient is indeed significant but not very high, just around 0.18. This implies a weak or almost negligible correlation.
+    </div>
+
+    <div>
+        Secondly, if higher entropy negatively affects the game, I should observe that unfinished paths have higher entropy, i.e., they are more challenging in terms of the next article choice. 
+        But again, the data refute this hypothesis.
+    </div>
+
+    <img src="images/entropy.png" alt="Image related to Entropy" style="width: 800px; height: auto; display: block; margin: 20px auto;">
+
+    <div>
+        As can be seen, the means of the two groups are indeed different (<strong>t-test p-value < 0.05</strong>). However, interestingly, this difference favors the unfinished paths. 
+        Therefore, your hypothesis that higher entropy is associated with abandonment is not only incorrect but actually completely reversed. 
+        <strong>People who succeed tend to follow paths with higher entropy. In essence, they are seeking complexity and struggle.</strong>
+    </div>
+
+    <div class="content">
+        <p>
+            <span class="image right"><img src="images/pepito.jpg" alt="Image of Dr. Cajal" /></span>
+            Your analysis is correct, but it doesn’t quite make sense to me. 
+            Based on your findings, it seems that people are <strong>intentionally seeking out articles with higher entropy</strong>, 
+            almost as if they enjoy engaging with more chaotic content. 
+            This is a very strange behavior, and I would appreciate it if you could explain why this happens. 
+            At this moment, I remain skeptical about your conclusion.
+        </p>
+    </div>
+
 </div>
 </section>
 
@@ -48,23 +79,40 @@
 
     <div id="text">Shannon Entropy</div>
 
-    <p>Entropy can  When an article leads to multiple different subsequent articles with similar probabilities, its entropy will be high. Formally, we define entropy for <strong>a single article</strong> as:</p>
+    <p>
+        Entropy can be described as the level of uncertainty along a path in the game. It can be easily assumed as a good proxy for indecision or a lack of clear direction. When an article leads to multiple subsequent articles with similar probabilities, its entropy will be high. This means that when a user is on such an article, it might be difficult for them to decide where to go next.
+    </p>
+    
+    <p>
+        Formally, we define entropy for a single article as:
+    </p>
     
     <div class="formula">
         $$ H(X) = -\sum_{i=1}^{n} p(x_i) \log_2 p(x_i) $$
     </div>
     
-    <p>Where:
+    <p>
+        Where:
         <ul>
-            <li><strong>H(X)</strong> represents the Shannon entropy of the random variable <strong>X</strong>.</li>
-            <li><strong>p(x_i)</strong> is the probability of each possible outcome <strong>x_i</strong> (e.g., the probability of transitioning to a specific subsequent article).</li>
-            <li><strong>n</strong> is the total number of possible outcomes (next articles).</li>
+            <li><strong>H(X)</strong> represents the Shannon entropy of the article X <strong>X</strong>.</li>
+            <li><strong>p(x<sub>i</sub>)</strong> is the the probability of transitioning to a specific subsequent article</li>
+            <li><strong>n</strong> is the total number of possible next articles.</li>
         </ul>
     </p>
     
-    <p>Naturally, the Entropy metric will derive from played games and not from the static connectivity of the articles.</p>
-
-    <img src="images/pic02.jpg" alt="Image related to Entropy">
+    <p>
+        To calculate entropy, we need probabilities that weigh each possible next article. These probabilities have been derived using data from played games rather than from the static connectivity of the articles.
+    </p>
+    
+    <p>
+        For example, consider the article "Dante Alighieri." It has a high entropy because many different paths can be taken from it, each with similar probabilities.
+    </p>
+    
+    <img src="images/dante_entropy.png" alt="Image related to Entropy">
+    
+    <p>
+        After calculating the entropy for each article, the entropy for the entire path (i.e., the mean of the single entropies of the articles that make up the path) was determined. Pepito’s hypothesis is that paths with higher entropy are more likely to remain unfinished, suggesting that increased randomness and indecision can negatively influence a player’s experience.
+    </p>
 
 </div>
 </div>

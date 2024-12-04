@@ -3,5 +3,6 @@ $(function () {
   $("#intro").load("./components/0_intro.html");
   $("#readability").load("./components/3_readability.html");
   $("#entropy").load("./components/4_entropy.html");
+  $("#cognitive_shift").load("./components/6_cognitive_shift.html");
   // $("#part2").load("./components/part2.html");
 });

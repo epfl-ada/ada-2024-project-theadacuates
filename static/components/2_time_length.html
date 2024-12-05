@@ -1,0 +1,84 @@
+<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in" id="path-length">
+    <div class="content">
+        <h2>Path Length: Analyzing Its Impact on Gameplay</h2>
+        <p>
+            As longer paths mean more articles visited, this could lead to confusion in the player's mind. Perhaps this is a cause of path abandonment?
+        </p>
+        <span style="color: red;"><strong>Dr. Cajal:</strong></span>
+        <p>
+            As you talked about path duration, let me now talk about path length. If path length, as you suppose, could influence the gameplay (i.e., longer paths are correlated to unfinished paths), I should observe that unfinished paths have a higher number of articles visited.
+        </p>
+        <img src="images/pathlength.png" alt="Distribution of Path Lengths for Finished and Unfinished Paths" style="width: 800px; height: auto; display: block; margin: 20px auto;">
+        <p>
+            Mann-Whitney U test results for Finished vs. Unfinished Path Lengths:
+            <strong>U = 772366749.0, p-value = 0.0</strong>.
+        </p>
+        <span style="color: red;"><strong>Dr. Cajal:</strong></span>
+        <p>
+            As you can see, and as further validated by the <strong>Mann-Whitney U Test</strong>, your thesis is completely contradicted. <strong>Unfinished paths actually have shorter lengths.</strong>
+        </p>
+        <p>
+            Dr. Cajal decided to use the Mann-Whitney U Test because the normality assumption is not met. It is a non-parametric test used to compare the distributions of two independent groups. Instead of comparing means, the test compares the ranks of values across both groups. The test statistic calculated is:
+        </p>
+        <p>
+            \( U = R_1 - \frac{n_1(n_1 + 1)}{2} \)
+        </p>
+        <p>
+            Where:
+            <ul>
+                <li>\( U \) is the Mann-Whitney U statistic.</li>
+                <li>\( R_1 \) is the sum of the ranks for group 1.</li>
+                <li>\( n_1 \) is the number of observations in group 1.</li>
+            </ul>
+        </p>
+        <span style="color: blue;"><strong>Pepito:</strong></span>
+        <p>
+            Mr. Cajal, I think your analysis is not entirely correct. Indeed, it may be that, by chance, finished paths have a source and target link that, by the architecture of the network, are far from each other. As a result, the path is elongated due to this structural factor.
+        </p>
+        <span style="color: red;"><strong>Dr. Cajal:</strong></span>
+        <p>
+            Pepito, you are right, but even if I regress out this factor, the conclusion remains the same. Let's take pairs of target and source links that have been played multiple times (for instance, the following four have been played more than 1000 times each). As you can see from the results of the tests, the difference in means between finished and unfinished paths consistently shows that finished paths have a longer path length. However, the confounding factor you cited earlier has already been regressed out.
+        </p>
+        <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+            <thead>
+                <tr style="background-color: #f4f4f4;">
+                    <th style="border: 1px solid #ddd; padding: 8px;">Source Link</th>
+                    <th style="border: 1px solid #ddd; padding: 8px;">Target Link</th>
+                    <th style="border: 1px solid #ddd; padding: 8px;">Mean Difference</th>
+                    <th style="border: 1px solid #ddd; padding: 8px;">t-Statistic</th>
+                    <th style="border: 1px solid #ddd; padding: 8px;">p-Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="border: 1px solid #ddd; padding: 8px;">Pyramid</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">Bean</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">2.679587</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">11.532746</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">1.605381e-29</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #ddd; padding: 8px;">Theatre</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">Zebra</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">2.740315</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">14.538996</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">3.410645e-45</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #ddd; padding: 8px;">Asteroid</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">Viking</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">2.478926</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">13.851010</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">1.600135e-40</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #ddd; padding: 8px;">Brain</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">Telephone</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">2.896909</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">18.759760</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">2.702263e-72</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>

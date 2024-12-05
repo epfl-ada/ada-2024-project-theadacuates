@@ -1,0 +1,110 @@
+<!-- Section 1: Spotlight Section -->
+<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in" id="first">
+    <div class="content">
+        <h2>Pepito's new hope: Cognitive Shift</h2>
+        <p>Despite being taken aback by the strong evidence presented by the Professor, Pepito will not be deterred so easily. 
+            He comes back home and continues to find new proofs for his theory. 
+            Let's observe him while he's sitting at his desk creating the presentation for tommorrow morning.
+        </p>
+        <ul class="actions stacked">
+        </ul>
+    </div>
+    <div class="image">
+        <img src="images/spotlight01.jpg" alt="Image related to entropy">
+    </div>
+</section>
+
+<section class="wrapper style1 align-center">
+    <div class="inner">
+        <div class="content">
+            <p>
+                <span class="image left"><img src="images/pepito.jpg"/></span>
+                When alternative, task-unrelated stimuli are presented to a human, mental fatigue and attention are negatively impacted <a href="https://pubmed.ncbi.nlm.nih.gov/26752733/" target="_blank">(Ref)</a>. 
+                I believe that moving from one category of knowledge to another (e.g., from science-related articles to arts-related articles) requires cognitive shifting, which can negatively impact gameplay. 
+                First, I will demonstrate my claims using a broad-level shift, the <strong>category shift</strong> per article. 
+                Then, I will show a more complex shift, the <strong>semantic shift</strong>, based on article semantic similarity.
+            </p>
+        </div>
+    
+        <img src="images/category_change_count.png" style="width: 800px; height: auto; display: block; margin: 20px auto;">
+    
+        <p>
+            Ohhh, <i>diablos</i>, the category shift per link <strong>is higher in finished paths</strong>, which challenges my initial assumption that a higher shift would correlate with increased cognitive load and greater difficulty. 
+            Dr. Cajal MUST never find out, let's move to a more complex metric, maybe I will find something more interesting.
+        </p>
+        
+        <br>
+
+        <p>
+            Another good metric that I can try is <strong>semantic shift</strong>, i.e. one minus the semantic similarity between two successive articles.
+            Large semantic shifts between articles can represent a higher cognitive load for the player, having to completely change topics from one article to the other. 
+            I can investigate if this can have an impact on whether the path is finished or not.
+        </p>
+
+        <br>
+
+        <p>
+            Before proceeding with Pepito's findings, let's start with a brief explanation and example of what semantic similarity is.
+        </p>
+
+        <p>
+            <strong>Semantic similarity</strong> refers to the degree to which two concepts, words, or phrases are related in meaning, even if they are not identical. 
+            In essence, it allows us to evaluate how closely words or sentences are associated based on their meanings rather than exact matches.
+        </p>
+
+        <p>
+            To quantify this value, Pepito is going to use <strong>SentenceTransformer</strong> a model that specializes in measuring semantic similarity by transforming sentences or words into high-dimensional vectors, which then allows for easy comparison of their meanings.
+        </p>
+
+        <img src="images/semantic_similarity_example.png">
+
+        <p>
+            To ensure he understands how this metric works, Pepito is testing the model on a subset of words. 
+            The results are generally intuitive: for example, "William Shakespeare" is semantically close to terms like "playwright" and "Romeo and Juliet" but has no relationship to "data analysis." 
+            However, the model isn't perfect; it struggles with more nuanced relationships, such as between "Romeo and Juliet" and "love," which one might expect to be closely related but are not always picked up as such by the model.
+        </p>
+
+        <br>
+
+        <p>
+            Firstly, I will show how the semantic shift evolves over the game, specifically by examining the number of articles visited from the beginning.
+        </p>
+        
+        <img src="images/semantic_shift.png" style="width: 800px; height: auto; display: block; margin: 20px auto;">
+
+        <p>
+            As can be seen, <strong>semantic shift decreases at the end of finished paths compared to unfinished paths, which tend to stagnate</strong> .
+            This indicates that, in unfinished paths, the gap in similarity between consecutive articles remains constant, suggesting that the player is "lost"—continuing to change semantic fields without converging on the correct target. 
+            This pattern supports my thesis that higher cognitive shifts are indeed associated with a greater likelihood of path abandonment.
+        </p>
+
+        <img src="images/semantic_shift_hist.png" style="width: 500px; height: auto; display: block; margin: 20px auto;">
+
+        <p>
+            We can observe that the <strong>semantic shift along finished paths is smaller than for unfinished paths</strong> indicating that finished paths tend to follow more closely related articles than unfinished ones. 
+            This supports the idea that jumping between articles with high differences in similarity can lead to unfinished paths, thus supporting my thesis. 
+            <strong>Although statistically significant, the shift is unfortunately minor to the extent</strong> that it may not represent a practical or relevant change to strongly support my thesis.
+        </p>
+
+        <p>
+            After a long evening of research and analysis, <strong>Pepito has found nothing</strong>—his idea of cognitive shift has shipwrecked badly. 
+            He's nervous about confronting the teacher tomorrow. 
+            He goes to bed, shaking at the thought of what awaits him. But then, all of a sudden, he realizes a brilliant new potential investigation: <strong>structural elements in the webpage HTML</strong>.
+        </p>
+    
+    </div>
+</section>
+
+
+<!-- JavaScript to control overlay -->
+<script>
+    // Function to show the overlay with text
+    function on(id) {
+      document.getElementById(id).style.display = "flex"; // Show overlay
+    }
+    
+    // Function to hide the overlay when clicked
+    function off(id) {
+      document.getElementById(id).style.display = "none"; // Hide overlay
+    }
+</script>

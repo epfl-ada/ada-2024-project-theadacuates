@@ -1,87 +1,5 @@
-<!-- CSS for Modal and Overlay -->
-<style>
-  /* Overlay */
-  .overlay-cc {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-  }
-
-  /* Hide the overlay initially */
-  .overlay-cc.hidden {
-    display: none;
-  }
-
-  /* Modal Box */
-  .modal {
-    background: #fff;
-    padding: 20px;
-    max-width: 600px;
-    width: 90%;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-  }
-
-  /* Close Button */
-  .close {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-</style>
-<style>
-  /* Overlay */
-  .overlay-dc {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-  }
-
-  /* Hide the overlay initially */
-  .overlay-dc.hidden {
-    display: none;
-  }
-
-  /* Modal Box */
-  .modal {
-    background: #fff;
-    padding: 20px;
-    max-width: 600px;
-    width: 90%;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-  }
-
-  /* Close Button */
-  .close {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-</style>
-<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
+<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in"
+  id="first">
   <div class="content">
     <h2>Dr. Cajal Clarifies Pepito's Concern: Connectivity analysis</h2>
   </div>
@@ -89,163 +7,144 @@
 <section class="wrapper style1 content-align-left">
   <div class="inner">
     <div class="content">
-          <p>
-              <span class="image left"><img src="images/cajal_face.png" alt="Image of Dr. Cajal" /></span>
-              <blockquote>
-                I think players aren’t navigating randomly or chaotically but are actually following a clever gaming strategy. 
-                I’ll show you that, in reality, they’re actively seeking high-connectivity hubs to efficiently reach their target article. 
-                This isn’t aimless clicking—it’s strategic thinking, Pepito!
-              </blockquote>
+      <p>
+        <span class="image left"><img src="images/cajal_face.png" alt="Image of Dr. Cajal" /></span>
+      <blockquote>
+        I think players aren’t navigating randomly or chaotically but are actually following a clever gaming strategy.
+        I’ll show you that, in reality, they’re actively seeking high-connectivity hubs to efficiently reach their
+        target article.
+        This isn’t aimless clicking—it’s strategic thinking, Pepito!
+      </blockquote>
 
-          </p>
+      </p>
     </div>
-    <img src="images/correlationmatrixentorpy.png" alt="Correlation Matrix Entropy" style="width: 800px; height: auto; display: block; margin: 20px auto;">
-    <img src="images/corrEntropy.png" alt="Correlation Matrix Entropy" style="width: 800px; height: auto; display: block; margin: 20px auto;">
+    <img src="images/correlationmatrixentorpy.png" alt="Correlation Matrix Entropy"
+      style="width: 800px; height: auto; display: block; margin: 20px auto;">
+    <img src="images/corrEntropy.png" alt="Correlation Matrix Entropy"
+      style="width: 800px; height: auto; display: block; margin: 20px auto;">
 
     <div>
-        <p>
-          <span class="image left"><img src="images/cajal_face.png" alt="Image of Dr. Cajal" /></span>
-          <blockquote>
-            As you can see, entropy is positively correlated with all connectivity indices, indicating that, in this case, entropy should not be interpreted as a proxy for indecision. 
-            Instead, it works as an indirect measure of the connectivity of the articles that players are navigating.
-  
-            In simple terms, an article with high entropy doesn't necessarily indicate that players are taking various different links from it (which would show high uncertainty in their choices). 
-            Instead, it just means that some articles naturally have more outgoing links than others, which inflates the entropy value.
-  
-            Additionally, the highest correlation is found with closeness centrality, which makes perfect sense, as players tend to select articles that are highly connected, helping them move efficiently 
-            from any starting article to the intended target.
-            Let’s look into the details of this fascinating metric:
-          </blockquote>
+      <p>
+        <span class="image left"><img src="images/cajal_face.png" alt="Image of Dr. Cajal" /></span>
+      <blockquote>
+        As you can see, entropy is positively correlated with all connectivity indices, indicating that, in this case,
+        entropy should not be interpreted as a proxy for indecision.
+        Instead, it works as an indirect measure of the connectivity of the articles that players are navigating.
 
-        </p>
+        In simple terms, an article with high entropy doesn't necessarily indicate that players are taking various
+        different links from it (which would show high uncertainty in their choices).
+        Instead, it just means that some articles naturally have more outgoing links than others, which inflates the
+        entropy value.
+
+        Additionally, the highest correlation is found with closeness centrality, which makes perfect sense, as players
+        tend to select articles that are highly connected, helping them move efficiently
+        from any starting article to the intended target.
+        Let’s look into the details of this fascinating metric:
+      </blockquote>
+
+      </p>
     </div>
     <div>
-        <h2>Closeness Centrality</h2>
-        <p>
-          Closeness centrality measures how close a node is to all other nodes in the graph. 
-          It is based on the <em>average shortest path distance</em> from a given node to all other nodes that can be reached. 
-          A node with high closeness centrality reaches other nodes more quickly, which can indicate a high degree of accessibility within the graph.
-        </p>
-        <div style="margin-bottom: 20px;">
-          <button id="btn-cc" class="button big wide smooth-scroll-middle">About Closeness Centrality</button>
-        </div>
-        <p>
-          In summary, if a node has high closeness centrality, it means that the node is "closer" to other nodes on average.
-          A lower closeness centrality means the node is, on average, farther from other nodes in the graph in terms of path length.
-        </p>
-        <div id="overlay-cc" class="overlay-cc hidden">
-          <div class="modal">
-            <span class="close" id="close-overlay-cc">&times;</span>
-            <div class="modal-content">
-              <h2>Closeness Centrality</h2>
-              <p>For a node \( u \), the closeness centrality \( C(u) \) is calculated as:</p>
-              <p>
-                $$ C(u) = \frac{N - 1}{\sum_{v \neq u} d(u, v)} $$
-              </p>
-              <p>Where:</p>
-              <ul>
-                <li>\( N \) is the total number of nodes in the graph.</li>
-                <li>\( d(u, v) \) is the shortest path distance between nodes \( u \) and \( v \).</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+      <h2>Closeness Centrality</h2>
+      <p>
+        Closeness centrality measures how close a node is to all other nodes in the graph.
+        It is based on the <em>average shortest path distance</em> from a given node to all other nodes that can be
+        reached.
+        A node with high closeness centrality reaches other nodes more quickly, which can indicate a high degree of
+        accessibility within the graph.
+      </p>
+      <div style="margin-bottom: 20px;">
+        <button data-overlay-id="cc" class="button big wide smooth-scroll-middle">About Closeness
+          Centrality</button>
+      </div>
+      <p>
+        In summary, if a node has high closeness centrality, it means that the node is "closer" to other nodes on
+        average.
+        A lower closeness centrality means the node is, on average, farther from other nodes in the graph in terms of
+        path length.
+      </p>
     </div>
     <div>
       <p>
-        After closeness centrality, out-degree and degree centrality have the highest correlation to entropy. 
-        Nodes with higher outgoing connections tend to have higher entropy. Outgoing connections influence entropy more than incoming connections, 
+        After closeness centrality, out-degree and degree centrality have the highest correlation to entropy.
+        Nodes with higher outgoing connections tend to have higher entropy. Outgoing connections influence entropy more
+        than incoming connections,
         because entropy could be related to a node's ability to link "out" to many other nodes, providing more options.
       </p>
       <div style="margin-bottom: 20px;">
-        <button id="btn-dc" class="button big wide smooth-scroll-middle">About Degree Centrality</button>
-      </div>
-      <div id="overlay-dc" class="overlay-dc hidden">
-        <div class="modal">
-          <span class="close" id="close-overlay-dc">&times;</span>
-          <div class="modal-content">
-            <h2>Degree Centrality</h2>
-            <p>
-              Degree centrality is another measure of how well connected a node is. 
-              On a graph <i>G</i>, NetworkX calculates the degree centrality as:
-            </p>
-            <div class="formula">
-              <p>
-                $$ C(u) = \frac{\text{deg}(u)}{N - 1} $$
-              </p>
-            </div>
-            <p>Where:</p>
-            <ul>
-              <li>\( \text{deg}(u) \) is the degree (number of edges) of node \( u \).</li>
-              <li>\( N \) is the total number of nodes in the graph.</li>
-            </ul>
-          </div>
-        </div>
+        <button data-overlay-id="dc" class="button big wide smooth-scroll-middle">About Degree
+          Centrality</button>
       </div>
       <p>
-        Nodes with higher entropy also tend to be more "central" overall in terms of connections when considering incoming and outgoing connections.
+        Nodes with higher entropy also tend to be more "central" overall in terms of connections when considering
+        incoming and outgoing connections.
       </p>
       <p>
-        These three metrics and their high correlation to entropy suggest that nodes with high entropy are generally central 
+        These three metrics and their high correlation to entropy suggest that nodes with high entropy are generally
+        central
         and well-connected in the graph.
       </p>
     </div>
-    <img src="images/evolutionCC.png" alt="Evolution of Closeness Centrality" style="width: 800px; height: auto; display: block; margin: 20px auto;">
+    <img src="images/evolutionCC.png" alt="Evolution of Closeness Centrality"
+      style="width: 800px; height: auto; display: block; margin: 20px auto;">
     <div class="content">
       <p>
-          <span class="image left"><img src="images/cajal_face.png" alt="Image of Dr. Cajal" /></span>
-          <blockquote>
-            You can even see, Pepito, that players tend to seek high-connectivity nodes early in their paths! The graph clearly shows how closeness 
-            centrality spikes at the beginning, indicating that players prioritize <b>well-connected articles right from the start</b>  This initial strategy 
-            helps them quickly move toward their target, rather than wandering aimlessly. <b>It’s proof that their choices are strategic, not chaotic!</b>
-          </blockquote>
+        <span class="image left"><img src="images/cajal_face.png" alt="Image of Dr. Cajal" /></span>
+      <blockquote>
+        You can even see, Pepito, that players tend to seek high-connectivity nodes early in their paths! The graph
+        clearly shows how closeness
+        centrality spikes at the beginning, indicating that players prioritize <b>well-connected articles right from the
+          start</b> This initial strategy
+        helps them quickly move toward their target, rather than wandering aimlessly. <b>It’s proof that their choices
+          are strategic, not chaotic!</b>
+      </blockquote>
       </p>
     </div>
   </div>
 </section>
-<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
+<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in"
+  id="first">
   <div class="content">
   </div>
 </section>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-  $(document).ready(function () {
-      // Open the overlay when the button is clicked
-      $("#btn-cc").click(function () {
-          $("#overlay-cc").removeClass("hidden");
-      });
+<div data-overlay-id="cc" class="overlay hidden">
+  <div class="modal">
+    <div class="modal-content">
+      <h2>Closeness Centrality</h2>
+      <p>For a node \( u \), the closeness centrality \( C(u) \) is calculated as:</p>
+      <p>
+        $$ C(u) = \frac{N - 1}{\sum_{v \neq u} d(u, v)} $$
+      </p>
+      <p>Where:</p>
+      <ul>
+        <li>\( N \) is the total number of nodes in the graph.</li>
+        <li>\( d(u, v) \) is the shortest path distance between nodes \( u \) and \( v \).</li>
+      </ul>
+    </div>
+  </div>
+</div>
 
-      // Close the overlay when the close button is clicked
-      $("#close-overlay-cc").click(function () {
-          $("#overlay-cc").addClass("hidden");
-      });
+<div data-overlay-id="dc" class="overlay hidden">
+  <div class="modal">
+    <div class="modal-content">
+      <h2>Degree Centrality</h2>
+      <p>
+        Degree centrality is another measure of how well connected a node is.
+        On a graph <i>G</i>, NetworkX calculates the degree centrality as:
+      </p>
+      <div class="formula">
+        <p>
+          $$ C(u) = \frac{\text{deg}(u)}{N - 1} $$
+        </p>
+      </div>
+      <p>Where:</p>
+      <ul>
+        <li>\( \text{deg}(u) \) is the degree (number of edges) of node \( u \).</li>
+        <li>\( N \) is the total number of nodes in the graph.</li>
+      </ul>
+    </div>
+  </div>
+</div>
 
-      // Close the overlay when clicking outside the modal
-      $(window).click(function (event) {
-          if ($(event.target).is("#overlay-cc")) {
-              $("#overlay-cc").addClass("hidden");
-          }
-      });
-  });
-</script>
-<script>
-  $(document).ready(function () {
-      // Open the overlay when the button is clicked
-      $("#btn-dc").click(function () {
-          $("#overlay-dc").removeClass("hidden");
-      });
-
-      // Close the overlay when the close button is clicked
-      $("#close-overlay-dc").click(function () {
-          $("#overlay-dc").addClass("hidden");
-      });
-
-      // Close the overlay when clicking outside the modal
-      $(window).click(function (event) {
-          if ($(event.target).is("#overlay-dc")) {
-              $("#overlay-dc").addClass("hidden");
-          }
-      });
-  });
-</script>
+<script src="assets/js/overlay.js"></script>

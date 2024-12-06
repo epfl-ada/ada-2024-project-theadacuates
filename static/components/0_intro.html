@@ -1,6 +1,8 @@
 <section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
   <div class="content">
-    <h2>Main Question: Is Cognitive Fatigue Quantifiable in Wikispeedia, and What Role Does It Play in Gameplay?</h2>
+    <h2><strong>Main Question:</strong> <br>
+      Is Cognitive Fatigue Quantifiable in Wikispeedia, and What Role Does It Play in Gameplay?
+    </h2>
     
     <div id="para-intro">
       <p>
@@ -8,31 +10,92 @@
         <a href="https://doi.org/10.1111/psyp.12339" target="_blank">(1)</a>. 
         This project aims to investigate user engagement with the  
         <b>Wikispeedia game from a neuroscientific angle</b>, focusing on how article complexity impacts cognitive load and behavior. Key questions include:
+  
+          <ul style="margin-left: 40px;">
+            <li>How does the complexity of articles affect user engagement?</li>
+            <li>Does the structure and layout (e.g., headings, multimedia) influence time spent, back-clicks, or path abandonment?</li>
+            <li>Are there biological biases that influence the gameplay?</li>
+          </ul>
+
       </p>
-      <ul>
-        <li>How does the complexity of articles affect user engagement?</li>
-        <li>Does the structure and layout (e.g., headings, multimedia) influence time spent, back-clicks, or path abandonment?</li>
-        <li>Is cognitive fatigue a factor in users abandoning navigation paths?</li>
-      </ul>
+
+      <button class="button big wide smooth-scroll-middle" onclick="on('overlay_wikispeedia')">Know More About Wikispeedia</button>
+
     </div>    
 
-    <div id="para-intro-detail" class="hidden">
-    somethings
+    <div> 
+      <p><strong>To shed light on this intricate question</strong>, 
+        we will delve into a discussion between the diligent student Pepito and his mentor, Mr. Cajal. 
+        <strong>Pepito</strong> is a young neuroscience student with big dreams and... questionable study habits. 
+        Last week, he faced an unexpected academic crisis—not in the lab, 
+        but in a game called Wikispeedia. The result? <strong>Pepito got lost</strong>. 
+        A lot. Like, "How did I end up reading about Cabbage Moths?" lost. 
+        Embarrassed but determined, Pepito boldly blamed the game, not himself. 
+        <strong>"It’s not me—it’s cognitive overload! This game would exhaust even the sharpest minds."
+        </strong> But Pepito's mentor, the legendary <strong>Dr. Ramón y Cajal</strong>, wasn’t buying it.
+        Known for spotting an excuse from a mile away, Dr. Cajal challenged Pepito to prove his claims with data. 
+        What followed was a heated back-and-forth between Pepito and Dr. Cajal. 
+        Could Pepito’s data reveal the game’s inherent challenge, or would Dr. Cajal’s <strong>“study harder” mantra</strong> prevail?
+      </p>
+
     </div>
 
-      <button id="btn-intro" class="button big wide smooth-scroll-middle">More Info</button>
+      <!-- <button id="btn-intro" class="button big wide smooth-scroll-middle">More Info</button> -->
   </div>
+
 </section>
 
-<section class="wrapper style1 align-center">
-  <div class="inner">
-    <div class="content">
-    <p><span class="image left"><img src="images/pic01.jpg" alt="" /></span>Lorem ipsum dolor Recent studies show that our attention spans are shrinking, and our brains can become fatigued within minutes of focused activity [(1)](https://doi.org/10.1111/psyp.12339). This project aims to investigate user engagement with Wikispeedia **game from a neuroscientific angle**, focusing on how article complexity impacts cognitive load and behaviour. Key questions include How does the complexity of articles affect user engagement? Does the structure and layout (e.g., headings, multimedia) influence time spent, back-clicks, or path abandonment? Is cognitive fatigue a factor in users abandoning navigation paths?.</p>
-    <p><span class="image right"><img src="images/pic02.jpg" alt="" /></span>Lorem ipsum dolor Recent studies show that our attention spans are shrinking, and our brains can become fatigued within minutes of focused activity [(1)](https://doi.org/10.1111/psyp.12339). This project aims to investigate user engagement with Wikispeedia **game from a neuroscientific angle**, focusing on how article complexity impacts cognitive load and behaviour. Key questions include How does the complexity of articles affect user engagement? Does the structure and layout (e.g., headings, multimedia) influence time spent, back-clicks, or path abandonment? Is cognitive fatigue a factor in users abandoning navigation paths?.</p>
+<!-- Overlay -->
+
+<div id="overlay_wikispeedia" onclick="off('overlay_wikispeedia')">
+  <div class="overlay-content">
+
+    <h1>Wikispeedia</h1>
+    <p>
+      Wikispeedia is a human-computation game in which users are asked to navigate from a given source to a given target article by only clicking Wikipedia links.
+    </p>
+    <p>
+      The game is playable at the following <a href="https://dlab.epfl.ch/wikispeedia/play/" target="_blank">link</a>, while the dataset, comprising human navigation paths on Wikipedia along with some other metrics, is available <a href="https://snap.stanford.edu/data/wikispeedia.html" target="_blank">here</a>.
+    </p>
+    <p>
+      Lastly, for a detailed analysis of the dataset, please refer to the following <a href="https://github.com/epfl-ada/ada-2024-project-theadacuates/blob/main/src/notebooks/1_EDA.ipynb" target="_blank">notebook</a>.
+    </p>
+
+    Example of gameplay for path form Rome to Paris:
+    <video width="640" height="360" autoplay loop muted>
+      <source src="images/rome_paris.mp4" type="video/mp4">
+      <p>Your browser does not support HTML video. You can <a href="example-video.mp4">download the video here</a>.</p>
+    </video>
 
   </div>
-  </div>
-</section>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <script>

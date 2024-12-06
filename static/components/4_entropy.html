@@ -6,13 +6,13 @@
 <section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
 <div class="content">
     <h2>Dr. Cajal's Counterargument: Entropy</h2>
-    <p>Dr. Cajal grows increasingly frustrated with the weak thesis presented by Pepito and decides to launch a counterattack.</p>
+    <p>Dr. Cajal grows increasingly frustrated with the weak thesis presented by Pepito and decides to launch a <strong>counterattack.</strong></p>
     <p>He is clever, he devises a plan to exploit Pepito’s own argument. He aims to turn 
        <span class="highlight"><strong>entropy</strong></span>, 
        a concept that should ostensibly support Pepito’s ideas, into evidence that will ultimately discredit him.</p>
-    <blockquote class="quote">
+    <!-- <blockquote class="quote">
         "In the world of arguments, the cleverest tactic is to wield your opponent's weapons against them."
-    </blockquote>
+    </blockquote> -->
     <ul class="actions stacked">
     </ul>
 </div>
@@ -30,15 +30,16 @@
             <span class="image left"><img src="images/cajal_face.png" alt="Image of Dr. Cajal" /></span>
             <strong>Dear Pepito,</strong> let’s examine a more complex metric—<strong>the entropy of a path</strong>. 
                 Entropy, you could say, serves <strong>as an index of indecisiveness and uncertainty</strong>. 
-                It helps us understand why some paths are abandoned mid-journey. 
+                It helps us understand why some paths are abandoned mid-journey. <br>
                 <strong>High entropy</strong> suggests that users are navigating across many different articles without a clear direction, likely due to <strong>cognitive overload or confusion</strong>. 
-                In essence, entropy quantifies <strong>decision-making uncertainty</strong> and can act as a proxy for cognitive load, revealing the challenges that players face as they attempt to complete paths. 
-                If this theory holds—if entropy indeed impacts gameplay—then we should observe <strong>higher average entropy per path in unfinished journeys</strong> compared to completed ones.
+                <!-- In essence, entropy quantifies <strong>decision-making uncertainty</strong> and can act as a proxy for cognitive load, revealing the challenges that players face as they attempt to complete paths.  -->
+                If this theory holds—if entropy indeed impacts gameplay—then we should observe <strong>higher average entropy per path in unfinished journeys</strong> compared to completed ones. <br>
                 <strong>I will show you that this is not the case.</strong>
         </p>
 
-        <!-- Content and Button to trigger the overlay -->
-        <button class="button big wide smooth-scroll-middle" onclick="on('overlay_entropy')">Know More About Entropy</button>
+        <div style="margin-bottom: 20px; margin-top: 20px; text-align: center;">
+            <button data-overlay-id="entropy" class="button big wide smooth-scroll-middle">Entropy</button>
+        </div>
     </div>
 
     <div>
@@ -60,7 +61,7 @@
     </div>
 
     <div class="content">
-        <p>
+        <p style="margin-top: 30px; margin-bottom: 80px;">
             <span class="image right"><img src="images/pepito.jpg" alt="Image of Dr. Cajal" /></span>
             Your analysis is correct, but it doesn’t quite make sense to me. 
             Based on your findings, it seems that people are <strong>intentionally seeking out articles with higher entropy</strong>, 
@@ -73,51 +74,68 @@
 </div>
 </section>
 
+
 <!-- Overlay -->
-<div id="overlay_entropy" onclick="off('overlay_entropy')">
-    <div class="overlay-content">
 
-        <h1>Shannon Entropy</h1>
+<div data-overlay-id="entropy" class="overlay hidden">
+    <div class="modal">
+        <div class="modal-content">
+            <div style="overflow-y: scroll; height: 500px;">
 
-        <p>
-            Entropy can be described as the level of uncertainty along a path in the game. It can be easily assumed as a good proxy for indecision or a lack of clear direction. When an article leads to multiple subsequent articles with similar probabilities, its entropy will be high. This means that when a user is on such an article, it might be difficult for them to decide where to go next.
-        </p>
-        
-        <p>
-            Formally, we define entropy for a single article as:
-        </p>
-        
-        <div class="formula">
-            $$ H(X) = -\sum_{i=1}^{n} p(x_i) \log_2 p(x_i) $$
+                <h1>Shannon Entropy</h1>
+
+                <p>
+                    Entropy can be described as the level of uncertainty along a path in the game. It can be easily assumed as a good proxy for indecision or a lack of clear direction. When an article leads to multiple subsequent articles with similar probabilities, its entropy will be high. This means that when a user is on such an article, it might be difficult for them to decide where to go next.
+                </p>
+                
+                <p>
+                    Formally, we define entropy for a single article as:
+                </p>
+                
+                <div class="formula">
+                    $$ H(X) = -\sum_{i=1}^{n} p(x_i) \log_2 p(x_i) $$
+                </div>
+                
+                <p>
+                    Where:
+                    <ul>
+                        <li><strong>H(X)</strong> represents the Shannon entropy of the article X <strong>X</strong>.</li>
+                        <li><strong>p(x<sub>i</sub>)</strong> is the the probability of transitioning to a specific subsequent article</li>
+                        <li><strong>n</strong> is the total number of possible next articles.</li>
+                    </ul>
+                </p>
+                
+                <p>
+                    To calculate entropy, we need probabilities that weigh each possible next article. These probabilities have been derived using data from played games rather than from the static connectivity of the articles.
+                </p>
+                
+                <p>
+                    For example, consider the article "Dante Alighieri." It has a high entropy because many different paths can be taken from it, each with similar probabilities.
+
+                    <img src="images/dante_entropy.png" alt="Image related to Entropy" style="width: 600px;">
+                </p>
+                    
+                <p>
+                    After calculating the entropy for each article, the entropy for the entire path (i.e., the mean of the single entropies of the articles that make up the path) was determined. Pepito’s hypothesis is that paths with higher entropy are more likely to remain unfinished, suggesting that increased randomness and indecision can negatively influence a player’s experience.
+                </p>
+
+            </div>
         </div>
-        
-        <p>
-            Where:
-            <ul>
-                <li><strong>H(X)</strong> represents the Shannon entropy of the article X <strong>X</strong>.</li>
-                <li><strong>p(x<sub>i</sub>)</strong> is the the probability of transitioning to a specific subsequent article</li>
-                <li><strong>n</strong> is the total number of possible next articles.</li>
-            </ul>
-        </p>
-        
-        <p>
-            To calculate entropy, we need probabilities that weigh each possible next article. These probabilities have been derived using data from played games rather than from the static connectivity of the articles.
-        </p>
-        
-        <p>
-            For example, consider the article "Dante Alighieri." It has a high entropy because many different paths can be taken from it, each with similar probabilities.
-        </p>
-        
-        <img src="images/dante_entropy.png" alt="Image related to Entropy">
-        
-        <p>
-            After calculating the entropy for each article, the entropy for the entire path (i.e., the mean of the single entropies of the articles that make up the path) was determined. Pepito’s hypothesis is that paths with higher entropy are more likely to remain unfinished, suggesting that increased randomness and indecision can negatively influence a player’s experience.
-        </p>
-
     </div>
 </div>
 
-<!-- ############################################################## -->
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- JavaScript to control overlay -->
 <script>

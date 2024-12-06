@@ -1,3 +1,86 @@
+<!-- CSS for Modal and Overlay -->
+<style>
+  /* Overlay */
+  .overlay-cc {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  /* Hide the overlay initially */
+  .overlay-cc.hidden {
+    display: none;
+  }
+
+  /* Modal Box */
+  .modal {
+    background: #fff;
+    padding: 20px;
+    max-width: 600px;
+    width: 90%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+
+  /* Close Button */
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+</style>
+<style>
+  /* Overlay */
+  .overlay-dc {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  /* Hide the overlay initially */
+  .overlay-dc.hidden {
+    display: none;
+  }
+
+  /* Modal Box */
+  .modal {
+    background: #fff;
+    padding: 20px;
+    max-width: 600px;
+    width: 90%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+
+  /* Close Button */
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+</style>
 <section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
   <div class="content">
     <h2>Dr. Cajal Clarifies Pepito's Concern: Connectivity analysis</h2>
@@ -43,21 +126,30 @@
           It is based on the <em>average shortest path distance</em> from a given node to all other nodes that can be reached. 
           A node with high closeness centrality reaches other nodes more quickly, which can indicate a high degree of accessibility within the graph.
         </p>
-        <div class="formula">
-          <p>For a node \( u \), the closeness centrality \( C(u) \) is calculated as:</p>
-          <p>
-            $$ C(u) = \frac{N - 1}{\sum_{v \neq u} d(u, v)} $$
-          </p>
+        <div style="margin-bottom: 20px;">
+          <button id="btn-cc" class="button big wide smooth-scroll-middle">About Closeness Centrality</button>
         </div>
-        <p>Where:</p>
-        <ul>
-          <li>\( N \) is the total number of nodes in the graph.</li>
-          <li>\( d(u, v) \) is the shortest path distance between nodes \( u \) and \( v \).</li>
-        </ul>
         <p>
-          In summary, if a node has high closeness centrality, it means that the node is "closer" to other nodes on average. 
+          In summary, if a node has high closeness centrality, it means that the node is "closer" to other nodes on average.
           A lower closeness centrality means the node is, on average, farther from other nodes in the graph in terms of path length.
         </p>
+        <div id="overlay-cc" class="overlay-cc hidden">
+          <div class="modal">
+            <span class="close" id="close-overlay-cc">&times;</span>
+            <div class="modal-content">
+              <h2>Closeness Centrality</h2>
+              <p>For a node \( u \), the closeness centrality \( C(u) \) is calculated as:</p>
+              <p>
+                $$ C(u) = \frac{N - 1}{\sum_{v \neq u} d(u, v)} $$
+              </p>
+              <p>Where:</p>
+              <ul>
+                <li>\( N \) is the total number of nodes in the graph.</li>
+                <li>\( d(u, v) \) is the shortest path distance between nodes \( u \) and \( v \).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
     </div>
     <div>
       <p>
@@ -65,20 +157,31 @@
         Nodes with higher outgoing connections tend to have higher entropy. Outgoing connections influence entropy more than incoming connections, 
         because entropy could be related to a node's ability to link "out" to many other nodes, providing more options.
       </p>
-      <p>
-        Degree centrality is another measure of how well connected a node is. 
-        On a graph <i>G</i>, NetworkX calculates the degree centrality as:
-      </p>
-      <div class="formula">
-        <p>
-          $$ C(u) = \frac{\text{deg}(u)}{N - 1} $$
-        </p>
+      <div style="margin-bottom: 20px;">
+        <button id="btn-dc" class="button big wide smooth-scroll-middle">About Degree Centrality</button>
       </div>
-      <p>Where:</p>
-      <ul>
-        <li>\( \text{deg}(u) \) is the degree (number of edges) of node \( u \).</li>
-        <li>\( N \) is the total number of nodes in the graph.</li>
-      </ul>
+      <div id="overlay-dc" class="overlay-dc hidden">
+        <div class="modal">
+          <span class="close" id="close-overlay-dc">&times;</span>
+          <div class="modal-content">
+            <h2>Degree Centrality</h2>
+            <p>
+              Degree centrality is another measure of how well connected a node is. 
+              On a graph <i>G</i>, NetworkX calculates the degree centrality as:
+            </p>
+            <div class="formula">
+              <p>
+                $$ C(u) = \frac{\text{deg}(u)}{N - 1} $$
+              </p>
+            </div>
+            <p>Where:</p>
+            <ul>
+              <li>\( \text{deg}(u) \) is the degree (number of edges) of node \( u \).</li>
+              <li>\( N \) is the total number of nodes in the graph.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
       <p>
         Nodes with higher entropy also tend to be more "central" overall in terms of connections when considering incoming and outgoing connections.
       </p>
@@ -97,6 +200,52 @@
             helps them quickly move toward their target, rather than wandering aimlessly. <b>It’s proof that their choices are strategic, not chaotic!</b>
           </blockquote>
       </p>
-</div>
+    </div>
   </div>
 </section>
+<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
+  <div class="content">
+  </div>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function () {
+      // Open the overlay when the button is clicked
+      $("#btn-cc").click(function () {
+          $("#overlay-cc").removeClass("hidden");
+      });
+
+      // Close the overlay when the close button is clicked
+      $("#close-overlay-cc").click(function () {
+          $("#overlay-cc").addClass("hidden");
+      });
+
+      // Close the overlay when clicking outside the modal
+      $(window).click(function (event) {
+          if ($(event.target).is("#overlay-cc")) {
+              $("#overlay-cc").addClass("hidden");
+          }
+      });
+  });
+</script>
+<script>
+  $(document).ready(function () {
+      // Open the overlay when the button is clicked
+      $("#btn-dc").click(function () {
+          $("#overlay-dc").removeClass("hidden");
+      });
+
+      // Close the overlay when the close button is clicked
+      $("#close-overlay-dc").click(function () {
+          $("#overlay-dc").addClass("hidden");
+      });
+
+      // Close the overlay when clicking outside the modal
+      $(window).click(function (event) {
+          if ($(event.target).is("#overlay-dc")) {
+              $("#overlay-dc").addClass("hidden");
+          }
+      });
+  });
+</script>

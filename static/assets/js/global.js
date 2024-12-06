@@ -1,10 +1,12 @@
 $(function () {
   $("#part1").load("./components/part1.html");
   $("#intro").load("./components/0_intro.html");
+  $("#pathlength").load("./components/2_time_length.html");
   $("#readability").load("./components/3_readability.html");
   $("#entropy").load("./components/4_entropy.html");
   $("#cognitive_shift").load("./components/6_cognitive_shift.html");
   $("#connectivity").load("./components/5_connectivity.html");
+  $("#position").load("./components/7_position.html");
 
   // $("#part2").load("./components/part2.html");
 });

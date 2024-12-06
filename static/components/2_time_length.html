@@ -1,37 +1,45 @@
 <section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in" id="path-length">
     <div class="content">
-        <h2>Path Length: Analyzing Its Impact on Gameplay</h2>
+        <h2>Pepito's Simple Mental Fatigue Metrics</h2>
         <p>
-            As longer paths mean more articles visited, this could lead to confusion in the player's mind. Perhaps this is a cause of path abandonment?
+            We all know that tasks that are repeated for long periods or become too complex can lead to confusion and, ultimately, cognitive fatigue. This is what I aim to demonstrate: that both the time taken to complete a path and the length of the path itself play a significant role in gameplay.
+        </p>
+        <p>
+            Since paths can either be completed or left unfinished, I base my argument on the assumption that unfinished paths are often a result of difficulty and the increased cognitive load experienced by the player during the process.
+        </p>
+        <p>
+            I will now show that these two factors—time and path length—are important indicators of cognitive strain in gameplay.
+        </p>
+        <span style="color: orange;"><strong>Pepito:</strong></span>
+        <p>
+            See, the mean duration of unfinished paths (orange line) is much higher compared to finished paths. This means time spent is a reliable predictor of the cognitive load on the person, and thus, the rate of abandonment.
+        </p>
+        <img src="images/durationbyfinished.png" alt="Mean duration of paths" style="width: 800px; height: auto; display: block; margin: 20px auto;">
+        <span style="color: red;"><strong>Dr. Cajal:</strong></span>
+        <p>
+            Pepito, please!!! Don’t you see what a strange distribution you have? What about the tail for unfinished paths? Here, have a look. If I now take only unfinished paths and color them by the type of unfinished path, i.e., "abandonment" or "timeout," I can clearly see a distinct split. 
+        </p>
+        <img src="images/durationbyunfinished.png" alt="Distribution of unfinished path types" style="width: 800px; height: auto; display: block; margin: 20px auto;">
+        <p>
+            The increased mean duration in these cases is largely due to session timeouts. In these instances, players were not necessarily experiencing difficulty; rather, they abandoned the session, allowing time to accumulate passively. As a result, the prolonged durations in unfinished paths reflect a lapse in activity rather than active engagement or cognitive load. Thus, any assumptions about cognitive load based on these time differences would be unreliable.
+        </p>
+        <span style="color: orange;"><strong>Pepito:</strong></span>
+        <p>
+            As longer paths mean more articles visited, this could lead to confusion in the player's mind. Perhaps is this a cause of path abandonment?
         </p>
         <span style="color: red;"><strong>Dr. Cajal:</strong></span>
         <p>
             As you talked about path duration, let me now talk about path length. If path length, as you suppose, could influence the gameplay (i.e., longer paths are correlated to unfinished paths), I should observe that unfinished paths have a higher number of articles visited.
         </p>
-        <img src="images/pathlength.png" alt="Distribution of Path Lengths for Finished and Unfinished Paths" style="width: 800px; height: auto; display: block; margin: 20px auto;">
+        <img src="images/pathlength.png" alt="Distribution of path lengths" style="width: 800px; height: auto; display: block; margin: 20px auto;">
         <p>
             Mann-Whitney U test results for Finished vs. Unfinished Path Lengths:
             <strong>U = 772366749.0, p-value = 0.0</strong>.
         </p>
-        <span style="color: red;"><strong>Dr. Cajal:</strong></span>
         <p>
             As you can see, and as further validated by the <strong>Mann-Whitney U Test</strong>, your thesis is completely contradicted. <strong>Unfinished paths actually have shorter lengths.</strong>
         </p>
-        <p>
-            Dr. Cajal decided to use the Mann-Whitney U Test because the normality assumption is not met. It is a non-parametric test used to compare the distributions of two independent groups. Instead of comparing means, the test compares the ranks of values across both groups. The test statistic calculated is:
-        </p>
-        <p>
-            \( U = R_1 - \frac{n_1(n_1 + 1)}{2} \)
-        </p>
-        <p>
-            Where:
-            <ul>
-                <li>\( U \) is the Mann-Whitney U statistic.</li>
-                <li>\( R_1 \) is the sum of the ranks for group 1.</li>
-                <li>\( n_1 \) is the number of observations in group 1.</li>
-            </ul>
-        </p>
-        <span style="color: blue;"><strong>Pepito:</strong></span>
+        <span style="color: orange;"><strong>Pepito:</strong></span>
         <p>
             Mr. Cajal, I think your analysis is not entirely correct. Indeed, it may be that, by chance, finished paths have a source and target link that, by the architecture of the network, are far from each other. As a result, the path is elongated due to this structural factor.
         </p>

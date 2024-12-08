@@ -3,8 +3,7 @@
     <div class="content">
         <h2>Pepito's new hope: Cognitive Shift</h2>
         <p>Despite being taken aback by the strong evidence presented by the Professor, Pepito will not be deterred so easily. 
-            He comes back home and continues to find new proofs for his theory. 
-            Let's observe him while he's sitting at his desk creating the presentation for tommorrow morning.
+            He decides to try a new metric, <strong>cognitive shift</strong>.
         </p>
         <ul class="actions stacked">
         </ul>
@@ -18,53 +17,46 @@
     <div class="inner">
         <div class="content">
             <p>
-                <span class="image left"><img src="images/pepito.jpg"/></span>
+                <span class="image left"><img src="images/pepito.jpg" style="width: 100px; height: auto"/></span>
                 When alternative, task-unrelated stimuli are presented to a human, mental fatigue and attention are negatively impacted <a href="https://pubmed.ncbi.nlm.nih.gov/26752733/" target="_blank">(Ref)</a>. 
-                I believe that moving from one category of knowledge to another (e.g., from science-related articles to arts-related articles) requires cognitive shifting, which can negatively impact gameplay. 
-                First, I will demonstrate my claims using a broad-level shift, the <strong>category shift</strong> per article. 
-                Then, I will show a more complex shift, the <strong>semantic shift</strong>, based on article semantic similarity.
+                I believe that moving from one category of knowledge to another (e.g., from science-related articles to arts-related articles) requires cognitive shifting, which can negatively impact gameplay.
+                I will look at the category changes along a path. For example if the player is on an article which is classified "Science" and goes to an article which is classified "History", this represents a category change.
+                For each path I will quantify how many shifts there are and use it as a metric.
+                I will only select paths of length more than 3, as shorter paths do not have enough shifts for the mental fatigue to be of any significance.
             </p>
         </div>
     
         <img src="images/category_change_count.png" style="width: 800px; height: auto; display: block; margin: 20px auto;">
     
         <p>
-            Ohhh, <i>diablos</i>, the category shift per link <strong>is higher in finished paths</strong>, which challenges my initial assumption that a higher shift would correlate with increased cognitive load and greater difficulty. 
-            Dr. Cajal MUST never find out, let's move to a more complex metric, maybe I will find something more interesting.
+            <i>Maravilloso!</i>, the category shift per link <strong>is higher in unfinished paths</strong> which shows that a higher shift correlates with increased cognitive load and thus greater difficulty.
         </p>
+
+        <div class="content">
+            <p>
+                <span class="image left"><img src="images/cajal_face.png" style="width: 100px; height: auto"/></span>
+                Indeed that seems to be the case. 
+                However are you sure that changes in category is the best metric for cognitive shift? 
+                Articles who have the same category could be completely unrelated, take for example Alexander the Great and Einstein. 
+                These two articles have category "People" but have very little connection. 
+                Now take Einstein and Physics, these articles have category "People" and "Physics" respectively, but are very closer related.
+            </p>
+        </div>
         
         <br>
 
-        <p>
-            Another good metric that I can try is <strong>semantic shift</strong>, i.e. one minus the semantic similarity between two successive articles.
-            Large semantic shifts between articles can represent a higher cognitive load for the player, having to completely change topics from one article to the other. 
-            I can investigate if this can have an impact on whether the path is finished or not.
-        </p>
+        <div class="content">
+            <p>
+                <span class="image left"><img src="images/pepito.jpg" style="width: 100px; height: auto"/></span>
+                Another good metric that I can try is semantic shift, i.e. one minus the semantic similarity between two successive articles.
+                Large semantic shifts between articles can represent a higher cognitive load for the player, having to completely change topics from one article to the other. 
+                I can investigate if this has an impact on whether the path is finished or not.
+            </p>
+        </div>
 
-        <br>
-
-        <p>
-            Before proceeding with Pepito's findings, let's start with a brief explanation and example of what semantic similarity is.
-        </p>
-
-        <p>
-            <strong>Semantic similarity</strong> refers to the degree to which two concepts, words, or phrases are related in meaning, even if they are not identical. 
-            In essence, it allows us to evaluate how closely words or sentences are associated based on their meanings rather than exact matches.
-        </p>
-
-        <p>
-            To quantify this value, Pepito is going to use <strong>SentenceTransformer</strong> a model that specializes in measuring semantic similarity by transforming sentences or words into high-dimensional vectors, which then allows for easy comparison of their meanings.
-        </p>
-
-        <img src="images/semantic_similarity_example.png">
-
-        <p>
-            To ensure he understands how this metric works, Pepito is testing the model on a subset of words. 
-            The results are generally intuitive: for example, "William Shakespeare" is semantically close to terms like "playwright" and "Romeo and Juliet" but has no relationship to "data analysis." 
-            However, the model isn't perfect; it struggles with more nuanced relationships, such as between "Romeo and Juliet" and "love," which one might expect to be closely related but are not always picked up as such by the model.
-        </p>
-
-        <br>
+        <div style="margin-bottom: 20px; margin-top: 20px; text-align: center;">
+            <button data-overlay-id="semantic-similarity" class="button big wide smooth-scroll-middle">About Semantic Similarity</button>
+        </div>
 
         <p>
             Firstly, I will show how the semantic shift evolves over the game, specifically by examining the number of articles visited from the beginning.
@@ -78,33 +70,55 @@
             This pattern supports my thesis that higher cognitive shifts are indeed associated with a greater likelihood of path abandonment.
         </p>
 
-        <img src="images/semantic_shift_hist.png" style="width: 500px; height: auto; display: block; margin: 20px auto;">
+        <img src="images/semantic_shift_hist.png" style="width: 800px; height: auto; display: block; margin: 20px auto;">
 
         <p>
             We can observe that the <strong>semantic shift along finished paths is smaller than for unfinished paths</strong> indicating that finished paths tend to follow more closely related articles than unfinished ones. 
-            This supports the idea that jumping between articles with high differences in similarity can lead to unfinished paths, thus supporting my thesis. 
-            <strong>Although statistically significant, the shift is unfortunately minor to the extent</strong> that it may not represent a practical or relevant change to strongly support my thesis.
+            This supports the idea that jumping between articles with high differences in similarity can lead to unfinished paths, thus supporting my thesis.
         </p>
 
-        <p>
-            After a long evening of research and analysis, <strong>Pepito has found nothing</strong>—his idea of cognitive shift has shipwrecked badly. 
-            He's nervous about confronting the teacher tomorrow. 
-            He goes to bed, shaking at the thought of what awaits him. But then, all of a sudden, he realizes a brilliant new potential investigation: <strong>structural elements in the webpage HTML</strong>.
-        </p>
+        <div class="content">
+            <p>
+                <span class="image left"><img src="images/cajal_face.png" style="width: 100px; height: auto"/></span>
+                <strong>Although statistically significant, the shift is unfortunately minor</strong>, to the extent that it may not represent a practical or relevant change to strongly support your point. 
+                Have you also considered the fact that this slight difference in semantic shift is probably due to the <strong>nature of finished paths</strong>, the last few articles being semantically close as the player is refining his search towards the target.
+            </p>
+        </div>
     
     </div>
 </section>
 
 
-<!-- JavaScript to control overlay -->
-<script>
-    // Function to show the overlay with text
-    function on(id) {
-      document.getElementById(id).style.display = "flex"; // Show overlay
-    }
-    
-    // Function to hide the overlay when clicked
-    function off(id) {
-      document.getElementById(id).style.display = "none"; // Hide overlay
-    }
-</script>
+<!-- Overlay -->
+
+<div data-overlay-id="semantic-similarity" class="overlay hidden">
+    <div class="modal">
+        <div class="modal-content">
+            <div style="overflow-y: scroll; height: 500px;">
+                
+                <h1> Semantic Similarity </h1>
+
+                <p>
+                    Before proceeding with Pepito's findings, let's start with a brief explanation and example of what semantic similarity is.
+                </p>
+        
+                <p>
+                    <strong>Semantic similarity</strong> refers to the degree to which two concepts, words, or phrases are related in meaning, even if they are not identical. 
+                    In essence, it allows us to evaluate how closely words or sentences are associated based on their meanings rather than exact matches.
+                </p>
+        
+                <p>
+                    To quantify this value, Pepito is going to use <strong>SentenceTransformer</strong> a model that specializes in measuring semantic similarity by transforming sentences or words into high-dimensional vectors, which then allows for easy comparison of their meanings.
+                </p>
+        
+                <img src="images/semantic_similarity_example.png" style="width: 500px; height: auto">
+        
+                <p>
+                    To ensure he understands how this metric works, Pepito is testing the model on a subset of words. 
+                    The results are generally intuitive: for example, "William Shakespeare" is semantically close to terms like "playwright" and "Romeo and Juliet" but has no relationship to "data analysis." 
+                    However, the model isn't perfect; it struggles with more nuanced relationships, such as between "Romeo and Juliet" and "love," which one might expect to be closely related but are not always picked up as such by the model.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

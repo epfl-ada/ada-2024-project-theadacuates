@@ -17,92 +17,77 @@
 <section class="wrapper style1 align-center">
     <div class="inner">
         <h3><b>Structural elements catch human Attention</b></h3>
-        <div class="row">
-            <div class="content box">
+
+        <div class="row content box">
+            <p>
                 <span class="image left"><img src="images/pepito.jpg" /></span>
-                <p>
-                    It’s well-established that human attention is drawn to colors and images. I believe that during
-                    the
-                    game, players are biased toward clicking links near images or other elements besides plain text.
-                    As
-                    a
-                    result, they may end up selecting links that don’t necessarily move them closer to their goal,
-                    but
-                    instead are simply more visually engaging, leading them off course.
-                </p>
-            </div>
+                It’s well-established that human attention is drawn to colors and images. I believe that during
+                the game, players are biased toward clicking links near images or other elements besides plain text.
+                As a result, they may end up selecting links that don’t necessarily move them closer to their goal,
+                but instead are simply more visually engaging, leading them off course.
+            </p>
         </div>
 
-        <div class="content row">
-            <p>Before proceeding, we present images illustrating the various HTML elements that may appear on a
-                Wikipedia page. These elements play distinct roles in structuring content and can potentially influence
-                player navigation choices:</p>
-        </div>
-        <!-- TODO: Links not found -->
-        <div style="align-items: center; float: left;">
-            <img src="images/description_elements.png" alt="structure elements"
-                style="width: 45%; height: auto; margin: 5px;" />
-            <img src="images/description_footer.png" alt="footer" style="width: 45%; height: auto; margin: 5px;" />
+
+        <div style="margin-bottom: 20px; margin-top: 20px; text-align: center;">
+            <button data-overlay-id="structural-elements" class="button big wide smooth-scroll-middle">About Structural
+                Elements</button>
         </div>
 
-        <div class="content-align-center" style="text-align: left;">
-            <ul>
-                <li><b>Heading</b>: Titles and subtitles that organize sections.</li>
-                <li><b>Paragraph</b>: Main blocks of text containing information.</li>
-                <li><b>Table</b>: Structured data or summaries, often used for comparative or statistical information.
-                </li>
-                <li><b>List</b>: Bulleted or numbered items, grouping related points or examples.</li>
-                <li><b>Infobox</b>: Highlighted summary boxes, typically on the side, summarizing key information about
-                    the topic.</li>
-                <li><b>Footer</b>: Content at the bottom, often with references or links to related articles.</li>
-                <li><b>Undefined</b>: Elements that don’t fit into the standard categories listed above.</li>
-            </ul>
-        </div>
 
         <img src="images/position_distribution_of_target_links.png" alt="distribution of target links"
             style="width: 500px; height: auto; display: block; margin: 20px auto;" />
 
 
-        <div class="content">
+        <div class="row content box">
             <p>
                 <span class="image left"><img src="images/pepito.jpg" alt="Image of Pepito" /></span>
                 As shown, <b>after normalizing</b> the count of links clicked within each HTML category, it becomes
-                clear that players are biased toward the infobox (which almost always includes an image). This strongly
+                clear that players are biased toward the infobox (which almost always includes an image). This
+                strongly
                 supports my argument that visually prominent elements attract more player attention and clicks.
             </p>
         </div>
 
+        <!-- <div class="content">
+            <p>We performed two-sample Kolmogorov-Smirnov tests for goodness of fit</p>
+        </div> -->
 
-        <div class="content">
-            <p>
-                <span class="image right"><img src="images/cajal_face.png" alt="Image of Dr. Cajal"></span>
-                Yes, people are clicking more frequently on infoboxes, even after accounting for the frequency of each
-                element. However, your claim is incorrect. When we compare the frequencies of finished and unfinished
-                paths, we observe that there is no statistically significant difference between the two groups (as
-                confirmed by a *two-sample Kolmogorov-Smirnov test for goodness of fit*). This means that, whether on
-                finished or unfinished paths, players tend to click more on infoboxes. Therefore, even if I am clicking
-                on an infobox, <b>I have the same likelihood of completing my path</b>.
-            </p>
-        </div>
 
+        <!-- https://en.wikipedia.org/wiki/Kolmogorov%E2%80%93Smirnov_test -->
         <img src="images/parent_categories_distribution.png" alt="distribution of parent categories"
             style="width: 600px; height: auto; display: block; margin: 20px auto;" />
 
         <div style="text-align: left;">
             <ul>
-                <li><b>Null Hypothesis</b>: People's choices regarding the structure where target links are located have
+                <!-- <li><b>Null Hypothesis</b>: People's choices regarding the structure where target links are located have
                     no impact on whether they can successfully complete the game.</li>
                 <li><b>Alternative Hypothesis</b>: People's choice of the structure containing the target link can
                     influence their success in completing the game.</li>
-                <li><b>P-value</b> is greater than 0.05</li>
+                <li><b>P-value</b> is greater than 0.05</li> -->
                 <li><b>Conclusion</b>: People's choices regarding the structure where target links are located have no
                     impact on whether they can successfully complete the game.</li>
             </ul>
         </div>
+        <div style="margin-bottom: 20px; margin-top: 20px; text-align: center;">
+            <button data-overlay-id="ks" class="button big wide smooth-scroll-middle">About KS-Test</button>
+        </div>
+        <div class="row content box">
+            <p>
+                <span class="image right"><img src="images/cajal_face.png" alt="Image of Dr. Cajal"></span>
+                Yes, people are clicking more frequently on infoboxes, even after accounting for the frequency of each
+                element. However, your claim is incorrect. When we compare the frequencies of finished and unfinished
+                paths, we observe that there is no statistically significant difference between the two groups (as
+                confirmed by a <strong>two-sample KS-Test (Kolmogorov-Smirnov Test)</strong> for goodness of fit). This
+                means that, whether on
+                finished or unfinished paths, players tend to click more on infoboxes. Therefore, even if I am clicking
+                on an infobox, <b>I have the same likelihood of completing my path</b>.
+            </p>
+        </div>
 
         <h3><b>Link Position & Human Laziness</b></h3>
 
-        <div class="content">
+        <div class="row content box">
             <p>
                 <span class="image left"><img src="images/pepito.jpg" alt="Image of Pepito" /></span>
                 Humans are inherently lazy and have evolved to minimize the energy spent on tasks. I believe this
@@ -132,16 +117,16 @@
 
         <div style="text-align: left;">
             <ul>
-                <li><b>Null Hypothesis</b>: The distributions of cumulative number of navigation links and positions are
+                <!-- <li><b>Null Hypothesis</b>: The distributions of cumulative number of navigation links and positions are
                     the same.</li>
                 <li><b>Alternative Hypothesis</b>: The distributions of cumulative number of navigation links and
                     positions are not the same.</li>
-                <li><b>P-value</b> is less than 0.05</li>
+                <li><b>P-value</b> is less than 0.05</li> -->
                 <li><b>Conclusion</b>: The distributions are significantly different.</li>
             </ul>
         </div>
 
-        <div class="content">
+        <div class="row content box">
             <p>
                 <span class="image left"><img src="images/pepito.jpg" alt="Image of Pepito" /></span>
                 As confirmed by the statistical test, the distribution of clicked links differs from the overall
@@ -156,17 +141,17 @@
 
         <div style="text-align: left;">
             <ul>
-                <li><b>Null Hypothesis</b>: Players who successfully completed the game and those who did not show the
+                <!-- <li><b>Null Hypothesis</b>: Players who successfully completed the game and those who did not show the
                     same preference in the order of link selection.</li>
                 <li><b>Alternative Hypothesis</b>: Players who successfully completed the game and those who did not
                     show different preferences in the order of link selection.</li>
-                <li><b>P-value</b> is less than 0.05</li>
+                <li><b>P-value</b> is less than 0.05</li> -->
                 <li><b>Conclusion</b>: Players who successfully completed the game and those who did not show different
                     preferences in the order of link selection.</li>
             </ul>
         </div>
 
-        <div class="content">
+        <div class="row content box">
             <p>
                 <span class="image left"><img src="images/pepito.jpg" alt="Image of Pepito" /></span>
                 As confirmed by the statistical test, the distribution of clicked links differs from the overall
@@ -174,7 +159,7 @@
                 earlier in the article.
             </p>
         </div>
-        <div class="content">
+        <div class="row content box">
             <p>
                 <span class="image right"><img src="images/cajal_face.png" alt="Image of Dr. Cajal"></span>
                 <img src="../data/assets/pik_speachless.jpeg" alt="Dr. Santiago Ramón y Cajal" width="200" />
@@ -183,3 +168,282 @@
     </div>
 
 </section>
+
+<div data-overlay-id="structural-elements" class="overlay hidden">
+    <div class="modal">
+        <div class="modal-content">
+            <div class="content row">
+                <p>Before proceeding, we present images illustrating the various HTML elements that may appear on a
+                    Wikipedia page. These elements play distinct roles in structuring content and can potentially
+                    influence
+                    player navigation choices:</p>
+            </div>
+            <!-- TODO: Links not found -->
+            <div style="align-items: center; float: left;">
+                <img src="images/description_elements.png" alt="structure elements"
+                    style="width: 40%; height: auto; margin: 5px;" />
+                <img src="images/description_footer.png" alt="footer" style="width: 40%; height: auto; margin: 5px;" />
+            </div>
+
+            <div class="content-align-center" style="text-align: left;">
+                <ul>
+                    <li><b>Heading</b>: Titles and subtitles that organize sections.</li>
+                    <li><b>Paragraph</b>: Main blocks of text containing information.</li>
+                    <li><b>Table</b>: Structured data or summaries, often used for comparative or statistical
+                        information.
+                    </li>
+                    <li><b>List</b>: Bulleted or numbered items, grouping related points or examples.</li>
+                    <li><b>Infobox</b>: Highlighted summary boxes, typically on the side, summarizing key information
+                        about
+                        the topic.</li>
+                    <li><b>Footer</b>: Content at the bottom, often with references or links to related articles.</li>
+                    <li><b>Undefined</b>: Elements that don’t fit into the standard categories listed above.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div data-overlay-id="ks" class="overlay hidden">
+    <div class="modal">
+        <div class="modal-content">
+            <div class="content row" style="overflow-y: scroll; height: 600px;">
+                <!-- <p><em>Details from Wikipedia <a href="https://en.wikipedia.org/wiki/Kolmogorov%E2%80%93Smirnov_test">Kolmogorov–Smirnov Test</a></em></p> -->
+                <p>The Kolmogorov distribution is the distribution of the <a href="/wiki/Random_variable" title="Random variable">random variable</a>
+                </p>
+                <dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" alttext="{\displaystyle K=\sup _{t\in [0,1]}|B(t)|}">
+                    <semantics>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <mstyle displaystyle="true" scriptlevel="0">
+                          <mi>K</mi>
+                          <mo>=</mo>
+                          <munder>
+                            <mo movablelimits="true" form="prefix">sup</mo>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mi>t</mi>
+                              <mo>∈<!-- ∈ --></mo>
+                              <mo stretchy="false">[</mo>
+                              <mn>0</mn>
+                              <mo>,</mo>
+                              <mn>1</mn>
+                              <mo stretchy="false">]</mo>
+                            </mrow>
+                          </munder>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mo stretchy="false">|</mo>
+                          </mrow>
+                          <mi>B</mi>
+                          <mo stretchy="false">(</mo>
+                          <mi>t</mi>
+                          <mo stretchy="false">)</mo>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mo stretchy="false">|</mo>
+                          </mrow>
+                        </mstyle>
+                      </mrow>
+                      <annotation encoding="application/x-tex">{\displaystyle K=\sup _{t\in [0,1]}|B(t)|}</annotation>
+                    </semantics>
+                  </math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/1ab27545201bcf6b446b42c5ee0da6d2dbdb1b44" class="mwe-math-fallback-image-inline mw-invert skin-invert" aria-hidden="true" style="vertical-align: -3.005ex; width:15.964ex; height:5.009ex;" alt="{\displaystyle K=\sup _{t\in [0,1]}|B(t)|}"></span></dd></dl>
+                <p>where <i>B</i>(<i>t</i>) is the <a href="/wiki/Brownian_bridge" title="Brownian bridge">Brownian
+                        bridge</a>. The <a href="/wiki/Cumulative_distribution_function"
+                        title="Cumulative distribution function">cumulative distribution function</a> of <i>K</i> is
+                    given by<sup id="cite_ref-3" class="reference"><a href="#cite_note-3"><span
+                                class="cite-bracket">[</span>3<span class="cite-bracket">]</span></a></sup>
+                </p>
+                <dl>
+                    <dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y"
+                                style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"
+                                    alttext="{\displaystyle \operatorname {Pr} (K\leq x)=1-2\sum _{k=1}^{\infty }(-1)^{k-1}e^{-2k^{2}x^{2}}={\frac {\sqrt {2\pi }}{x}}\sum _{k=1}^{\infty }e^{-(2k-1)^{2}\pi ^{2}/(8x^{2})},}">
+                                    <semantics>
+                                        <mrow class="MJX-TeXAtom-ORD">
+                                            <mstyle displaystyle="true" scriptlevel="0">
+                                                <mi>Pr</mi>
+                                                <mo>⁡<!-- ⁡ --></mo>
+                                                <mo stretchy="false">(</mo>
+                                                <mi>K</mi>
+                                                <mo>≤<!-- ≤ --></mo>
+                                                <mi>x</mi>
+                                                <mo stretchy="false">)</mo>
+                                                <mo>=</mo>
+                                                <mn>1</mn>
+                                                <mo>−<!-- − --></mo>
+                                                <mn>2</mn>
+                                                <munderover>
+                                                    <mo>∑<!-- ∑ --></mo>
+                                                    <mrow class="MJX-TeXAtom-ORD">
+                                                        <mi>k</mi>
+                                                        <mo>=</mo>
+                                                        <mn>1</mn>
+                                                    </mrow>
+                                                    <mrow class="MJX-TeXAtom-ORD">
+                                                        <mi mathvariant="normal">∞<!-- ∞ --></mi>
+                                                    </mrow>
+                                                </munderover>
+                                                <mo stretchy="false">(</mo>
+                                                <mo>−<!-- − --></mo>
+                                                <mn>1</mn>
+                                                <msup>
+                                                    <mo stretchy="false">)</mo>
+                                                    <mrow class="MJX-TeXAtom-ORD">
+                                                        <mi>k</mi>
+                                                        <mo>−<!-- − --></mo>
+                                                        <mn>1</mn>
+                                                    </mrow>
+                                                </msup>
+                                                <msup>
+                                                    <mi>e</mi>
+                                                    <mrow class="MJX-TeXAtom-ORD">
+                                                        <mo>−<!-- − --></mo>
+                                                        <mn>2</mn>
+                                                        <msup>
+                                                            <mi>k</mi>
+                                                            <mrow class="MJX-TeXAtom-ORD">
+                                                                <mn>2</mn>
+                                                            </mrow>
+                                                        </msup>
+                                                        <msup>
+                                                            <mi>x</mi>
+                                                            <mrow class="MJX-TeXAtom-ORD">
+                                                                <mn>2</mn>
+                                                            </mrow>
+                                                        </msup>
+                                                    </mrow>
+                                                </msup>
+                                                <mo>=</mo>
+                                                <mrow class="MJX-TeXAtom-ORD">
+                                                    <mfrac>
+                                                        <msqrt>
+                                                            <mn>2</mn>
+                                                            <mi>π<!-- π --></mi>
+                                                        </msqrt>
+                                                        <mi>x</mi>
+                                                    </mfrac>
+                                                </mrow>
+                                                <munderover>
+                                                    <mo>∑<!-- ∑ --></mo>
+                                                    <mrow class="MJX-TeXAtom-ORD">
+                                                        <mi>k</mi>
+                                                        <mo>=</mo>
+                                                        <mn>1</mn>
+                                                    </mrow>
+                                                    <mrow class="MJX-TeXAtom-ORD">
+                                                        <mi mathvariant="normal">∞<!-- ∞ --></mi>
+                                                    </mrow>
+                                                </munderover>
+                                                <msup>
+                                                    <mi>e</mi>
+                                                    <mrow class="MJX-TeXAtom-ORD">
+                                                        <mo>−<!-- − --></mo>
+                                                        <mo stretchy="false">(</mo>
+                                                        <mn>2</mn>
+                                                        <mi>k</mi>
+                                                        <mo>−<!-- − --></mo>
+                                                        <mn>1</mn>
+                                                        <msup>
+                                                            <mo stretchy="false">)</mo>
+                                                            <mrow class="MJX-TeXAtom-ORD">
+                                                                <mn>2</mn>
+                                                            </mrow>
+                                                        </msup>
+                                                        <msup>
+                                                            <mi>π<!-- π --></mi>
+                                                            <mrow class="MJX-TeXAtom-ORD">
+                                                                <mn>2</mn>
+                                                            </mrow>
+                                                        </msup>
+                                                        <mrow class="MJX-TeXAtom-ORD">
+                                                            <mo>/</mo>
+                                                        </mrow>
+                                                        <mo stretchy="false">(</mo>
+                                                        <mn>8</mn>
+                                                        <msup>
+                                                            <mi>x</mi>
+                                                            <mrow class="MJX-TeXAtom-ORD">
+                                                                <mn>2</mn>
+                                                            </mrow>
+                                                        </msup>
+                                                        <mo stretchy="false">)</mo>
+                                                    </mrow>
+                                                </msup>
+                                                <mo>,</mo>
+                                            </mstyle>
+                                        </mrow>
+                                        <annotation encoding="application/x-tex">{\displaystyle \operatorname {Pr}
+                                            (K\leq x)=1-2\sum _{k=1}^{\infty }(-1)^{k-1}e^{-2k^{2}x^{2}}={\frac {\sqrt
+                                            {2\pi }}{x}}\sum _{k=1}^{\infty }e^{-(2k-1)^{2}\pi ^{2}/(8x^{2})},}
+                                        </annotation>
+                                    </semantics>
+                                </math></span><img
+                                src="https://wikimedia.org/api/rest_v1/media/math/render/svg/903eca5479093bd44fdace8ae185f00ba2f28f81"
+                                class="mwe-math-fallback-image-inline mw-invert skin-invert" aria-hidden="true"
+                                style="vertical-align: -3.005ex; width:65.744ex; height:7.009ex;"
+                                alt="{\displaystyle \operatorname {Pr} (K\leq x)=1-2\sum _{k=1}^{\infty }(-1)^{k-1}e^{-2k^{2}x^{2}}={\frac {\sqrt {2\pi }}{x}}\sum _{k=1}^{\infty }e^{-(2k-1)^{2}\pi ^{2}/(8x^{2})},}"></span>
+                    </dd>
+                </dl>
+
+                <p>which can also be expressed by the <a href="/wiki/Jacobi_theta_function" class="mw-redirect"
+                        title="Jacobi theta function">Jacobi theta function</a> <span class="mwe-math-element"><span
+                            class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math
+                                xmlns="http://www.w3.org/1998/Math/MathML"
+                                alttext="{\displaystyle \vartheta _{01}(z=0;\tau =2ix^{2}/\pi )}">
+                                <semantics>
+                                    <mrow class="MJX-TeXAtom-ORD">
+                                        <mstyle displaystyle="true" scriptlevel="0">
+                                            <msub>
+                                                <mi>ϑ<!-- ϑ --></mi>
+                                                <mrow class="MJX-TeXAtom-ORD">
+                                                    <mn>01</mn>
+                                                </mrow>
+                                            </msub>
+                                            <mo stretchy="false">(</mo>
+                                            <mi>z</mi>
+                                            <mo>=</mo>
+                                            <mn>0</mn>
+                                            <mo>;</mo>
+                                            <mi>τ<!-- τ --></mi>
+                                            <mo>=</mo>
+                                            <mn>2</mn>
+                                            <mi>i</mi>
+                                            <msup>
+                                                <mi>x</mi>
+                                                <mrow class="MJX-TeXAtom-ORD">
+                                                    <mn>2</mn>
+                                                </mrow>
+                                            </msup>
+                                            <mrow class="MJX-TeXAtom-ORD">
+                                                <mo>/</mo>
+                                            </mrow>
+                                            <mi>π<!-- π --></mi>
+                                            <mo stretchy="false">)</mo>
+                                        </mstyle>
+                                    </mrow>
+                                    <annotation encoding="application/x-tex">{\displaystyle \vartheta _{01}(z=0;\tau
+                                        =2ix^{2}/\pi )}</annotation>
+                                </semantics>
+                            </math></span><img
+                            src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b3237d8f3111f761fd36476284087e6d9d59e10e"
+                            class="mwe-math-fallback-image-inline mw-invert skin-invert" aria-hidden="true"
+                            style="vertical-align: -0.838ex; width:22.586ex; height:3.176ex;"
+                            alt="{\displaystyle \vartheta _{01}(z=0;\tau =2ix^{2}/\pi )}"></span>. Both the form of the
+                    Kolmogorov–Smirnov test statistic and its asymptotic distribution under the null hypothesis were
+                    published by <a href="/wiki/Andrey_Kolmogorov" title="Andrey Kolmogorov">Andrey Kolmogorov</a>,<sup
+                        id="cite_ref-AK_4-0" class="reference"><a href="#cite_note-AK-4"><span
+                                class="cite-bracket">[</span>4<span class="cite-bracket">]</span></a></sup> while a
+                    table of the distribution was published by <a href="/wiki/Nikolai_Smirnov_(mathematician)"
+                        title="Nikolai Smirnov (mathematician)">Nikolai Smirnov</a>.<sup id="cite_ref-5"
+                        class="reference"><a href="#cite_note-5"><span class="cite-bracket">[</span>5<span
+                                class="cite-bracket">]</span></a></sup> Recurrence relations for the distribution of the
+                    test statistic in finite samples are available.<sup id="cite_ref-AK_4-1" class="reference"><a
+                            href="#cite_note-AK-4"><span class="cite-bracket">[</span>4<span
+                                class="cite-bracket">]</span></a></sup>
+                </p>
+                <p>Kolmogorov-Smirnov Test compares the underlying continuous distributions F(x) and G(x) of two
+                    independent samples.</p>
+                <p>The null hypothesis is that the two distributions are identical, F(x)=G(x) for all x; the alternative
+                    is that they are not identical. The statistic is the maximum absolute difference between the
+                    empirical distribution functions of the samples.</p>
+            </div>
+        </div>
+    </div>
+</div>

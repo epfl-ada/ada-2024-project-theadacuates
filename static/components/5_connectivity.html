@@ -1,69 +1,63 @@
-<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in"
-  id="first">
+<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in" id="first">
   <div class="content">
     <h2>Dr. Cajal Clarifies Pepito's Concern: Connectivity analysis</h2>
+    <p>
+      Pepito's response leaves Dr.Cajal pensive but not defeated. The idea of players 
+      intentionally seeking chaotic, high-entropy paths is intriguing... something doesn’t fit right.
+      Shaking his head, he turns the conversation to a new angle: connectivity!
+    </p>
   </div>
+  <div class="image">
+    <img src="images/spotlight01.jpg" alt="Image related to entropy">
+</div>
 </section>
-<section class="wrapper style1 content-align-left">
+</section>
+<section class="wrapper style1 align-center">
   <div class="inner">
     <div class="content">
       <p>
         <span class="image left"><img src="images/cajal_face.png" alt="Image of Dr. Cajal" /></span>
-      <blockquote>
-        I think players aren’t navigating randomly or chaotically but are actually following a clever gaming strategy.
-        I’ll show you that, in reality, they’re actively seeking high-connectivity hubs to efficiently reach their
-        target article.
-        This isn’t aimless clicking—it’s strategic thinking, Pepito!
-      </blockquote>
-
+      I think players aren’t navigating randomly or chaotically but are actually following a clever gaming strategy.
+      I’ll show you that, in reality, they’re actively seeking high-connectivity hubs to efficiently reach their
+      target article.
+      This isn’t aimless clicking—it’s strategic thinking, Pepito!
       </p>
     </div>
-    <img src="images/correlationmatrixentorpy.png" alt="Correlation Matrix Entropy"
-      style="width: 800px; height: auto; display: block; margin: 20px auto;">
-    <img src="images/corrEntropy.png" alt="Correlation Matrix Entropy"
-      style="width: 800px; height: auto; display: block; margin: 20px auto;">
-
-    <div>
-      <p>
-        <span class="image left"><img src="images/cajal_face.png" alt="Image of Dr. Cajal" /></span>
-      <blockquote>
-        As you can see, entropy is positively correlated with all connectivity indices, indicating that, in this case,
-        entropy should not be interpreted as a proxy for indecision.
-        Instead, it works as an indirect measure of the connectivity of the articles that players are navigating.
-
-        In simple terms, an article with high entropy doesn't necessarily indicate that players are taking various
-        different links from it (which would show high uncertainty in their choices).
-        Instead, it just means that some articles naturally have more outgoing links than others, which inflates the
-        entropy value.
-
-        Additionally, the highest correlation is found with closeness centrality, which makes perfect sense, as players
-        tend to select articles that are highly connected, helping them move efficiently
-        from any starting article to the intended target.
-        Let’s look into the details of this fascinating metric:
-      </blockquote>
-
-      </p>
+    <br>
+    <div style="align-items: center; float: left; margin-top: 2em; margin-bottom: 2em;">
+      <img src="images/correlationmatrixentorpy.png" alt="structure elements"
+          style="width: 45%; height: auto; margin: 5px;" />
+      <img src="images/corrEntropy.png" alt="footer" style="width: 45%; height: auto; margin: 5px;" />
     </div>
+    <br>
+    <br>
+  <section class="wrapper style1 align-center">
     <div>
-      <h2>Closeness Centrality</h2>
-      <p>
-        Closeness centrality measures how close a node is to all other nodes in the graph.
-        It is based on the <em>average shortest path distance</em> from a given node to all other nodes that can be
-        reached.
-        A node with high closeness centrality reaches other nodes more quickly, which can indicate a high degree of
-        accessibility within the graph.
-      </p>
-      <div style="margin-bottom: 20px;">
-        <button data-overlay-id="cc" class="button big wide smooth-scroll-middle">About Closeness
-          Centrality</button>
+      <div class="content">
+        <p>
+          <span class="image left"><img src="images/cajal_face.png" alt="Image of Dr. Cajal" /></span>
+          <p>As you can see, entropy is positively correlated with all connectivity indices, indicating that, in this case,
+            entropy should not be interpreted as a proxy for indecision.
+            Instead, it works as an indirect measure of the connectivity of the articles that players are navigating.
+  
+            In simple terms, an article with high entropy doesn't necessarily indicate that players are taking various
+            different links from it (which would show high uncertainty in their choices).
+            Instead, it just means that some articles naturally have more outgoing links than others, which inflates the
+            entropy value.
+  
+            Additionally, the highest correlation is found with closeness centrality, which makes perfect sense, as players
+            tend to select articles that are highly connected, helping them move efficiently
+            from any starting article to the intended target.
+          </p>
+          
+        </p>
       </div>
-      <p>
-        In summary, if a node has high closeness centrality, it means that the node is "closer" to other nodes on
-        average.
-        A lower closeness centrality means the node is, on average, farther from other nodes in the graph in terms of
-        path length.
-      </p>
     </div>
+    <div style="margin-bottom: 20px; margin-top: 20px; text-align: center;">
+      <button data-overlay-id="cc" class="button big wide smooth-scroll-middle">About Closeness Centrality</button>
+    </div>
+  </section>
+
     <div>
       <p>
         After closeness centrality, out-degree and degree centrality have the highest correlation to entropy.
@@ -71,9 +65,8 @@
         than incoming connections,
         because entropy could be related to a node's ability to link "out" to many other nodes, providing more options.
       </p>
-      <div style="margin-bottom: 20px;">
-        <button data-overlay-id="dc" class="button big wide smooth-scroll-middle">About Degree
-          Centrality</button>
+      <div style="margin-bottom: 20px; margin-top: 20px; text-align: center;">
+        <button data-overlay-id="dc" class="button big wide smooth-scroll-middle">About Degree Centrality</button>
       </div>
       <p>
         Nodes with higher entropy also tend to be more "central" overall in terms of connections when considering
@@ -90,14 +83,12 @@
     <div class="content">
       <p>
         <span class="image left"><img src="images/cajal_face.png" alt="Image of Dr. Cajal" /></span>
-      <blockquote>
         You can even see, Pepito, that players tend to seek high-connectivity nodes early in their paths! The graph
         clearly shows how closeness
         centrality spikes at the beginning, indicating that players prioritize <b>well-connected articles right from the
-          start</b> This initial strategy
+          start.</b> This initial strategy
         helps them quickly move toward their target, rather than wandering aimlessly. <b>It’s proof that their choices
           are strategic, not chaotic!</b>
-      </blockquote>
       </p>
     </div>
   </div>
@@ -112,6 +103,11 @@
   <div class="modal">
     <div class="modal-content">
       <h2>Closeness Centrality</h2>
+      <p>Closeness centrality measures how close a node is to all other nodes in the graph.
+        It is based on the <em>average shortest path distance</em> from a given node to all other nodes that can be
+        reached.
+        A node with high closeness centrality reaches other nodes more quickly, which can indicate a high degree of
+        accessibility within the graph.</p>
       <p>For a node \( u \), the closeness centrality \( C(u) \) is calculated as:</p>
       <p>
         $$ C(u) = \frac{N - 1}{\sum_{v \neq u} d(u, v)} $$
@@ -121,6 +117,12 @@
         <li>\( N \) is the total number of nodes in the graph.</li>
         <li>\( d(u, v) \) is the shortest path distance between nodes \( u \) and \( v \).</li>
       </ul>
+      <p>
+        In summary, if a node has high closeness centrality, it means that the node is "closer" to other nodes on
+        average.
+        A lower closeness centrality means the node is, on average, farther from other nodes in the graph in terms of
+        path length.
+      </p>
     </div>
   </div>
 </div>

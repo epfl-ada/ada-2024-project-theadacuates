@@ -28,33 +28,31 @@
 
 <!-- Section 2: Content and Button to Trigger Overlay -->
 <section class="wrapper style1 align-center">
-<div class="inner">
-    <div class="content">
+    <div class="inner">
+        <div class="content">
+            <p>
+                <span class="image left"><img src="images/pepito.jpg"></span>
 
-        <p>
-            <span class="image left"><img src="images/pepito.jpg"></span>
+                <p>Previous studies have shown that <strong>text can lead to mental fatigue</strong>, 
+                    and readability metrics—such as those used to assess the ease of reading—
+                    can serve as a proxy to quantify this effect <a href="https://typeset.io/papers/readability-measures-as-predictors-of-understandability-and-4cc738phts" target="_blank">(Ref)</a>. 
+                    I will demonstrate that higher <strong>article complexity is correlated with path abandonment</strong>,
+                    suggesting that mental energy is depleted before completing the correct path. 
+                    <strong>Again, it is not my fault; it is simply how my brain functions.</strong> <br> 
 
-            <p>Previous studies have shown that <strong>text can lead to mental fatigue</strong>, 
-                and readability metrics—such as those used to assess the ease of reading—
-                can serve as a proxy to quantify this effect <a href="https://typeset.io/papers/readability-measures-as-predictors-of-understandability-and-4cc738phts" target="_blank">(Ref)</a>. 
-                I will demonstrate that higher <strong>article complexity is correlated with path abandonment</strong>,
-                suggesting that mental energy is depleted before completing the correct path. 
-                <strong>Again, it is not my fault; it is simply how my brain functions.</strong> <br> 
+                    <div style="margin-bottom: 20px; margin-top: 20px; text-align: center;">
+                        <button data-overlay-id="readability" class="button big wide smooth-scroll-middle">Readability Metrics</button>
+                        <button data-overlay-id="ttest" class="button big wide smooth-scroll-middle">T-Test</button>
+                    </div>
+                    
+                    To explore this, I will calculate different readability metrics for each article, and then, 
+                    for each single readability metric, compute the <strong>average value for each path.</strong>
+                    After performing a <strong>t-test</strong> (please se the table below), I found that, for 2 indices, namely <strong>ARI and the Readability Consensus</strong>, 
+                    show <strong>statistically significant differences in mean</strong> values between <strong>inished and unfinished paths.</strong> 
+                    This supports my thesis.
+                </p>
 
-                <div style="margin-bottom: 20px; margin-top: 20px; text-align: center;">
-                    <button data-overlay-id="readability" class="button big wide smooth-scroll-middle">Readability Metrics</button>
-                    <button data-overlay-id="ttest" class="button big wide smooth-scroll-middle">T-Test</button>
-                </div>
-                
-                To explore this, I will calculate different readability metrics for each article, and then, 
-                for each single readability metric, compute the <strong>average value for each path.</strong>
-                After performing a <strong>t-test</strong> (please se the table below), I found that, for 2 indices, namely <strong>ARI and the Readability Consensus</strong>, 
-                show <strong>statistically significant differences in mean</strong> values between <strong>inished and unfinished paths.</strong> 
-                This supports my thesis.
             </p>
-
-        </p>
-
 
         <div class="table-container">
             <table>
@@ -106,8 +104,6 @@
                 </tbody>
             </table>
         </div>
-
-        
     </div>
 
     <!-- Cajal Response -->
@@ -126,31 +122,93 @@
         </p>
     </div>
 
-    <div style="margin-bottom: 20px; margin-top: 80px; text-align: center;">
+    <!-- <div style="margin-bottom: 20px; margin-top: 80px; text-align: center;">
         <img src="images/readability_plots.png" alt="Image related to Entropy" style="width: 800px; height: auto; display: block; margin: 20px auto;">
-    </div>   
+    </div>   -->
 
-
-    <p>
-        In addition, you must always <strong>visualize the data itself</strong>: Yes, there is a significant difference in the results, 
-        but <strong>is this difference truly meaningful?</strong>
-    
-        You need to understand the <strong>difference between statistical significance and practical significance</strong>.    
-        <strong>Statistical significance</strong> means that the difference you observed is unlikely to have happened by chance, often indicated by a p-value less than 0.05.
-        <strong>Practical significance</strong>, on the other hand, asks whether the observed difference is large enough to have a real-world impact.
-
-        <p>
-        Even though your results might be statistically significant (p-value &lt; 0.05), 
-        <strong>the actual change in the means is so small (~0.01)</strong> that it would not affect gameplay 
-        in any meaningful way. 
-        Therefore, these results do not support your theory, Pepito.
-        </p>
+    </section>
+        <style>
+            /* Initial state */
+            .icon_zoom {
+            display: flex;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+            }
         
-    </p>
+            /* Hover state */
+            .icon_zoom:hover {
+            transform: translateY(-10px) scale(1.05); /* Moves the element up and slightly enlarges it */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
+            }
+        </style>
 
-</div>
+        <div style="height: 20px;"></div> <!-- Adds 20px of vertical space -->
+
+        <div class="items style1 medium onscroll-fade-in" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh;">
+            <!-- column 1 -->
+            <section style="display: flex; flex-direction: column; gap: 0px; justify-content: center; align-items: center;">
+                <div class="inner">
+                    <span class="icon icon_zoom style2 major">
+                        <img src="images/mean_path_ARI.png" width="300" height="auto">
+                    </span>
+                </div>
+                <div class="inner">
+                    <span class="icon icon_zoom style2 major">
+                        <img src="images/mean_path_Coleman-Liau.png" width="300" height="auto">
+                    </span>
+                </div>
+            </section>  
+            <!-- column 2 -->
+            <section style="display: flex; flex-direction: column; gap: 0px; justify-content: center; align-items: center;">
+                <div class="inner">
+                    <span class="icon icon_zoom style2 major">
+                        <img src="images/mean_path_Flesch-Kincaid.png" width="300" height="auto">
+                    </span>
+                </div>
+                <div class="inner">
+                    <span class="icon icon_zoom style2 major">
+                        <img src="images/mean_path_Gunning_Fog.png" width="300" height="auto">
+                    </span>
+                </div>
+            </section>  
+            <!-- column 3 -->
+            <section style="display: flex; flex-direction: column; gap: 0px; justify-content: center; align-items: center;">
+                <div class="inner">
+                    <span class="icon icon_zoom style2 major">
+                        <img src="images/mean_path_SMOG.png" width="300" height="auto">
+                    </span>
+                </div>
+                <div class="inner">
+                    <span class="icon icon_zoom style2 major">
+                        <img src="images/mean_path_Readability_Consensus.png" width="300" height="auto">
+                    </span>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <section class="wrapper style1 align-center" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 40vh;">
+        <div class="inner">
+
+                <p>
+                    In addition, you must always <strong>visualize the data itself</strong>: Yes, there is a significant difference in the results, 
+                    but <strong>is this difference truly meaningful?</strong>
+                
+                    You need to understand the <strong>difference between statistical significance and practical significance</strong>.    
+                    <strong>Statistical significance</strong> means that the difference you observed is unlikely to have happened by chance, often indicated by a p-value less than 0.05.
+                    <strong>Practical significance</strong>, on the other hand, asks whether the observed difference is large enough to have a real-world impact.
+
+                    <p>
+                    Even though your results might be statistically significant (p-value &lt; 0.05), 
+                    <strong>the actual change in the means is so small (~0.01)</strong> that it would not affect gameplay 
+                    in any meaningful way. 
+                    Therefore, these results do not support your theory, Pepito.
+                    </p>
+                    
+                </p>
+
+        </div>
+    </section>
 </section>
-
 
 
 

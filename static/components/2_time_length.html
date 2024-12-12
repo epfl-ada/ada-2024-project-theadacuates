@@ -2,12 +2,13 @@
     <div class="content">
         <h2>Pepito's Simple Mental Fatigue Metrics</h2>
         <p>
-            In any complex task, two key factors that influence success are the time spent on the task and the number of steps required to complete it. Time reflects how long a player is engaged, while path length reveals the complexity of the task. 
-            Together, they provide insight into the cognitive demands placed on the player.
+            Pepito and Dr. Cajal prepare to tackle a new question: what role do time spent and path length play in shaping a player’s journey? With curiosity and resolve, the two dive into the details of these key factors.
+
+            Time reflects how long a player persists, while path length captures the number of steps needed to complete a path. Pepito and Dr. Cajal seek to discover how these elements contribute to success or failure when playing Wikispeedia. Are longer paths or extended durations the breaking point for players, or is the truth more complex?
         </p>
-        <p>
-            The assumption is that longer durations and lengths contribute to cognitive fatigue, causing players to abandon paths more often.
-        </p>
+    </div>
+    <div class="image">
+        <img src="images/spotlight01.jpg" alt="Mental Fatigue Visualization">
     </div>
 </section>
 
@@ -16,18 +17,35 @@
         <div class="content">
             <p>
                 <span class="image left"><img src="images/pepito.jpg" alt="Pepito's face" /></span>
-                <strong>Pepito:</strong> See, the mean duration of unfinished paths (orange line) is much higher compared to finished paths. This means time spent is a reliable predictor of the cognitive load on the person, and thus, the rate of abandonment.
+                I will now show a plot of the duration of paths for both finished and unfinished cases. Look at this chart! The blue line represents the durations for finished paths, while the orange line shows the durations for unfinished ones. It is clear that unfinished paths tend to take much longer, with their average duration (marked by the orange dashed line) being significantly higher than that of finished paths (blue dashed line).
+
+                See, the mean duration of unfinished paths (orange line) is much higher compared to finished paths. This means time spent is a reliable predictor of the cognitive load on the person, and thus, the rate of abandonment.
             </p>
         </div>
-        <img src="images/durationbyfinished.png" alt="Mean duration of paths" style="width: 800px; height: auto; display: block; margin: 20px auto;">
+        <br>
+
+        <iframe src="dynamicplots/plotly_duration_plot.html" 
+        style="width: 100%; height: 600px; border: none;">
+        </iframe>
+
+
+        <!--<img src="images/durationbyfinished.png" alt="Mean duration of paths" style="width: 800px; height: auto; display: block; margin: 20px auto;">-->
+        <br>
         <div class="content">
             <p>
                 <span class="image right"><img src="images/cajal_face.png" alt="Dr. Cajal's face" /></span>
-                <strong>Dr. Cajal:</strong> Pepito, please!!! Don’t you see what a strange distribution you have? What about the tail for unfinished paths? Here, have a look. If I now take only unfinished paths and color them by the type of unfinished path, i.e., "abandonment" or "timeout," I can clearly see a distinct split.
+                Pepito, please! Don’t you see what a strange distribution you have here? What about the tail for unfinished paths? Here, have a look: if I now take only unfinished paths and split them by their type, i.e., if it's 'abandonment' or 'timeout,' I can clearly see a distinct split. This makes it evident that not all unfinished paths are the same, and understanding these differences is key to interpretation.
             </p>
         </div>
-        <img src="images/durationbyunfinished.png" alt="Distribution of unfinished path types" style="width: 800px; height: auto; display: block; margin: 20px auto;">
+        <br>
+        <iframe src="dynamicplots/dynamic_duration_distribution.html" 
+        style="width: 100%; height: 600px; border: none;">
+        </iframe>
+
+        <!--<img src="images/durationbyunfinished.png" alt="Distribution of unfinished path types" style="width: 800px; height: auto; display: block; margin: 20px auto;">-->
+        <br>
         <p>
+            <span class="image right"><img src="images/cajal_face.png" alt="Dr. Cajal's face" /></span>
             The increased mean duration in these cases is largely due to session timeouts. In these instances, players were not necessarily experiencing difficulty; rather, they abandoned the session, allowing time to accumulate passively. As a result, the prolonged durations in unfinished paths reflect a lapse in activity rather than active engagement or cognitive load.
         </p>
     </div>
@@ -38,19 +56,26 @@
         <div class="content">
             <p>
                 <span class="image left"><img src="images/pepito.jpg" alt="Pepito's face" /></span>
-                As longer paths mean more articles visited, this could lead to confusion in the player's mind. Perhaps this is a cause of path abandonment?
+                Professor, I see your point about unfinished paths. But let’s take a closer look at the path lengths instead. I will plot them now. Here we go : this chart shows the distribution of path lengths for finished and unfinished paths. The blue line represents finished paths, and the orange line shows unfinished ones. Interestingly, the mean path length for finished paths (blue dashed line) is slightly longer than for unfinished paths (orange dashed line). This seems counterintuitive, doesn’t it? Could it be that longer paths (which mean more articles visited) lead to abandonment?
             </p>
         </div>
+        <br>
+        <br>
         <div class="content">
             <p>
                 <span class="image right"><img src="images/cajal_face.png" alt="Dr. Cajal's face" /></span>
-                If path length, as you suppose, could influence the gameplay (i.e., longer paths are correlated to unfinished paths), I should observe that unfinished paths have a higher number of articles visited.
+                If path length, as you suppose, could influence gameplay (i.e., longer paths are correlated to unfinished paths), I would expect unfinished paths to have a higher average number of articles visited. However, the data shows otherwise. To confirm this, let’s perform a Mann-Whitney U test to statistically compare the path lengths of finished and unfinished paths. The results might give us more clarity on whether the difference is significant.
             </p>
         </div>
-        <img src="images/pathlength.png" alt="Distribution of path lengths" style="width: 800px; height: auto; display: block; margin: 20px auto;">
+        <br>
+        <br>
+        <iframe src="dynamicplots/plotly_path_lengths.html" 
+        style="width: 100%; height: 600px; border: none;">
+        </iframe>
+        <!--<img src="images/pathlength.png" alt="Distribution of path lengths" style="width: 800px; height: auto; display: block; margin: 20px auto;">-->
         <p>
             Mann-Whitney U test results for Finished vs. Unfinished Path Lengths:
-            <strong>U = 772366749.0, p-value = 0.0</strong>.
+            <strong>U = 7.72 × 10<sup>8</sup>, p-value = 0.0</strong>.
         </p>
         <div style="margin-bottom: 20px; margin-top: 20px; text-align: center;">
             <button data-overlay-id="mann-whitney-details" class="button big wide smooth-scroll-middle">Mann-Whitney U Test Details</button>
@@ -63,15 +88,20 @@
         <div class="content">
             <p>
                 <span class="image left"><img src="images/pepito.jpg" alt="Pepito's face" /></span>
-                <strong>Pepito:</strong> Mr. Cajal, I think your analysis is not entirely correct. It may be that, by chance, finished paths have a source and target link that are structurally distant in the network, elongating the path.
+                Let’s look at the results of the Mann-Whitney U test. The p-value is basically zero, which means there is a clear difference between the path lengths of finished and unfinished games. This is surprising! the average path length for finished games is actually a bit longer than for unfinished ones. So, it seems like having a longer path doesn’t confuse players as much as I thought!
+                Professor... I think your analysis may not be entirely correct! It may be that, by chance, finished paths have a source and target link that are structurally distant in the network, elongating the path. This could be a confounding factor!
             </p>
         </div>
+        <br>
+        <br>
         <div class="content">
             <p>
                 <span class="image right"><img src="images/cajal_face.png" alt="Dr. Cajal's face" /></span>
-                <strong>Dr. Cajal:</strong> Pepito, even after regressing out this factor, the conclusion remains unchanged. Let’s look at specific source-target pairs that have been played frequently. As you can see, the difference in means consistently shows that finished paths have longer path lengths.
+                Pepito, even after regressing out this factor, the conclusion remains unchanged. Let’s look at specific source-target pairs that have been played frequently. As you can see, the difference in means consistently shows that finished paths have longer path lengths. This suggests that players are capable of completing longer paths, and perhaps other factors, such as engagement or familiarity with the topic, play a role in their success. Therefore, path length alone does not fully explain why some paths are abandoned, and a deeper analysis of player behavior is necessary to uncover the underlying reasons.
             </p>
         </div>
+        <br>
+        <br>
         <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
             <thead>
                 <tr style="background-color: #f4f4f4;">

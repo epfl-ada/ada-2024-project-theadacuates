@@ -1,173 +1,110 @@
 <!-- Section 1: Spotlight Section -->
-<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in"
-    id="first">
+<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in" id="first">
     <div class="content">
-        <h2>Pepito's last chance: Structural Information</h2>
-        <p>The next day, Pepito arrives in class eager to present his latest findings to the teacher. Below is a brief
-            summary of their conversation.
+
+        <h2>Pepito's Brainstorm: HTML Structure</h2>
+
+        <p>
+            After a long conversation with Dr. Cajal, Pepito begins to fear his defeat. 
+            Fortunately, <b>Cajal has to leave for two hours</b> to attend a conference, leaving Pepito on his own. 
         </p>
-        <ul class="actions stacked">
-        </ul>
+        <p>
+            <b>"This is fantastic"</b>, thinks Pepito. He realizes he can use this time to come up with new ideas to propose. During this time, he identifies two brilliant potential investigations: 
+            <strong>the role of structural elements in the webpage HTML</strong> and the <strong>position of links within the HTML page</strong>.
+        </p>
+        <p>
+            Let's follow his mental process and observe <b>if he can uncover something meaningful to present to Dr. Cajal.</b>
+        </p>
+    
     </div>
     <div class="image">
         <img src="images/spotlight01.jpg" alt="Image related to entropy">
     </div>
 </section>
 
+<!-- Section 2: Structural elements catch human Attention -->
 <section class="wrapper style1 align-center">
     <div class="inner">
-        <h3><b>Structural elements catch human Attention</b></h3>
 
-        <div class="row content box">
-            <p>
-                <span class="image left"><img src="images/pepito.jpg" /></span>
-                It’s well-established that human attention is drawn to colors and images. I believe that during
-                the game, players are biased toward clicking links near images or other elements besides plain text.
-                As a result, they may end up selecting links that don’t necessarily move them closer to their goal,
-                but instead are simply more visually engaging, leading them off course.
-            </p>
-        </div>
+        <h2>Structural elements catch human Attention</h2>
+
+        <span class="image left"><img src="images/pepito.jpg"></span>
+        <p>
+            It’s well-established that human <b>attention is drawn to colors and images</b><a href="https://jov.arvojournals.org/article.aspx?articleid=2193355" target="_blank">(Ref)</a>.  
+            I believe that during the game, players are <b>biased toward clicking links near images or other elements besides plain text</b>.
+            As a result, they may end up selecting links that don’t necessarily move them closer to their goal, leading them off course.
+        </p>
 
 
         <div style="margin-bottom: 20px; margin-top: 20px; text-align: center;">
-            <button data-overlay-id="structural-elements" class="button big wide smooth-scroll-middle">About Structural
-                Elements</button>
+            <button data-overlay-id="structural-elements" class="button big wide smooth-scroll-middle">HTML Structural Elements</button>
         </div>
 
+        <p>
+            In the image on the left, I have plotted how frequently a clicked link was found inside a specific structural element. 
+            <b>After normalizing</b> by the total number of links in each category, it becomes evident that people <b>tend to click on infoboxes</b> 
+            (which almost always include an image). 
+            This strongly supports my argument that visually prominent elements attract more player attention and clicks.
+        </p>
+        <p>
+            Naturally, to validate my hypothesis, I need to show that there is a difference in the distribution between finished and unfinished paths. 
+            If visually prominent elements truly distract players from the target, <b>I should see more of these elements being clicked in unfinished paths</b>. <br>
+            And... ohhh, if we look at the plot on the right, it seems that this <b>is indeed the case!</b>
+        </p>
 
-        <img src="images/position_distribution_of_target_links.png" alt="distribution of target links"
+        <img src="images/elements_html_distribution.png" alt="distribution of target links"
             style="width: 500px; height: auto; display: block; margin: 20px auto;" />
 
+        <p>
+            Naturally, as Dr. Cajal taught me, <strong>visual appearance alone is not sufficient</strong>; I must perform a statistical test.
+            I chose to use the <strong>two-sample Kolmogorov-Smirnov (KS) test</strong> to determine if there is a significant difference in the distribution of clicks across finished and unfinished paths.
+            Unfortunately, the test </strong>results are negative (p-value > 0.05)</strong>. Therefore, even though I may be clicking on an infobox, 
+            <strong>I have the same likelihood of completing or not my path</strong>. <br>
+            <strong style="font-size: 24px;">I must hide this result from Dr. Cajal!!!</strong>
+        </p>
 
-        <div class="row content box">
-            <p>
-                <span class="image left"><img src="images/pepito.jpg" alt="Image of Pepito" /></span>
-                As shown, <b>after normalizing</b> the count of links clicked within each HTML category, it becomes
-                clear that players are biased toward the infobox (which almost always includes an image). This
-                strongly
-                supports my argument that visually prominent elements attract more player attention and clicks.
-            </p>
-        </div>
-
-        <!-- <div class="content">
-            <p>We performed two-sample Kolmogorov-Smirnov tests for goodness of fit</p>
-        </div> -->
-
-
-        <!-- https://en.wikipedia.org/wiki/Kolmogorov%E2%80%93Smirnov_test -->
-        <img src="images/parent_categories_distribution.png" alt="distribution of parent categories"
-            style="width: 600px; height: auto; display: block; margin: 20px auto;" />
-
-        <div style="text-align: left;">
-            <ul>
-                <!-- <li><b>Null Hypothesis</b>: People's choices regarding the structure where target links are located have
-                    no impact on whether they can successfully complete the game.</li>
-                <li><b>Alternative Hypothesis</b>: People's choice of the structure containing the target link can
-                    influence their success in completing the game.</li>
-                <li><b>P-value</b> is greater than 0.05</li> -->
-                <li><b>Conclusion</b>: People's choices regarding the structure where target links are located have no
-                    impact on whether they can successfully complete the game.</li>
-            </ul>
-        </div>
         <div style="margin-bottom: 20px; margin-top: 20px; text-align: center;">
             <button data-overlay-id="ks" class="button big wide smooth-scroll-middle">About KS-Test</button>
-        </div>
-        <div class="row content box">
-            <p>
-                <span class="image right"><img src="images/cajal_face.png" alt="Image of Dr. Cajal"></span>
-                Yes, people are clicking more frequently on infoboxes, even after accounting for the frequency of each
-                element. However, your claim is incorrect. When we compare the frequencies of finished and unfinished
-                paths, we observe that there is no statistically significant difference between the two groups (as
-                confirmed by a <strong>two-sample KS-Test (Kolmogorov-Smirnov Test)</strong> for goodness of fit). This
-                means that, whether on
-                finished or unfinished paths, players tend to click more on infoboxes. Therefore, even if I am clicking
-                on an infobox, <b>I have the same likelihood of completing my path</b>.
-            </p>
-        </div>
 
-        <h3><b>Link Position & Human Laziness</b></h3>
+        <!-- some space -->
+        <p>        </p>
 
-        <div class="row content box">
-            <p>
-                <span class="image left"><img src="images/pepito.jpg" alt="Image of Pepito" /></span>
-                Humans are inherently lazy and have evolved to minimize the energy spent on tasks. I believe this
-                behavior applies to the Wikipedia game as well. I hypothesize that players are more likely to click on
-                links that appear at the top of the page, as scrolling down and searching for information on a new page
-                requires more time and effort. Based on this assumption, I think players are more likely to abandon
-                optimal links (which may be positioned lower on the page) in favor of easily accessible but less useful
-                links at the top.
-            </p>
+        <h2>Link Position  &  Human Laziness</h2>
+
+        <p>
+            Humans are inherently lazy and have <b>evolved to minimize the energy spent on tasks</b>. 
+            I believe this behavior applies to the Wikispeedia game as well. 
+            I hypothesize that players are <b>more likely to click on links that appear at the top of the page</b>, 
+            as scrolling down and searching for information on a new page requires more time and effort. 
+            Based on this assumption, I think unsinished paths have the postion of clicks more skewed toward the start of the page.
+        </p>
+
+
+        <div style="margin-bottom: 20px; margin-top: 20px; text-align: center;">
+            <button data-overlay-id="link_position" class="button big wide smooth-scroll-middle">Link Position</button>
         </div>
 
-        <div>
-            <p>
-                Before proceeding, it is important to explain how the position of a link on a page was defined in
-                Pepito's analysis. Since <b>monitor resolution cannot be inferred from our dataset</b>, we cannot assume
-                it
-                is the same for every player. Therefore, we are unable to determine the exact position of a link on a
-                webpage a priori.
-            </p>
-            <p>However, we decided to use the order of link appearance on the page as a metric for position. In cases
-                where a link appears more than once on the same page, the expected value for the position was used.
-            </p>
-        </div>
+        <!-- <img src="images/position_frequency_clicked_articles.png" alt="frequency of clicked articles"
+            style="width: 1000px; height: auto; display: block; margin: 20px auto;" /> -->
 
-        <img src="images/position_frequency_clicked_articles.png" alt="frequency of clicked articles"
-            style="width: 1000px; height: auto; display: block; margin: 20px auto;" />
 
-        <div style="text-align: left;">
-            <ul>
-                <!-- <li><b>Null Hypothesis</b>: The distributions of cumulative number of navigation links and positions are
-                    the same.</li>
-                <li><b>Alternative Hypothesis</b>: The distributions of cumulative number of navigation links and
-                    positions are not the same.</li>
-                <li><b>P-value</b> is less than 0.05</li> -->
-                <li><b>Conclusion</b>: The distributions are significantly different.</li>
-            </ul>
-        </div>
-
-        <div class="row content box">
-            <p>
-                <span class="image left"><img src="images/pepito.jpg" alt="Image of Pepito" /></span>
-                As confirmed by the statistical test, the distribution of clicked links differs from the overall
-                distribution of all links on the webpages. This indicates that people tend to click on links that appear
-                earlier in the article.
-            </p>
-        </div>
+        <p>
+            Unfortunately, once again, the <b>KS test resulted in non-significant output</b>. <br>
+            <b>I have nothing to present to Dr. Cajal...</b>
+        </p>
 
         <img src="images/position_finished_unfinished_links_distribution.png"
             alt="distribution of finished and unfinished links"
             style="width: 1000px; height: auto; display: block; margin: 20px auto;" />
 
-        <div style="text-align: left;">
-            <ul>
-                <!-- <li><b>Null Hypothesis</b>: Players who successfully completed the game and those who did not show the
-                    same preference in the order of link selection.</li>
-                <li><b>Alternative Hypothesis</b>: Players who successfully completed the game and those who did not
-                    show different preferences in the order of link selection.</li>
-                <li><b>P-value</b> is less than 0.05</li> -->
-                <li><b>Conclusion</b>: Players who successfully completed the game and those who did not show different
-                    preferences in the order of link selection.</li>
-            </ul>
-        </div>
 
-        <div class="row content box">
-            <p>
-                <span class="image left"><img src="images/pepito.jpg" alt="Image of Pepito" /></span>
-                As confirmed by the statistical test, the distribution of clicked links differs from the overall
-                distribution of all links on the webpages. This indicates that people tend to click on links that appear
-                earlier in the article.
-            </p>
-        </div>
-        <div class="row content box">
-            <p>
-                <span class="image right"><img src="images/cajal_face.png" alt="Image of Dr. Cajal"></span>
-                <img src="../data/assets/pik_speachless.jpeg" alt="Dr. Santiago Ramón y Cajal" width="200" />
-            </p>
-        </div>
     </div>
 
 </section>
+
+
+
+<!-- OVERLAYS -->
 
 <div data-overlay-id="structural-elements" class="overlay hidden">
     <div class="modal">
@@ -199,6 +136,30 @@
                     <li><b>Footer</b>: Content at the bottom, often with references or links to related articles.</li>
                     <li><b>Undefined</b>: Elements that don’t fit into the standard categories listed above.</li>
                 </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div data-overlay-id="link_position" class="overlay hidden">
+    <div class="modal">
+        <div class="modal-content">
+            <div style="overflow-y: scroll; height: 500px;">
+
+
+                <h1>How Link Position is Quantified?</h1>
+
+                <p>
+                    Since <b>monitor resolution cannot be inferred from our dataset</b>, we cannot assume it is the same for every player. 
+                    Therefore, we are unable to determine the exact position of a link on a webpage a priori.
+                </p>
+                <p>
+                    However, we decided to use the <b>order of link appearance on the page as a metric for position</b>. <br>
+                    In cases where a link appears more than once on the same page, the mean position position was used.
+                </p>
+
+
             </div>
         </div>
     </div>

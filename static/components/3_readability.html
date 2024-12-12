@@ -265,13 +265,67 @@
                 <p>
                 <h3>6. Readability Consensus Index</h3>
                 Averages the results from various readability formulas to provide an overall score.
-                </p>
 
+                </p>
                 <p>
                     Naturally, <strong>Pepito</strong> wants to calculate, for each index, 
                     the <strong>mean value</strong> for each path. 
-                    For example, consider the SMOG index applied to a path that is made up of <strong>["Rome", "Europe", "France", "Paris"]</strong>.
-                    Pepito would first calculate the SMOG index for the single articles and then mean those values. 
+                    For example, consider the SMOG index applied to a path that is made up of 
+                    <p>
+                        <strong>Rome → Europe → France → Paris</strong>
+                    </p>
+                    Pepito would first calculate the SMOG index for the single articles and then mean those values.
+                </p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div data-overlay-id="ttest" class="overlay hidden">
+    <div class="modal">
+        <div class="modal-content">
+            <div style="overflow-y: scroll; height: 500px;">
+
+
+                <h1>What is the T-test?</h1>
+                <p>The T-test is a statistical test used to compare the means (averages) of two groups to determine if there is a significant difference between them. It's often used in research to see if a new treatment or condition has an effect compared to a control group.</p>
+        
+                <h2>Why is it important?</h2>
+                <p>The T-test helps us answer questions like:</p>
+                <ul>
+                    <li>Does a new drug have a different effect compared to a placebo?</li>
+                    <li>Is there a difference in test scores between two classes?</li>
+                    <li>Are two machines producing products with different quality levels?</li>
+                </ul>
+        
+                <h2>How does it work?</h2>
+                <p>The T-test calculates a value called the <strong>t-statistic</strong>, which tells us how different the two groups are. The larger the t-statistic, the greater the difference. The test also considers the variation within each group and the number of samples.</p>
+                <p>The formula for calculating the t-statistic depends on the type of T-test, but it generally follows this structure:</p>
+                <div class="formula">
+                    $$ t = \frac{\bar{X}_1 - \bar{X}_2}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}} $$
+                </div>
+                <p>Where:</p>
+                <ul>
+                    <li><strong><i>t</i>:</strong> T-statistic value</li>
+                    <li><strong><i>&#x0305;X<sub>1</sub></i> and <i>&#x0305;X<sub>2</sub></i>:</strong> The sample means of the two groups</li>
+                    <li><strong><i>s<sub>1</sub><sup>2</sup></i> and <i>s<sub>2</sub><sup>2</sup></i>:</strong> The variances of the two groups</li>
+                    <li><strong><i>n<sub>1</sub></i> and <i>n<sub>2</sub></i>:</strong> The sample sizes of the two groups</li>
+                </ul>
+        
+                <h2>What does the result mean?</h2>
+                <p>The result of the T-test will give us a value called the <strong>p-value</strong>. If the p-value is low (typically below 0.05), it means the difference between the two groups is likely not due to chance, and we can conclude there is a significant difference. If the p-value is high, it suggests there is no significant difference.</p>
+        
+                <h2>Assumptions of the T-test</h2>
+                <p>There are a few assumptions that need to be met for the T-test to be valid:</p>
+                <ul>
+                    <li><strong>Independence:</strong> The observations in each group must be independent of each other.</li>
+                    <li><strong>Normality:</strong> The data in each group should follow a normal distribution. This is especially important for small sample sizes.</li>
+                    <li><strong>Equal variance:</strong> The variance of the two groups should be approximately equal. If the variances are unequal, a variation of the T-test, such as Welch’s T-test, should be used.</li>
+                </ul>
 
 
             </div>
@@ -315,7 +369,7 @@
         
                 <h2>Assumptions of the T-test</h2>
                 <p>There are a few assumptions that need to be met for the T-test to be valid:</p>
-                <ul>
+                <ul style="margin-left: 40px;">
                     <li><strong>Independence:</strong> The observations in each group must be independent of each other.</li>
                     <li><strong>Normality:</strong> The data in each group should follow a normal distribution. This is especially important for small sample sizes.</li>
                     <li><strong>Equal variance:</strong> The variance of the two groups should be approximately equal. If the variances are unequal, a variation of the T-test, such as Welch’s T-test, should be used.</li>

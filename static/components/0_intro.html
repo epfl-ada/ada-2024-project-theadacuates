@@ -7,7 +7,7 @@
     
     <p>
       Recent studies show that our attention spans are shrinking, and our brains can become fatigued within minutes of focused activity 
-      <a href="https://doi.org/10.1111/psyp.12339" target="_blank">(1)</a>. 
+      <a href="https://doi.org/10.1111/psyp.12339" target="_blank">(Ref)</a>. 
       This project aims to investigate user engagement with the  
       <b>Wikispeedia game from a neuroscientific angle</b>, focusing on how article complexity impacts cognitive load and behavior. Key questions include:
         <ul style="margin-left: 40px;">
@@ -17,18 +17,29 @@
         </ul>
     </p>
 
+    <p>
+      The <b>dataset</b> used in this analysis can be found 
+      <a href="https://snap.stanford.edu/data/wikispeedia.html" target="_blank">here</a>. It contains the paths from approximately <b>75,000 games</b>, 
+      along with additional information such as the game’s rating and the number of back-clicks. 
+      The primary focus of the dataset is the <b>paths, i.e. sequences of articles</b> that users followed to navigate from the source to the target link.
     </p>
-    The dataset used in the analysis can be found in <a href="https://snap.stanford.edu/data/wikispeedia.html" target="_blank">here</a> and includes the paths of approximately 75,000 games, 
-    along with ancillary information such as the game’s rating and the number of backclicks.
-   </p>
-
-   
-    - finshed/unifhesd as proxy for mental fatigue
-    - motvation can be regressed out as simialr to eahcplayer. We assume that poelaie ghave all same motioa +  diffcult to measyre mtovaiton in rnetscience (link article)
-    - impossible to traks user thrieug time due to IP address (link to exmplamntion)
-    Each path, i.e. list of articles from source to target, could either be <strong>finished or unfinished</strong>, 
-    depending on whether the user completes the mission. 
-    This distinction is particularly important, as unfinished paths will be used as <strong>proxies for mental fatigue</strong>. 
+    <p>Before proceeding with the data analysis, it is important to clarify some aspects and <b>hypotheses on which the analysis is based</b>:</p>
+      <ul style="margin-left: 40px;">
+          <li>
+              The division between <b>finished and unfinished paths will be used as a proxy for mental fatigue</b>, hypothesizing that unfinished paths occur due to some brain bias.
+          </li>
+          <li>
+              The <b>motivation of the player</b>, given that Wikipedia is a non-lucrative game, will be <b>assumed to be the same for all participants</b>. T
+              herefore, motivation will not be considered a confounding factor in the analysis. 
+              (<a href="https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2017.00145/full">See more on how to measure motivation neuroscientifically</a>).
+          </li>
+          <li>
+              Each path has an associated <b>IP address</b>. However, due to the intrinsic nature of IP addresses 
+              (<a href="https://www.avast.com/c-ip-address-public-vs-private">(Ref)</a>), it is <b>not possible to link each address to a unique individual</b>. 
+              Consequently, no evolution of player behavior is studied. Instead, each path is <b>assumed to be an independent sample</b>, 
+              i.e., played by a different person, for statistical analysis.
+          </li>
+      </ul>
 
     <div style="margin-bottom: 20px; margin-top: 20px; text-align: center;">
       <button data-overlay-id="wikispeedia" class="button big wide smooth-scroll-middle">Know More About Wikispeedia</button>

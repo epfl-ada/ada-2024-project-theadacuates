@@ -8,4 +8,6 @@ $(function () {
   $("#cognitive_shift").load("./components/6_cognitive_shift.html");
   $("#connectivity").load("./components/5_connectivity.html");
   $("#position").load("./components/7_position.html");
+  $("#sentiment").load("./components/8_sentiment.html");
+  $("#conclusion").load("./components/9_conclusion.html");
 });

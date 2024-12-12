@@ -1,9 +1,11 @@
 <!-- Section 1: Spotlight Section -->
 <section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in" id="first">
     <div class="content">
-        <h2>Pepito's new hope: Cognitive Shift</h2>
-        <p>Despite being taken aback by the strong evidence presented by the Professor, Pepito will not be deterred so easily. 
-            He decides to try a new metric, <strong>cognitive shift</strong>.
+        <h2>Pepito's new hope: Cognitive Shifting</h2>
+        <p>
+            Despite being taken aback by the strong evidence presented by the Professor, Pepito will not be deterred so easily.
+            Cajal's mention of strategic choices along a path gives Pepito a new idea: measuring the <strong>amount of change</strong> along a path.
+            He decides to try a new metric, <strong>cognitive shifting</strong>.
         </p>
         <ul class="actions stacked">
         </ul>
@@ -17,16 +19,17 @@
     <div class="inner">
         <div class="content">
             <p>
-                <span class="image left"><img src="images/pepito.jpg" style="width: 100px; height: auto"/></span>
+                <span class="image left"><img src="images/pepito.jpg"/></span>
                 When alternative, task-unrelated stimuli are presented to a human, mental fatigue and attention are negatively impacted <a href="https://pubmed.ncbi.nlm.nih.gov/26752733/" target="_blank">(Ref)</a>. 
-                I believe that moving from one category of knowledge to another (e.g., from science-related articles to arts-related articles) requires cognitive shifting, which can negatively impact gameplay.
-                I will look at the category changes along a path. For example if the player is on an article which is classified "Science" and goes to an article which is classified "History", this represents a category change.
-                For each path I will quantify how many shifts there are and use it as a metric.
-                I will only select paths of length more than 3, as shorter paths do not have enough shifts for the mental fatigue to be of any significance.
+                I believe that <strong>moving from one category of knowledge to another</strong> (e.g., from science-related articles to arts-related articles) <strong>requires cognitive shifting</strong>, which can <strong>negatively impact gameplay</strong>.
+                I will look at the <strong>category changes along a path</strong>, for example if the player is on an article categorised "Science" and moves to an article categorised "History", this represents a category change.
+                For each path I will quantify how many changes there are and use it as a metric.
+                I will only select paths of length more than 3, as shorter paths do not have enough changes for the mental fatigue to be of any significance.
+                I will also remove the last shift of finished paths, as this is a necessary to get to the target articles's category.
             </p>
         </div>
     
-        <img src="images/category_change_count.png" style="width: 800px; height: auto; display: block; margin: 20px auto;">
+        <img src="images/category_change_count.png" style="width: 600px; height: auto; display: block; margin: 20px auto;">
     
         <p>
             <i>Maravilloso!</i>, the category shift per link <strong>is higher in unfinished paths</strong> which shows that a higher shift correlates with increased cognitive load and thus greater difficulty.
@@ -34,12 +37,14 @@
 
         <div class="content">
             <p>
-                <span class="image left"><img src="images/cajal_face.png" style="width: 100px; height: auto"/></span>
-                Indeed that seems to be the case. 
-                However are you sure that changes in category is the best metric for cognitive shift? 
+                <span class="image left"><img src="images/cajal_face.png"/></span>
+                Indeed that seems to be the case, however <strong>are you sure that changes in category is the best metric for measuring cognitive shifting</strong>? 
                 Articles who have the same category could be completely unrelated, take for example Alexander the Great and Einstein. 
-                These two articles have category "People" but have very little connection. 
-                Now take Einstein and Physics, these articles have category "People" and "Physics" respectively, but are very closer related.
+                These two articles have category "People" but have close to nothing in common.
+                Now take Einstein and Physics, these articles have category "People" and "Physics" respectively, but are very closely related.
+                Furthermore, are you sure you should be removing the final shift in finished paths?
+                It is necessary, but still represents a change in category that should be accounted for if we consider cognitive load.
+                Furthermore, this is only applied to finished paths, but unfinished paths might also have this necessary shift.
             </p>
         </div>
         
@@ -47,10 +52,10 @@
 
         <div class="content">
             <p>
-                <span class="image left"><img src="images/pepito.jpg" style="width: 100px; height: auto"/></span>
-                Another good metric that I can try is semantic shift, i.e. one minus the semantic similarity between two successive articles.
-                Large semantic shifts between articles can represent a higher cognitive load for the player, having to completely change topics from one article to the other. 
-                I can investigate if this has an impact on whether the path is finished or not.
+                <span class="image left"><img src="images/pepito.jpg"/></span>
+                A potentially more meaninigul metric I can use is <strong>semantic shift</strong>, which I define as one minus the semantic similarity between two successive articles.
+                <strong>Large semantic shifts</strong> between articles can represent a <strong>higher cognitive load</strong> for the player, having to completely change topics from one article to the other. 
+                I can investigate if this is related to whether the path is finished or not.
             </p>
         </div>
 
@@ -59,7 +64,7 @@
         </div>
 
         <p>
-            Firstly, I will show how the semantic shift evolves over the game, specifically by examining the number of articles visited from the beginning.
+            Firstly, I will show how the semantic shift evolves over a path, by examining the semantic shift between articles in paths of different lengths.
         </p>
         
         <img src="images/semantic_shift.png" style="width: 800px; height: auto; display: block; margin: 20px auto;">
@@ -67,10 +72,10 @@
         <p>
             As can be seen, <strong>semantic shift decreases at the end of finished paths compared to unfinished paths, which tend to stagnate</strong> .
             This indicates that, in unfinished paths, the gap in similarity between consecutive articles remains constant, suggesting that the player is "lost"—continuing to change semantic fields without converging on the correct target. 
-            This pattern supports my thesis that higher cognitive shifts are indeed associated with a greater likelihood of path abandonment.
+            This pattern supports my thesis that higher cognitive shiftings are indeed associated with a greater likelihood of path abandonment.
         </p>
 
-        <img src="images/semantic_shift_hist.png" style="width: 800px; height: auto; display: block; margin: 20px auto;">
+        <img src="images/semantic_shift_hist.png" style="width: 700px; height: auto; display: block; margin: 20px auto;">
 
         <p>
             We can observe that the <strong>semantic shift along finished paths is smaller than for unfinished paths</strong> indicating that finished paths tend to follow more closely related articles than unfinished ones. 
@@ -79,9 +84,10 @@
 
         <div class="content">
             <p>
-                <span class="image left"><img src="images/cajal_face.png" style="width: 100px; height: auto"/></span>
-                <strong>Although statistically significant, the shift is unfortunately minor</strong>, to the extent that it may not represent a practical or relevant change to strongly support your point. 
+                <span class="image left"><img src="images/cajal_face.png"/></span>
+                <strong>Although statistically significant, the shift is unfortunately minor</strong>, to the extent that it doesn't represent a practical or relevant change to strongly support your point. 
                 Have you also considered the fact that this slight difference in semantic shift is probably due to the <strong>nature of finished paths</strong>, the last few articles being semantically close as the player is refining his search towards the target.
+                On the contrary, unfinished paths do not get this final homing in phase, so have slightly higher semantic shift.
             </p>
         </div>
     
@@ -97,14 +103,10 @@
             <div style="overflow-y: scroll; height: 500px;">
                 
                 <h1> Semantic Similarity </h1>
-
-                <p>
-                    Before proceeding with Pepito's findings, let's start with a brief explanation and example of what semantic similarity is.
-                </p>
         
                 <p>
                     <strong>Semantic similarity</strong> refers to the degree to which two concepts, words, or phrases are related in meaning, even if they are not identical. 
-                    In essence, it allows us to evaluate how closely words or sentences are associated based on their meanings rather than exact matches.
+                    In essence, it allows us to evaluate <strong>how similar words or sentences based on their meanings</strong> rather than exact matches.
                 </p>
         
                 <p>
@@ -115,8 +117,8 @@
         
                 <p>
                     To ensure he understands how this metric works, Pepito is testing the model on a subset of words. 
-                    The results are generally intuitive: for example, "William Shakespeare" is semantically close to terms like "playwright" and "Romeo and Juliet" but has no relationship to "data analysis." 
-                    However, the model isn't perfect; it struggles with more nuanced relationships, such as between "Romeo and Juliet" and "love," which one might expect to be closely related but are not always picked up as such by the model.
+                    The results are <strong>generally intuitive</strong>: for example, "William Shakespeare" is semantically close to terms like "playwright" and "Romeo and Juliet" but has no relationship to "data analysis." 
+                    However, <strong>the model isn't perfect</strong>; it struggles with more nuanced relationships, such as between "Romeo and Juliet" and "love," which one might expect to be closely related but are not always picked up as such by the model.
                 </p>
             </div>
         </div>

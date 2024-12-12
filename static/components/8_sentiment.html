@@ -1,11 +1,20 @@
 <!-- Section 1: Spotlight Section -->
-<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
+<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in" id="first">
     <div class="content">
-        <h2>Dr. Cajal's Counterargument: Entropy</h2>
+        <h2>Pepito's last chance: Sentiment Analysis</h2>
+
+        <p>
+           Just before Dr. Cajal returned, Pepito had an idea: <strong>sentiment analysis</strong> for path decision-making.
+        </p>
+        <p>
+            He thinks that players are more likely to choose the next article with a <strong>positive emotion</strong>, while discarding negative articles that might actually be more optimal for reaching the target.
+        </p>
         
-        <div class="image">
-            <img src="images/spotlight01.jpg" alt="Image related to entropy">
-        </div>
+        
+        
+    </div>
+    <div class="image">
+        <img src="images/spotlight01.jpg" alt="Image related to entropy">
     </div>
 </section>
     
@@ -14,8 +23,182 @@
     <div class="inner">
         <div class="content">
 
-            hello
+            <span class="image left"><img src="images/pepito.jpg"></span>
 
+            Our brains are full of biases, many of which have evolved over time. 
+            One of the most well-known is <strong>choice bias</strong>: when given a choice, we are more likely to select the positive option over a negative one.
+
+            Based on this observation, I suspect that during the game, players—when given the option of which article to click 
+            on next—will be <strong>biased toward articles that convey a positive sentiment</strong>, even if those articles are <strong>not the most optimal</strong>.
+
+            <br>
+
+            To test this hypothesis, I will count how many positive, negative, and neutral articles appear in each path. 
+            Then, I will use a <strong>logistic regression</strong> model to predict path abandonment, exploring the significance of negative paths in the gameplay.
+
+                <div style="margin-bottom: 20px; margin-top: 20px; text-align: center;">
+                    <button data-overlay-id="sentiment_overlay" class="button big wide smooth-scroll-middle">Sentiment Categorization</button>
+                </div>
+
+        </div>
+
+        <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+            <thead>
+                <tr style="background-color: #f4f4f4;">
+                    <th style="border: 1px solid #ddd; padding: 8px;">Variable</th>
+                    <th style="border: 1px solid #ddd; padding: 8px;">Coef</th>
+                    <th style="border: 1px solid #ddd; padding: 8px;">Std Err</th>
+                    <th style="border: 1px solid #ddd; padding: 8px;">Z</th>
+                    <th style="border: 1px solid #ddd; padding: 8px;">P>|Z|</th>
+                    <th style="border: 1px solid #ddd; padding: 8px;">[0.025]</th>
+                    <th style="border: 1px solid #ddd; padding: 8px;">[0.975]</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="border: 1px solid #ddd; padding: 8px;">const</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">-0.3594</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">0.017</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">-21.685</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">0.000</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">-0.392</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">-0.327</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #ddd; padding: 8px;">positive_count</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">-0.0155</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">0.012</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">-1.261</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">0.207</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">-0.040</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">0.009</td>
+                </tr>
+                <tr style="background-color: #ffff99;">
+                    <td style="border: 1px solid #ddd; padding: 8px;">negative_count</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">0.0571</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">0.014</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">4.188</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">0.000</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">0.030</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">0.084</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #ddd; padding: 8px;">neutral_count</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">0.0640</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">0.003</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">24.513</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">0.000</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">0.059</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">0.069</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>
+            As expected, I observed that the coefficient for <strong>negative sentiment is significant (**p-value < 0.05**</strong>). 
+            This suggests that choosing negative articles is an important factor in path abandonment.       
+         </p>
+
+
+
+        <div class="content">
+            <p>
+                <span class="image right"><img src="images/cajal_face.png" alt="Image of Dr. Cajal" /></span>
+
+                <p>Pepito, Pepito, don’t you see you’re climbing mirrors here? 
+                    Indeed, your data preprocessing pipeline for the logistic regression model is well-structured, 
+                    but <b>basing your analysis solely on the coefficients makes no sense.</b></p>
+
+                <p>
+                    Firstly, the coefficient contradicts your hypothesis. 
+                    It is <strong>positive (+0.0571)</strong>, which means that as the number of negative articles increases,
+                    the probability of finishing the path also increases. This is the opposite of your assumption. 
+                    
+                    Secondly, after I performed a <strong>cross-validation</strong> in the model, I've got an <strong>f1-score is around 50%</strong>, 
+                    and with only two classes, this implies that the model is effectively <strong>guessing randomly.</strong>
+                     There is no meaningful information being captured in the negative or positive paths.
+                </p>
+                
+                <p>
+                    This observation <strong>aligns with previous findings</strong> where users searched for hub articles regardless of their sentiment. 
+                    For instance, "WW2" is frequently part of finished paths despite being counted as conveying negative sentiment.
+                </p>
+                
+                <!-- <p>Lastly, even if your model had achieved better accuracy, I am skeptical about its reliability. In analyses like these, many variables can confound the results. For instance:</p>
+                <ul>
+                    <li>There might not be an equal number of positive and negative articles on the current webpage to choose from.</li>
+                    <li>Negative articles might tend to appear at the bottom of the page or not be accompanied by images.</li>
+                </ul>
+                <p>Without addressing these potential biases, it’s impossible to make a fair comparison between positive and negative articles.</p> -->
+                
+                <p style="font-size: 25px;">
+                    <em>
+                        <strong>
+                            Pepito stop! <br>
+                            You do not only know how to play wikispeedia, but you are also the worst data analyst I have ever seen.<br>
+                            I recommend you also to follow ADA course ;).
+                        </strong> 
+                   </em>
+                </p>
+
+            </p>
         </div>
     </div>
 </section>
+
+
+
+
+
+
+<!-- Overlay -->
+
+<div data-overlay-id="sentiment_overlay" class="overlay hidden">
+    <div class="modal">
+        <div class="modal-content">
+            <div style="overflow-y: scroll; height: 500px;">
+
+
+                <h2>Sentiment Values Exctraction</h2>
+
+                <p>
+                    Sentiment analysis is a method used to assess the emotional tone behind a series of words, which can help understand the sentiment of the content (positive, negative, or neutral).
+                </p>
+                
+                <p>
+                    In order to gain sentiment data to feed in the logistic model, Pepito followed the following steps:
+                </p>
+                
+                <ol>
+                    <li><strong>Calculate Sentiment Values</strong><br>
+                        Pepito calculates the sentiment value for each article’s name. <br>
+                        He decided to use only the name and not the full article, as during the choice moment, the user has access to only this limited information. 
+                        The LLM used for emotion categorization is <a href="https://www.nltk.org/_modules/nltk/corpus/reader/sentiwordnet.html" target="_blank">NLTK</a>.
+                    </li>
+                
+                    <li><strong>Categorize Articles</strong><br>
+                        Pepito categorizes all articles into three sentiment groups: <strong>neutral</strong>, <strong>negative</strong>, and <strong>positive</strong>, based on a threshold.
+                    </li>
+                
+                    <li><strong>Count Sentiments Per Path</strong><br>
+                        For each path, Pepito counts how many positive, negative, and neutral articles it contains.
+                        These counts will serve as features in the logistic regression model.
+                    </li>
+                
+                    <li><strong>Balance the Dataset</strong><br>
+                        To ensure balanced classes, Pepito downsamples the dataset to equalize the number of finished and unfinished paths.
+                    </li>
+
+                    <!-- <li><strong>Regress out Path Length</strong><br>
+                        Finally, to account for the possibility that the length of the path could influence the number of positive and negative articles, 
+                        this variable is also included in the model.
+                    </li> -->
+                </ol>
+                
+
+
+            </div>
+        </div>
+    </div>
+</div>
+

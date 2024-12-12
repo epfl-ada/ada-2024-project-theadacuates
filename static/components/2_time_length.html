@@ -23,21 +23,13 @@
             </p>
         </div>
         <br>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Duration by Finished Status</title>
-        </head>
-        <body>
-            <!-- Embed the Plotly Chart -->
-            <iframe src="components/plotly_duration_plot.html" 
-                    style="width: 100%; height: 600px; border: none;">
-            </iframe>
-        </body>
-        </html>
 
-        <img src="images/durationbyfinished.png" alt="Mean duration of paths" style="width: 800px; height: auto; display: block; margin: 20px auto;">
+        <iframe src="components/plotly_duration_plot.html" 
+        style="width: 100%; height: 600px; border: none;">
+        </iframe>
+
+
+        <!--<img src="images/durationbyfinished.png" alt="Mean duration of paths" style="width: 800px; height: auto; display: block; margin: 20px auto;">-->
         <br>
         <div class="content">
             <p>
@@ -46,7 +38,11 @@
             </p>
         </div>
         <br>
-        <img src="images/durationbyunfinished.png" alt="Distribution of unfinished path types" style="width: 800px; height: auto; display: block; margin: 20px auto;">
+        <iframe src="components/dynamic_duration_distribution.html" 
+        style="width: 100%; height: 600px; border: none;">
+        </iframe>
+
+        <!--<img src="images/durationbyunfinished.png" alt="Distribution of unfinished path types" style="width: 800px; height: auto; display: block; margin: 20px auto;">-->
         <br>
         <p>
             <span class="image right"><img src="images/cajal_face.png" alt="Dr. Cajal's face" /></span>
@@ -73,7 +69,10 @@
         </div>
         <br>
         <br>
-        <img src="images/pathlength.png" alt="Distribution of path lengths" style="width: 800px; height: auto; display: block; margin: 20px auto;">
+        <iframe src="components/plotly_path_lengths.html" 
+        style="width: 100%; height: 600px; border: none;">
+        </iframe>
+        <!--<img src="images/pathlength.png" alt="Distribution of path lengths" style="width: 800px; height: auto; display: block; margin: 20px auto;">-->
         <p>
             Mann-Whitney U test results for Finished vs. Unfinished Path Lengths:
             <strong>U = 7.72 × 10<sup>8</sup>, p-value = 0.0</strong>.

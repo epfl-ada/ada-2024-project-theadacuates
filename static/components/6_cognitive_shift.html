@@ -18,7 +18,7 @@
     </div>
 </section>
 
-<section class="wrapper style1 align-left">
+<section class="wrapper style1 align-center">
     <div class="inner">
         <div class="content">
             <p>
@@ -34,7 +34,7 @@
                 For each path I will quantify how many changes there are and use it as a metric.
                 I will only select paths of length more than 3, as shorter paths do not have enough changes for the
                 mental fatigue to be of any significance.
-                I will also remove the last shift of finished paths, as this is a necessary to get to the target
+                I will also remove the last shift of finished paths, as this is necessary to get to the target
                 articles's category.
             </p>
         </div>
@@ -55,16 +55,16 @@
                 <span class="image right"><img src="images/cajal_face.png" /></span>
                 Indeed that seems to be the case, however <strong>are you sure that changes in category is the best
                     metric for measuring cognitive shifting</strong>?
-                Articles who have the same category could be completely unrelated, take for example Alexander the Great
+                Articles which have the same category could be completely unrelated, take for example Alexander the Great
                 and Einstein.
                 These two articles have category "People" but have close to nothing in common.
-                Now take Einstein and Physics, these articles have category "People" and "Physics" respectively, but are
-                very closely related.
+                <!-- Now take Einstein and Physics, these articles have category "People" and "Physics" respectively, but are
+                very closely related. -->
+                <br>
                 Furthermore, are you sure you should be removing the final shift in finished paths?
-                It is necessary, but still represents a change in category that should be accounted for if we consider
-                cognitive load.
-                Furthermore, this is only applied to finished paths, but unfinished paths might also have this necessary
-                shift.
+                The player must shift category to reach the target, but it still represents a congitive shift. 
+                In addition if we look at the plot the difference between finished and unfinished seems to be very close to 1, 
+                which may just be the effect of your intial data manipulation and assumption.
             </p>
         </div>
 
@@ -96,9 +96,8 @@
         <p>
             As can be seen, <strong>semantic shift decreases at the end of finished paths compared to unfinished paths,
                 which tend to stagnate</strong> .
-            This indicates that, in unfinished paths, the gap in similarity between consecutive articles remains
-            constant, suggesting that the player is "lost"—continuing to change semantic fields without converging on
-            the correct target.
+            This indicates that, in unfinished paths, the gap in similarity between consecutive articles eventually remains
+            constant, suggesting that the player is "lost"—continuing to change semantic fields without converging to the target.
             This pattern supports my thesis that higher cognitive shiftings are indeed associated with a greater
             likelihood of path abandonment.
         </p>
@@ -110,7 +109,7 @@
             We can observe that the <strong>semantic shift along finished paths is smaller than for unfinished
                 paths</strong> indicating that finished paths tend to follow more closely related articles than
             unfinished ones.
-            This supports the idea that jumping between articles with high differences in similarity can lead to
+            This supports the idea that jumping between articles with little similarity can lead to
             unfinished paths, thus supporting my thesis.
         </p>
 
@@ -118,7 +117,7 @@
             <p>
                 <span class="image right"><img src="images/cajal_face.png" /></span>
                 <strong>Although statistically significant, the shift is unfortunately minor</strong>, to the extent
-                that it doesn't represent a practical or relevant change to strongly support your point.
+                that it <strong>doesn't support your point.</strong>
                 Have you also considered the fact that this slight difference in semantic shift is probably due to the
                 <strong>nature of finished paths</strong>, the last few articles being semantically close as the player
                 is refining his search towards the target.
@@ -142,7 +141,7 @@
                 <p>
                     <strong>Semantic similarity</strong> refers to the degree to which two concepts, words, or phrases
                     are related in meaning, even if they are not identical.
-                    In essence, it allows us to evaluate <strong>how similar words or sentences based on their
+                    In essence, it allows us to evaluate <strong>how similar words or sentences are based on their
                         meanings</strong> rather than exact matches.
                 </p>
 

@@ -1,5 +1,10 @@
 <h1 style="text-align: center;">A Matter of Mind: Pepito’s Cognitive Challenge and Dr. Cajal’s Skepticism</h1>
 
+Please find our Website [here](https://epfl-ada.github.io/ada-2024-project-theadacuates/).
+
+
+Please find the result notebook [here](results.ipynb).
+
 ## Abstract
 Recent research suggests that attention spans are decreasing, with cognitive fatigue occurring within minutes of sustained focus [(1)](https://doi.org/10.1111/psyp.12339). Such rapid onset of fatigue is linked to cognitive load theory, which proposes that complex information processing can overwhelm working memory, reducing engagement and performance [(2)](https://pubmed.ncbi.nlm.nih.gov/28237888/). This project investigates **Wikispeedia game** engagement from a **neuroscientific perspective**, focusing on how article complexity, structure, and article network connectivity influence player navigation and performance.
 Through this analysis, we aim to develop metrics for assessing **cognitive load and mental fatigue** and to predict path abandonment based on these factors. 
@@ -45,16 +50,17 @@ The main themes presented by Pepito and Dr. Cajal will focus on the following me
 ## Additional Datasets
 There are no direct additional datasets.
 
-## Timeline and organisation:
+## Work Distribution:
 
-- **Week 1:** Finalize the narrative. Refine Pepito and Cajal's dialogue to clearly present their arguments and analysis steps. (Homework 2 week)
-- **Week 2:** Start data analysis, create initial results and plots, and begin developing the webpage layout. (Homework 2 week)
-- **Week 3:** Peer review the analysis, standardize plot styles, and improve clarity and visual appeal.
-- **Week 4:** Complete the webpage development, integrating all content and ensuring functionality.
-- **Week 5:** Finalize details, fix any issues, and optimize. Many team members will be traveling, so focus on final adjustments.
+Each member worked on a distinct section, pperfoming EDA, data analysis and webpage creation:
 
+- **Rapahel Tasseel**: Cogntive shifting, Semantic Similarity
+- **Daniela Correa**: Connectivity Analysis, Network Analysis
+- **Gabriele Dall'Aglio**: Entropy, Sentiment,
+- **Feifan Wang**: Structural element of html file, Link position
+- **Adam Chahedouzzani**: Path length, path duration
 
-We will work together on all steps, meeting once or twice a week to collaborate and ensure progress.
+We met once or twice a week to collaborate and ensure progress.
 
 <p align="center">
   <img src="data/assets/fatigue_2.jpg" alt="Dr. Santiago Ramón y Cajal" width="500"/>

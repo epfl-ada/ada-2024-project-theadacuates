@@ -4,10 +4,10 @@
         <h2>Pepito's last chance: Sentiment Analysis</h2>
 
         <p>
-           Just before Dr. Cajal returned, Pepito had an idea: <strong>sentiment analysis</strong> for path decision-making.
+           Just before Dr. Cajal returned, Pepito has an idea: <strong>sentiment analysis</strong> for path decision-making.
         </p>
         <p>
-            He thinks that players are more likely to choose the next article with a <strong>positive emotion</strong>, while discarding negative articles that might actually be more optimal for reaching the target.
+            He thinks that players are more likely to click on articles with a <strong>positive emotion</strong>, while discarding negative articles that might actually be more optimal for reaching the target.
         </p>
         
         
@@ -95,7 +95,7 @@
         </table>
 
         <p>
-            As expected, I observed that the coefficient for <strong>negative sentiment is significant (**p-value < 0.05**</strong>). 
+            As expected, I observed that the coefficient for <strong>negative sentiment is significant (p-value < 0.05</strong>). 
             This suggests that choosing negative articles is an important factor in path abandonment.       
          </p>
 
@@ -105,7 +105,7 @@
             <p>
                 <span class="image right"><img src="images/cajal_face.png" alt="Image of Dr. Cajal" /></span>
 
-                <p>Pepito, Pepito, don’t you see you’re climbing mirrors here? 
+                <p>Pepito, Pepito, don’t you see you’re clutching at straws? 
                     Indeed, your data preprocessing pipeline for the logistic regression model is well-structured, 
                     but <b>basing your analysis solely on the coefficients makes no sense.</b></p>
 
@@ -114,7 +114,7 @@
                     It is <strong>positive (+0.0571)</strong>, which means that as the number of negative articles increases,
                     the probability of finishing the path also increases. This is the opposite of your assumption. 
                     
-                    Secondly, after I performed a <strong>cross-validation</strong> in the model, I've got an <strong>f1-score is around 50%</strong>, 
+                    Secondly, after I performed a <strong>cross-validation</strong> in the model, I've got an <strong>f1-score of around 50%</strong>, 
                     and with only two classes, this implies that the model is effectively <strong>guessing randomly.</strong>
                      There is no meaningful information being captured in the negative or positive paths.
                 </p>
@@ -135,8 +135,13 @@
                     <em>
                         <strong>
                             Pepito stop! <br>
-                            You do not only know how to play wikispeedia, but you are also the worst data analyst I have ever seen.<br>
-                            I recommend you also to follow ADA course ;).
+                            <!-- Not only do you not know how to play wikispeedia, but you are also the worst data analyst I have ever seen.<br> -->
+
+                            Not only do you have the wikispeedia skills of a confused goldfish, 
+                            but your data analysis is so bad it’s inspiring
+                            —it proves that truly anyone can try this! 
+                            Chin up, there’s nowhere to go but up from here! <br>
+                            I think you should take the ADA course ;).
                         </strong> 
                    </em>
                 </p>

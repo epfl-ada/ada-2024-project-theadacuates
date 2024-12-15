@@ -1,7 +1,7 @@
 <script src='https://cdn.plot.ly/plotly-2.35.2.min.js'></script>
 
 <!-- Section 1: Spotlight Section -->
-<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in" id="first">
+<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
     <div class="content">
         <h2>Pepito and Readability Metrics</h2>
         <p><strong>"It's just the beginning,"</strong> Pepito thinks, reflecting on Dr. Cajal's earlier comment. 
@@ -35,7 +35,7 @@
 
                 <p>Previous studies have shown that <strong>text can lead to mental fatigue</strong>, 
                     and readability metrics—such as those used to assess the ease of reading—
-                    can serve as a proxy to quantify this effect <a href="https://typeset.io/papers/readability-measures-as-predictors-of-understandability-and-4cc738phts" target="_blank">(Ref)</a>. 
+                    can serve as a proxy to quantify this effect (<a href="https://typeset.io/papers/readability-measures-as-predictors-of-understandability-and-4cc738phts" target="_blank">Ref</a>). 
                     I will demonstrate that higher <strong>article complexity is correlated with path abandonment</strong>,
                     suggesting that mental energy is depleted before completing the correct path. 
                     <strong>Again, it is not my fault; it is simply how my brain functions.</strong> <br> 
@@ -47,7 +47,7 @@
                     
                     To explore this, I will calculate different readability metrics for each article, and then, 
                     for each single readability metric, compute the <strong>average value for each path.</strong>
-                    After performing a <strong>t-test</strong> (please se the table below), I found that, for 2 indices, namely <strong>ARI and the Readability Consensus</strong>, 
+                    After performing a <strong>t-test</strong> (please see the table below), I found that, for 2 indices, namely <strong>Gunning Fog and the Readability Consensus</strong>, 
                     show <strong>statistically significant differences in mean</strong> values between <strong>finished and unfinished paths.</strong> 
                     This supports my thesis.
                 </p>
@@ -71,7 +71,7 @@
                         <td>0.089689</td>
                         <td class="significant-false">False</td>
                     </tr>
-                    <tr>
+                    <tr style="background-color: #ffff99;">
                         <td>Gunning Fog</td>
                         <td>-4.696039</td>
                         <td>0.000003</td>
@@ -95,7 +95,7 @@
                         <td>0.151295</td>
                         <td class="significant-false">False</td>
                     </tr>
-                    <tr>
+                    <tr style="background-color: #ffff99;">
                         <td>Readability Consensus</td>
                         <td>-2.181674</td>
                         <td>0.029140</td>
@@ -141,9 +141,9 @@
             }
         </style>
 
-        <div style="height: 20px;"></div> <!-- Adds 20px of vertical space -->
+        <!-- <div style="height: 20px;"></div> Adds 20px of vertical space -->
 
-        <div class="items style1 medium onscroll-fade-in" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh;">
+        <div class="items style1 medium onscroll-fade-in" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 60vh;">
             <!-- column 1 -->
             <section style="display: flex; flex-direction: column; gap: 0px; justify-content: center; align-items: center;">
                 <div class="inner">
@@ -190,7 +190,7 @@
         <div class="inner">
 
                 <p>
-                    In addition, you must always <strong>visualize the data itself</strong>: Yes, there is a significant difference in the results, 
+                    In addition, you must always <strong>visualize the data itself</strong>: yes, there is a significant difference in the results, 
                     but <strong>is this difference truly meaningful?</strong>
                 
                     You need to understand the <strong>difference between statistical significance and practical significance</strong>.    
@@ -293,11 +293,11 @@
         
                 <h2>Why is it important?</h2>
                 <p>The T-test helps us answer questions like:</p>
-                <ul>
+                <dl>
                     <li>Does a new drug have a different effect compared to a placebo?</li>
                     <li>Is there a difference in test scores between two classes?</li>
                     <li>Are two machines producing products with different quality levels?</li>
-                </ul>
+                </dl>
         
                 <h2>How does it work?</h2>
                 <p>The T-test calculates a value called the <strong>t-statistic</strong>, which tells us how different the two groups are. The larger the t-statistic, the greater the difference. The test also considers the variation within each group and the number of samples.</p>
@@ -306,23 +306,23 @@
                     $$ t = \frac{\bar{X}_1 - \bar{X}_2}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}} $$
                 </div>
                 <p>Where:</p>
-                <ul>
+                <dl>
                     <li><strong><i>t</i>:</strong> T-statistic value</li>
                     <li><strong><i>&#x0305;X<sub>1</sub></i> and <i>&#x0305;X<sub>2</sub></i>:</strong> The sample means of the two groups</li>
                     <li><strong><i>s<sub>1</sub><sup>2</sup></i> and <i>s<sub>2</sub><sup>2</sup></i>:</strong> The variances of the two groups</li>
                     <li><strong><i>n<sub>1</sub></i> and <i>n<sub>2</sub></i>:</strong> The sample sizes of the two groups</li>
-                </ul>
+                </dl>
         
                 <h2>What does the result mean?</h2>
                 <p>The result of the T-test will give us a value called the <strong>p-value</strong>. If the p-value is low (typically below 0.05), it means the difference between the two groups is likely not due to chance, and we can conclude there is a significant difference. If the p-value is high, it suggests there is no significant difference.</p>
         
                 <h2>Assumptions of the T-test</h2>
                 <p>There are a few assumptions that need to be met for the T-test to be valid:</p>
-                <ul>
+                <dl>
                     <li><strong>Independence:</strong> The observations in each group must be independent of each other.</li>
                     <li><strong>Normality:</strong> The data in each group should follow a normal distribution. This is especially important for small sample sizes.</li>
                     <li><strong>Equal variance:</strong> The variance of the two groups should be approximately equal. If the variances are unequal, a variation of the T-test, such as Welch’s T-test, should be used.</li>
-                </ul>
+                </ud>
 
 
             </div>

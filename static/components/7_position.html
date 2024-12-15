@@ -1,5 +1,5 @@
 <!-- Section 1: Spotlight Section -->
-<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in"
+<section class="spotlight style1 orient-rigth content-align-left image-position-center onscroll-image-fade-in"
     id="first">
     <div class="content">
 
@@ -50,12 +50,11 @@
 
         <p>
             In the image on the left, I have plotted how frequently a clicked link was found inside a specific
-            structural element. When a clicked link appears in multiple positions on a page and it is unclear which one
+            <!-- structural element. When a clicked link appears in multiple positions on a page and it is unclear which one
             the user clicked, I <b>assume that users have no bias and that the probability of clicking each position is
-                equal</b>. The number of clicks is then calculated using the <b>mathematical expectation</b>.
+                equal</b>. The number of clicks is then calculated using the <b>mathematical expectation</b>. -->
             <b>After normalizing</b> by the total number of links in each category, it becomes evident that people
-            <b>tend to click on infoboxes</b>
-            (which almost always include an image).
+            <b>tend to click on infoboxes</b> (which almost always include an image).
             This strongly supports my argument that visually prominent elements attract more player attention and
             clicks.
         </p>
@@ -104,8 +103,13 @@
                 Humans are inherently lazy and have <b>evolved to minimize the energy spent on tasks</b>.
                 I believe this behavior applies to the Wikispeedia game as well.
                 I hypothesize that players are <b>more likely to click on links that appear at the top of the page</b>,
-                as scrolling down and searching for information on a new page requires more time and effort. The
-                following figure illustrates the distribution of link positions.
+                as scrolling down and searching for information on a new page requires more time and effort. 
+
+                <br>
+
+                The image on the left shows the <b>expected distribution</b> of link clicks, if they were all clicked with equal probability. 
+                In contrast, the image on the right depicts the <b>actual distribution</b> of the position of clicked links in played games.
+                As evident from the data, people tend to click more frequently on the initial links. 
             </p>
 
             <div style="margin-bottom: 20px; margin-top: 20px; text-align: center;">
@@ -117,7 +121,9 @@
                 <img src="images/position_frequency_clicked_articles.png" alt="frequency of clicked articles"
                     style="width: 100%;" />
             </div>
-            <p>
+            <!-- <p>
+                Now I have still to verify that there is a difference between finished and unfinished paths.
+                To do so I will 
                 Based on this figure and the results of the KS-Test hypothesis test, I believe my assumption is correct.
                 Therefore, I can propose a new hypothesis: unfinished paths have the positions of clicks more skewed
                 toward the start of the page.
@@ -126,10 +132,11 @@
             <div class="row">
                 <img src="images/position_finished_unfinished_links_distribution.png"
                     alt="frequency of finished and unfinished clicked articles" style="width: 100%;" />
-            </div>
+            </div> -->
             <p>
-                Unfortunately, once again, the <b>KS-Test resulted in non-significant output</b>. <br> The distribution
-                of clicked target links in finished and unfinished records is nearly identical.
+                Now I have still to verify that there is a difference between finished and unfinished paths.
+                Unfortunately, once again, the <b>KS-Test resulted in non-significant output</b>. 
+                <br> The distribution of clicked target links in finished and unfinished records is nearly identical.
                 <b>I have nothing to present to Dr. Cajal...</b>
             </p>
 
@@ -144,14 +151,15 @@
 <div data-overlay-id="structural-elements" class="overlay hidden">
     <div class="modal">
         <div class="modal-content">
-            <div style="overflow-y: auto; height: 80vh;">
-                <div class="content row">
+            <div style="overflow-y: scroll; height: 500px;">
+
                     <p>Before proceeding, we present images illustrating the various HTML elements that may appear on a
                         Wikipedia page. These elements play distinct roles in structuring content and can potentially
                         influence
-                        player navigation choices:</p>
-                </div>
-                <!-- TODO: Links not found -->
+                        player navigation choices:
+                    </p>
+
+ 
                 <button data-overlay-id="description-elements"
                     style="background-image:url('images/description_elements.png'); background-size: 100%; width: 100%; height: 34%; margin: 5px;">
                 </button>
@@ -177,6 +185,7 @@
                         <li><b>Undefined</b>: Elements that don’t fit into the standard categories listed above.</li>
                     </ul>
                 </div>
+        
             </div>
         </div>
     </div>
@@ -255,7 +264,7 @@
                 still works.
             </p>
 
-            <p>References: <a href="https://arize.com/blog-course/kolmogorov-smirnov-test/">Kolmogorov Smirnov Test for
+            <p>References: <a href="https://arize.com/blog-course/kolmogorov-smirnov-test/" target="_blank">Kolmogorov Smirnov Test for
                     AI: When and Where To Use It</a></p>
         </div>
     </div>

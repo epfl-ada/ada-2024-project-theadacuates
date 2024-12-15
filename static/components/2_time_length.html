@@ -16,42 +16,71 @@
 
 <section class="wrapper style1 align-center">
     <div class="inner">
+
+        <h2>Path Duration</h2>
+
+    
         <div class="content">
             <p>
                 <span class="image left"><img src="images/pepito.jpg" alt="Pepito's face" /></span>
-                I will now show a plot of the <strong>duration</strong> of paths for both <strong>finished</strong> and <strong>unfinished</strong> cases. Look at this chart! The <strong>blue line</strong> represents the durations for <strong>finished</strong> paths, while the <strong>orange line</strong> shows the durations for <strong>unfinished</strong> ones. It is clear that <strong>unfinished paths</strong> tend to take much longer, with their <strong>average duration</strong> (marked by the orange dashed line) being significantly higher than that of <strong>finished paths</strong> (blue dashed line).
-
-                See, the <strong>mean duration</strong> of <strong>unfinished paths</strong> (orange line) is much higher compared to <strong>finished paths</strong>. This means <strong>time spent</strong> is a reliable predictor of the <strong>cognitive load</strong> on the person, and thus, the rate of <strong>abandonment</strong>.
+                I will now show a plot of the <strong>duration</strong> of paths for both <strong>finished</strong> and <strong>unfinished</strong> cases. 
+                It is clear that <strong>unfinished paths</strong> tend to take much longer, with their <strong>average duration</strong> being significantly higher than that of <strong>finished paths</strong>.
+                This means <strong>time spent</strong> is a reliable predictor of the <strong>cognitive load</strong> on the person, and thus, the rate of <strong>abandonment</strong>.
             </p>
         </div>
-        <br>
 
         <iframe src="dynamicplots/plotly_duration_plot.html" 
         style="width: 100%; height: 600px; border: none;">
         </iframe>
 
-        <!--<img src="images/durationbyfinished.png" alt="Mean duration of paths" style="width: 800px; height: auto; display: block; margin: 20px auto;">-->
-        <br>
         <div class="content">
             <p>
                 <span class="image right"><img src="images/cajal_face.png" alt="Dr. Cajal's face" /></span>
-                Pepito, please! Don’t you see what a <strong>strange distribution</strong> you have here? What about the <strong>tail</strong> for <strong>unfinished paths</strong>? Here, have a look: if I now take only <strong>unfinished paths</strong> and split them by their <strong>type</strong>, i.e., if it's 'abandonment' or 'timeout,' I can clearly see a <strong>distinct split</strong>. This makes it evident that not all <strong>unfinished paths</strong> are the same, and understanding these <strong>differences</strong> is key to <strong>interpretation</strong>.
+                Pepito, please! Don’t you see what a <strong>strange distribution</strong> you have here? What about the <strong>tail</strong> for <strong>unfinished paths</strong>? 
+                Here, have a look: if I now take only <strong>unfinished paths</strong> and split them by their <strong>type</strong>, i.e., if it's 'abandonment' or 'timeout,' I can clearly see a <strong>distinct split</strong>. 
             </p>
         </div>
-        <br>
+
         <iframe src="dynamicplots/dynamic_duration_distribution.html" 
         style="width: 100%; height: 600px; border: none;">
         </iframe>
 
-        <!--<img src="images/durationbyunfinished.png" alt="Distribution of unfinished path types" style="width: 800px; height: auto; display: block; margin: 20px auto;">-->
-        <br>
+        <p>
+            The increased <strong>mean duration</strong> is due to <strong>session timeouts</strong>.
+            Players were not necessarily experiencing <strong>difficulty</strong>; rather, they abandoned the session, allowing <strong>time</strong> to accumulate passively. 
+            As a result, the prolonged durations in <strong>unfinished paths</strong> reflect a lapse in <strong>activity</strong> rather than active <strong>engagement</strong> or <strong>cognitive load</strong>.
+        </p>
+
+            <!--  -->
+
+        <h2>Path Length</h2>
+
+
         <p>
             <span class="image right"><img src="images/cajal_face.png" alt="Dr. Cajal's face" /></span>
-            The increased <strong>mean duration</strong> in these cases is largely due to <strong>session timeouts</strong>. In these instances, players were not necessarily experiencing <strong>difficulty</strong>; rather, they abandoned the session, allowing <strong>time</strong> to accumulate passively. As a result, the prolonged durations in <strong>unfinished paths</strong> reflect a lapse in <strong>activity</strong> rather than active <strong>engagement</strong> or <strong>cognitive load</strong>.
+            I alredy know that Path length doesn't influence the gamaplay, but I'll show you anyways.
+            <br>
+            </i>If <strong>path length</strong>, as you suppose, could influence <strong>gameplay</strong> 
+            (i.e., longer paths are correlated to <strong>unfinished paths</strong>),
+            I would expect <strong>unfinished paths</strong> to have a higher <strong>average number of articles</strong> visited.
+            However, the <strong>data shows otherwise</strong>. 
+
+            The <strong>Mann-Whitney U test</strong> proves that there is indeed a statistical difference, but it contradicts your expectation.
+            <strong>It seems that finished paths are longer.</strong>
         </p>
+
+        <div style="margin-bottom: 20px; margin-top: 20px; text-align: center;">
+            <button data-overlay-id="mann-whitney-details" class="button big wide smooth-scroll-middle">About <strong>Mann-Whitney U Test</strong></button>
+        </div>
+
+
+        <iframe src="dynamicplots/plotly_path_lengths.html" 
+        style="width: 100%; height: 600px; border: none;">
+        </iframe>
+
     </div>
 </section>
-
+<!-- 
 <section class="wrapper style1 align-center">
     <div class="inner">
         <div class="content">
@@ -73,7 +102,7 @@
         <iframe src="dynamicplots/plotly_path_lengths.html" 
         style="width: 100%; height: 600px; border: none;">
         </iframe>
-        <!--<img src="images/pathlength.png" alt="Distribution of path lengths" style="width: 800px; height: auto; display: block; margin: 20px auto;">-->
+        <img src="images/pathlength.png" alt="Distribution of path lengths" style="width: 800px; height: auto; display: block; margin: 20px auto;">
         <p>
             <strong>Mann-Whitney U test results</strong> for Finished vs. Unfinished Path Lengths:
             <strong>U = 7.72 × 10<sup>8</sup>, p-value = 0.0</strong>.
@@ -144,29 +173,29 @@
             </tbody>
         </table>
     </div>
-</section>
+</section> -->
 
 <!-- Overlay for Mann-Whitney U Test Details -->
 <div data-overlay-id="mann-whitney-details" class="overlay hidden">
     <div class="modal">
         <div class="modal-content">
             <div style="overflow-y: scroll; height: 500px;">
-                <h1><strong>Mann-Whitney U Test Details</strong></h1>
+                <h1>Mann-Whitney U Test Details</h1>
                 <p>The <strong>Mann-Whitney U test</strong> is a <strong>non-parametric test</strong> used to compare <strong>differences</strong> between two <strong>independent groups</strong>. It is particularly useful when the <strong>data</strong> do not follow a <strong>normal distribution</strong>.</p>
                 <p>Let’s denote the groups as follows:</p>
-                <ul>
+                <dl>
                     <li><strong>Group 1:</strong> <strong>Finished paths</strong></li>
                     <li><strong>Group 2:</strong> <strong>Unfinished paths</strong></li>
-                </ul>
+                </dl>
                 <p>The <strong>U statistic</strong> is computed as follows:</p>
                 <div class="formula">
                     $$ U = R_1 - \frac{n_1(n_1 + 1)}{2} $$
                 </div>
                 <p>Where:</p>
-                <ul>
+                <dl>
                     <li><strong>R<sub>1</sub></strong> is the <strong>sum of ranks</strong> for Group 1.</li>
                     <li><strong>n<sub>1</sub></strong> is the <strong>sample size</strong> of Group 1.</li>
-                </ul>
+                </dl>
                 <p>The <strong>p-value</strong> is obtained by comparing the <strong>U statistic</strong> to a <strong>reference distribution</strong>, adjusted for <strong>ties</strong> in the ranks if necessary.</p>
                 <p>Our results indicate a <strong>significant difference</strong> in <strong>path lengths</strong> (<strong>p-value < 0.05</strong>), confirming that <strong>finished paths</strong> tend to have <strong>longer lengths</strong>.</p>
             </div>

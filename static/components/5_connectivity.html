@@ -3,8 +3,8 @@
     <h2>Dr. Cajal Clarifies Pepito's Concern: Connectivity analysis</h2>
     <p>
       Pepito's response leaves Dr.Cajal pensive but not defeated. The idea of players 
-      intentionally seeking chaotic, high-entropy paths is intriguing... something doesn’t fit right.
-      Shaking his head, he turns the conversation to a new angle: connectivity!
+      intentionally seeking chaotic, high-entropy paths is intriguing... <b>something doesn’t fit right.</b>
+      Shaking his head, he turns the conversation to a new angle: <b>connectivity!</b>
     </p>
   </div>
   <div class="image">
@@ -18,74 +18,62 @@
       <p>
         <span class="image left"><img src="images/cajal_face.png" alt="Image of Dr. Cajal" /></span>
       I think players aren’t navigating randomly or chaotically but are actually following a clever gaming strategy.
-      I’ll show you that, in reality, they’re actively seeking high-connectivity hubs to efficiently reach their
+      I’ll show you that, in reality, they’re <b>actively seeking high-connectivity hubs</b> to efficiently reach their
       target article.
-      This isn’t aimless clicking—it’s strategic thinking, Pepito!
+      <b>This isn’t aimless clicking—it’s strategic thinking, Pepito!</b> Let us look at how entropy is correlated to various measurements of connectivity:
       </p>
     </div>
     <br>
     <div style="align-items: center; float: left; margin-top: 2em; margin-bottom: 2em;">
-      <img src="images/correlationmatrixentorpy.png" alt="structure elements"
-          style="width: 45%; height: auto; margin: 5px;" />
-      <img src="images/corrEntropy.png" alt="footer" style="width: 45%; height: auto; margin: 5px;" />
+      <img src="images/correlationCC.png" alt="structure elements"
+          style="width: 100%; height: auto; margin: 5px;" />
     </div>
     <br>
     <br>
   <section class="wrapper style1 align-center">
     <div>
       <div class="content">
-        <p>
-          <span class="image left"><img src="images/cajal_face.png" alt="Image of Dr. Cajal" /></span>
-          <p>As you can see, entropy is positively correlated with all connectivity indices, indicating that, in this case,
-            entropy should not be interpreted as a proxy for indecision.
-            Instead, it works as an indirect measure of the connectivity of the articles that players are navigating.
-  
-            In simple terms, an article with high entropy doesn't necessarily indicate that players are taking various
-            different links from it (which would show high uncertainty in their choices).
-            Instead, it just means that some articles naturally have more outgoing links than others, which inflates the
-            entropy value.
-  
-            Additionally, the highest correlation is found with closeness centrality, which makes perfect sense, as players
-            tend to select articles that are highly connected, helping them move efficiently
-            from any starting article to the intended target.
-          </p>
-          
-        </p>
+        <!-- <span class="image left"><img src="images/cajal_face.png" alt="Image of Dr. Cajal" /></span> -->
+        <p>As you can see, <b>entropy is positively correlated with all connectivity indices</b>, indicating that, in this case,
+          <b>entropy should not be interpreted as a proxy for indecision</b>.
+          Instead, it works as an <b>indirect measure of the connectivity</b> of the articles that players are navigating.
+
+          In simple terms, an article with high entropy doesn't necessarily indicate that players are taking various
+          different links from it (which would show high uncertainty in their choices).
+          Instead, it just means that some articles naturally have more outgoing links than others, which <b>inflates the
+          entropy value.</b>
+
+          Additionally, the <b>highest correlation is found with closeness centrality</b>, which makes perfect sense, as players
+          tend to select articles that are <b>highly connected</b>, helping them move efficiently
+          from any starting article to the intended target.
+          <br>
+          After closeness centrality, <b>out-degree and degree centrality</b> have the highest correlation to entropy.
+          Nodes with higher outgoing connections tend to have higher entropy. These three metrics and their high correlation to entropy suggest that <b>nodes with high entropy are generally
+            central and well-connected in the graph.</b>
+          <br>
+          <!-- Outgoing connections influence entropy more
+          than incoming connections,
+          because entropy could be related to a node's ability to link "out" to many other nodes, providing more options. -->
+        </p>      
       </div>
     </div>
     <div style="margin-bottom: 20px; margin-top: 20px; text-align: center;">
-      <button data-overlay-id="cc" class="button big wide smooth-scroll-middle">About Closeness Centrality</button>
     </div>
   </section>
-
     <div>
-      <p>
-        After closeness centrality, out-degree and degree centrality have the highest correlation to entropy.
-        Nodes with higher outgoing connections tend to have higher entropy. Outgoing connections influence entropy more
-        than incoming connections,
-        because entropy could be related to a node's ability to link "out" to many other nodes, providing more options.
-      </p>
       <div style="margin-bottom: 20px; margin-top: 20px; text-align: center;">
+        <button data-overlay-id="cc" class="button big wide smooth-scroll-middle">About Closeness Centrality</button>
         <button data-overlay-id="dc" class="button big wide smooth-scroll-middle">About Degree Centrality</button>
       </div>
-      <p>
-        Nodes with higher entropy also tend to be more "central" overall in terms of connections when considering
-        incoming and outgoing connections.
-      </p>
-      <p>
-        These three metrics and their high correlation to entropy suggest that nodes with high entropy are generally
-        central
-        and well-connected in the graph.
-      </p>
+      <p>Let's see if players try to find these nodes during their game...</p>
     </div>
-    <img src="images/evolutionCC.png" alt="Evolution of Closeness Centrality"
+    <img src="images/ccEvolution.png" alt="Evolution of Closeness Centrality"
       style="width: 800px; height: auto; display: block; margin: 20px auto;">
     <div class="content">
       <p>
-        <span class="image left"><img src="images/cajal_face.png" alt="Image of Dr. Cajal" /></span>
-        You can even see, Pepito, that players tend to seek high-connectivity nodes early in their paths! The graph
-        clearly shows how closeness
-        centrality spikes at the beginning, indicating that players prioritize <b>well-connected articles right from the
+        Here you can see, Pepito, that players tend to <b>seek high-connectivity nodes early in their paths!</b> The graph
+        clearly shows how <b>closeness
+          centrality spikes at the beginning</b>, indicating that players prioritize <b>well-connected articles right from the
           start.</b> This initial strategy
         helps them quickly move toward their target, rather than wandering aimlessly. <b>It’s proof that their choices
           are strategic, not chaotic!</b>
@@ -113,7 +101,7 @@
         $$ C(u) = \frac{N - 1}{\sum_{v \neq u} d(u, v)} $$
       </p>
       <p>Where:</p>
-      <ul>
+      <ul style="text-align: left">
         <li>\( N \) is the total number of nodes in the graph.</li>
         <li>\( d(u, v) \) is the shortest path distance between nodes \( u \) and \( v \).</li>
       </ul>
@@ -141,7 +129,7 @@
         </p>
       </div>
       <p>Where:</p>
-      <ul>
+      <ul style="text-align: left">
         <li>\( \text{deg}(u) \) is the degree (number of edges) of node \( u \).</li>
         <li>\( N \) is the total number of nodes in the graph.</li>
       </ul>

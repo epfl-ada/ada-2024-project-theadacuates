@@ -69,12 +69,14 @@
 
         <div class="row">
             <div class="col-6">
-                <img src="images/position_distribution_of_target_links.png" alt="distribution of target links"
-                    style="width: 90%;" />
+                <div id="img-category-all-links" style="width: 40vw;height:30vw;"></div>
+                <!-- <img src="images/position_distribution_of_target_links.png" alt="distribution of target links"
+                    style="width: 90%;" /> -->
             </div>
             <div class="col-6">
-                <img src="images/parent_categories_distribution.png" alt="distribution of parent categories"
-                    style="width: 90%;" />
+                <div id="img-category-finished-unfinished-links" style="width: 40vw;height:30vw;"></div>
+                <!-- <img src="images/parent_categories_distribution.png" alt="distribution of parent categories"
+                    style="width: 90%;" /> -->
             </div>
         </div>
 
@@ -126,7 +128,8 @@
                     alt="frequency of finished and unfinished clicked articles" style="width: 100%;" />
             </div>
             <p>
-                Unfortunately, once again, the <b>KS-Test resulted in non-significant output</b>. <br> The distribution of clicked target links in finished and unfinished records is nearly identical.
+                Unfortunately, once again, the <b>KS-Test resulted in non-significant output</b>. <br> The distribution
+                of clicked target links in finished and unfinished records is nearly identical.
                 <b>I have nothing to present to Dr. Cajal...</b>
             </p>
 
@@ -213,7 +216,8 @@
                 </p>
                 <p>
                     Similarly, we assume that users exhibit no bias in their selection of links, and all links on a page
-                    have an equal probability of being clicked. If users have no bias toward link positions, the distribution of clicked links should resemble
+                    have an equal probability of being clicked. If users have no bias toward link positions, the
+                    distribution of clicked links should resemble
                     the distribution of all links on the page.
                 </p>
 
@@ -256,3 +260,83 @@
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+
+    // all links
+    var myChart = echarts.init(document.getElementById('img-category-all-links'));
+
+    var option = {
+        title: {
+            text: 'Proportion Distribution of Target Links in All Links'
+        },
+        tooltip: {},
+        xAxis: {
+            axisLabel: {
+                interval: 0,
+                // rotate: 30 //If the label names are too long you can manage this by rotating the label.
+              },      
+            data: ['heading', 'paragraph', 'table', 'list', 'infobox', 'footer', 'undefined']
+        },
+        yAxis: {},
+        series: [
+            {
+                name: 'Normalized Count',
+                type: 'bar',
+                data: [0.00045973497771180946, 0.020118817416331487, 0.01656017443295444, 0.0200453345914206, 0.03365487021878709, 0.00016676599723332476, 5.1448268765756035e-05]
+            }
+        ]
+    };
+    myChart.setOption(option);
+
+    // finished - unfinished
+    var myChart2 = echarts.init(document.getElementById('img-category-finished-unfinished-links'));
+
+
+    var option2 = {
+        title: {
+            text: 'Parent Categories Distribution'
+        },
+        tooltip: {},
+        xAxis: {
+            axisLabel: {
+                interval: 0,
+                // rotate: 30 //If the label names are too long you can manage this by rotating the label.
+              },        
+            data: ['heading', 'paragraph', 'table', 'list', 'infobox', 'footer', 'undefined']
+        },
+        yAxis: {},
+        legend: {
+            orient: 'vertical',
+            right: 10,
+            top: 'top',
+            data: ['Finished', 'Unfinished']
+        },
+        series: [
+            {
+                name: 'Finished',
+                type: 'bar',
+                data: [0.0004558181936576154,
+                    0.01975887025490131,
+                    0.016486000345680017,
+                    0.019517463205332593,
+                    0.033140556224463616,
+                    7.097774574679508e-05,
+                    0.0]
+            },
+            {
+                name: 'Unfinished',
+                type: 'bar',
+                data: [0.00047160277571919423,
+                    0.021285628820568604,
+                    0.01682165594106382,
+                    0.021768634236363774,
+                    0.035384717519750385,
+                    0.0004558035322027941,
+                    0.00022696323195642307]
+            }
+        ]
+    };
+
+    myChart2.setOption(option2);
+</script>

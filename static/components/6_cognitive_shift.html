@@ -42,8 +42,8 @@
         <img src="images/category_change_count.png"
             style="width: 600px; height: auto; display: block; margin: 20px auto;">
 
-        <div class="row" style="text-align:center;">
-            <div id="img-category-change-count" style="width: 80vw;height:40vw;"></div>
+        <div class="row" style="margin: 0;">
+            <div class="col-12" id="img-category-change-count" style="width: 80vw;height:40vw;"></div>
         </div>
         <p>
             <i>Maravilloso!</i>, the category shift per link <strong>is higher in unfinished paths</strong> which shows
@@ -183,30 +183,35 @@
             },
             label: {
                 formatter: (params) => {
-                    return params.name.slice(0, -1);},
+                    return params.name.slice(0, -1);
+                },
             },
+            lineStyle: {
+                color: 'gradient',
+            },
+            //['#c23531','#2f4554', '#61a0a8', '#d48265', '#91c7ae','#749f83', '#ca8622', '#bda29a','#6e7074','#546570', '#c4ccd3']
             data: [
-                { name: 'History1' },
-                { name: 'Geography1' },
-                { name: 'Citizenship1' },
-                { name: 'Religion1' },
-                { name: 'Science1' },
-                { name: 'People1' },
-                { name: 'Everyday life1' },
-                { name: 'Design and Technology1' },
-                { name: 'Language and literature1' },
-                { name: 'Music1' },
+                { name: 'History1', itemStyle: { color: '#c23531' }, label: { position: 'right'} },
+                { name: 'Geography1', itemStyle: { color: '#2f4554' }, label: { position: 'right'} },
+                { name: 'Citizenship1', itemStyle: { color: '#61a0a8' }, label: { position: 'right'} },
+                { name: 'Religion1', itemStyle: { color: '#d48265' }, label: { position: 'right'} },
+                { name: 'Science1', itemStyle: { color: '#91c7ae' }, label: { position: 'right'} },
+                { name: 'People1', itemStyle: { color: '#749f83' }, label: { position: 'right'} },
+                { name: 'Everyday life1', itemStyle: { color: '#ca8622' }, label: { position: 'right'} },
+                { name: 'Design and Technology1', itemStyle: { color: '#bda29a' }, label: { position: 'right'} },
+                { name: 'Language and literature1', itemStyle: { color: '#6e7074' }, label: { position: 'right'} },
+                { name: 'Music1', itemStyle: { color: '#546570' }, label: { position: 'right'} },
 
-                { name: 'History2' },
-                { name: 'Geography2' },
-                { name: 'Citizenship2' },
-                { name: 'Religion2' },
-                { name: 'Science2' },
-                { name: 'People2' },
-                { name: 'Everyday life2' },
-                { name: 'Design and Technology2' },
-                { name: 'Language and literature2' },
-                { name: 'Music2' },
+                { name: 'History2', itemStyle: { color: '#c23531' }, label: { position: 'right'} },
+                { name: 'Geography2', itemStyle: { color: '#2f4554' }, label: { position: 'right'} },
+                { name: 'Citizenship2', itemStyle: { color: '#61a0a8' }, label: { position: 'right'} },
+                { name: 'Religion2', itemStyle: { color: '#d48265' }, label: { position: 'right'} },
+                { name: 'Science2', itemStyle: { color: '#91c7ae' }, label: { position: 'right'} },
+                { name: 'People2', itemStyle: { color: '#749f83' }, label: { position: 'right'} },
+                { name: 'Everyday life2', itemStyle: { color: '#ca8622' }, label: { position: 'right'} },
+                { name: 'Design and Technology2', itemStyle: { color: '#bda29a' }, label: { position: 'right'} },
+                { name: 'Language and literature2', itemStyle: { color: '#6e7074' }, label: { position: 'right'} },
+                { name: 'Music2', itemStyle: { color: '#546570' }, label: { position: 'right'} },
             ],
             links: [{ source: 'History1', target: 'History2', value: 0 },
             { source: 'History1', target: 'Geography2', value: 7564 },

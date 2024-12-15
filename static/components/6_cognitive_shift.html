@@ -1,10 +1,13 @@
 <!-- Section 1: Spotlight Section -->
-<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in" id="first">
+<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in"
+    id="first">
     <div class="content">
         <h2>Pepito's new hope: Cognitive Shifting</h2>
         <p>
-            Despite being taken aback by the strong evidence presented by the Professor, Pepito will not be deterred so easily.
-            Cajal's mention of strategic choices along a path gives Pepito a new idea: measuring the <strong>amount of change</strong> along a path.
+            Despite being taken aback by the strong evidence presented by the Professor, Pepito will not be deterred so
+            easily.
+            Cajal's mention of strategic choices along a path gives Pepito a new idea: measuring the <strong>amount of
+                change</strong> along a path.
             He decides to try a new metric, <strong>cognitive shifting</strong>.
         </p>
         <ul class="actions stacked">
@@ -19,78 +22,111 @@
     <div class="inner">
         <div class="content">
             <p>
-                <span class="image left"><img src="images/pepito.jpg"/></span>
-                When alternative, task-unrelated stimuli are presented to a human, mental fatigue and attention are negatively impacted <a href="https://pubmed.ncbi.nlm.nih.gov/26752733/" target="_blank">(Ref)</a>. 
-                I believe that <strong>moving from one category of knowledge to another</strong> (e.g., from science-related articles to arts-related articles) <strong>requires cognitive shifting</strong>, which can <strong>negatively impact gameplay</strong>.
-                I will look at the <strong>category changes along a path</strong>, for example if the player is on an article categorised "Science" and moves to an article categorised "History", this represents a category change.
+                <span class="image left"><img src="images/pepito.jpg" /></span>
+                When alternative, task-unrelated stimuli are presented to a human, mental fatigue and attention are
+                negatively impacted <a href="https://pubmed.ncbi.nlm.nih.gov/26752733/" target="_blank">(Ref)</a>.
+                I believe that <strong>moving from one category of knowledge to another</strong> (e.g., from
+                science-related articles to arts-related articles) <strong>requires cognitive shifting</strong>, which
+                can <strong>negatively impact gameplay</strong>.
+                I will look at the <strong>category changes along a path</strong>, for example if the player is on an
+                article categorised "Science" and moves to an article categorised "History", this represents a category
+                change.
                 For each path I will quantify how many changes there are and use it as a metric.
-                I will only select paths of length more than 3, as shorter paths do not have enough changes for the mental fatigue to be of any significance.
-                I will also remove the last shift of finished paths, as this is a necessary to get to the target articles's category.
+                I will only select paths of length more than 3, as shorter paths do not have enough changes for the
+                mental fatigue to be of any significance.
+                I will also remove the last shift of finished paths, as this is a necessary to get to the target
+                articles's category.
             </p>
         </div>
-    
-        <img src="images/category_change_count.png" style="width: 600px; height: auto; display: block; margin: 20px auto;">
-    
+
+        <img src="images/category_change_count.png"
+            style="width: 600px; height: auto; display: block; margin: 20px auto;">
+
+        <div class="row" style="text-align:center;">
+            <div id="img-category-change-count" style="width: 80vw;height:40vw;"></div>
+        </div>
         <p>
-            <i>Maravilloso!</i>, the category shift per link <strong>is higher in unfinished paths</strong> which shows that a higher shift correlates with increased cognitive load and thus greater difficulty.
+            <i>Maravilloso!</i>, the category shift per link <strong>is higher in unfinished paths</strong> which shows
+            that a higher shift correlates with increased cognitive load and thus greater difficulty.
         </p>
 
         <div class="content">
             <p>
-                <span class="image left"><img src="images/cajal_face.png"/></span>
-                Indeed that seems to be the case, however <strong>are you sure that changes in category is the best metric for measuring cognitive shifting</strong>? 
-                Articles who have the same category could be completely unrelated, take for example Alexander the Great and Einstein. 
+                <span class="image left"><img src="images/cajal_face.png" /></span>
+                Indeed that seems to be the case, however <strong>are you sure that changes in category is the best
+                    metric for measuring cognitive shifting</strong>?
+                Articles who have the same category could be completely unrelated, take for example Alexander the Great
+                and Einstein.
                 These two articles have category "People" but have close to nothing in common.
-                Now take Einstein and Physics, these articles have category "People" and "Physics" respectively, but are very closely related.
+                Now take Einstein and Physics, these articles have category "People" and "Physics" respectively, but are
+                very closely related.
                 Furthermore, are you sure you should be removing the final shift in finished paths?
-                It is necessary, but still represents a change in category that should be accounted for if we consider cognitive load.
-                Furthermore, this is only applied to finished paths, but unfinished paths might also have this necessary shift.
+                It is necessary, but still represents a change in category that should be accounted for if we consider
+                cognitive load.
+                Furthermore, this is only applied to finished paths, but unfinished paths might also have this necessary
+                shift.
             </p>
         </div>
-        
+
         <br>
 
         <div class="content">
             <p>
-                <span class="image left"><img src="images/pepito.jpg"/></span>
-                A potentially more meaninigul metric I can use is <strong>semantic shift</strong>, which I define as one minus the semantic similarity between two successive articles.
-                <strong>Large semantic shifts</strong> between articles can represent a <strong>higher cognitive load</strong> for the player, having to completely change topics from one article to the other. 
+                <span class="image left"><img src="images/pepito.jpg" /></span>
+                A potentially more meaninigul metric I can use is <strong>semantic shift</strong>, which I define as one
+                minus the semantic similarity between two successive articles.
+                <strong>Large semantic shifts</strong> between articles can represent a <strong>higher cognitive
+                    load</strong> for the player, having to completely change topics from one article to the other.
                 I can investigate if this is related to whether the path is finished or not.
             </p>
         </div>
 
         <div style="margin-bottom: 20px; margin-top: 20px; text-align: center;">
-            <button data-overlay-id="semantic-similarity" class="button big wide smooth-scroll-middle">About Semantic Similarity</button>
+            <button data-overlay-id="semantic-similarity" class="button big wide smooth-scroll-middle">About Semantic
+                Similarity</button>
         </div>
 
         <p>
-            Firstly, I will show how the semantic shift evolves over a path, by examining the semantic shift between articles in paths of different lengths.
+            Firstly, I will show how the semantic shift evolves over a path, by examining the semantic shift between
+            articles in paths of different lengths.
         </p>
-        
+
         <img src="images/semantic_shift.png" style="width: 800px; height: auto; display: block; margin: 20px auto;">
 
         <p>
-            As can be seen, <strong>semantic shift decreases at the end of finished paths compared to unfinished paths, which tend to stagnate</strong> .
-            This indicates that, in unfinished paths, the gap in similarity between consecutive articles remains constant, suggesting that the player is "lost"—continuing to change semantic fields without converging on the correct target. 
-            This pattern supports my thesis that higher cognitive shiftings are indeed associated with a greater likelihood of path abandonment.
+            As can be seen, <strong>semantic shift decreases at the end of finished paths compared to unfinished paths,
+                which tend to stagnate</strong> .
+            This indicates that, in unfinished paths, the gap in similarity between consecutive articles remains
+            constant, suggesting that the player is "lost"—continuing to change semantic fields without converging on
+            the correct target.
+            This pattern supports my thesis that higher cognitive shiftings are indeed associated with a greater
+            likelihood of path abandonment.
         </p>
 
-        <img src="images/semantic_shift_hist.png" style="width: 700px; height: auto; display: block; margin: 20px auto;">
+        <img src="images/semantic_shift_hist.png"
+            style="width: 700px; height: auto; display: block; margin: 20px auto;">
 
         <p>
-            We can observe that the <strong>semantic shift along finished paths is smaller than for unfinished paths</strong> indicating that finished paths tend to follow more closely related articles than unfinished ones. 
-            This supports the idea that jumping between articles with high differences in similarity can lead to unfinished paths, thus supporting my thesis.
+            We can observe that the <strong>semantic shift along finished paths is smaller than for unfinished
+                paths</strong> indicating that finished paths tend to follow more closely related articles than
+            unfinished ones.
+            This supports the idea that jumping between articles with high differences in similarity can lead to
+            unfinished paths, thus supporting my thesis.
         </p>
 
         <div class="content">
             <p>
-                <span class="image left"><img src="images/cajal_face.png"/></span>
-                <strong>Although statistically significant, the shift is unfortunately minor</strong>, to the extent that it doesn't represent a practical or relevant change to strongly support your point. 
-                Have you also considered the fact that this slight difference in semantic shift is probably due to the <strong>nature of finished paths</strong>, the last few articles being semantically close as the player is refining his search towards the target.
-                On the contrary, unfinished paths do not get this final homing in phase, so have slightly higher semantic shift.
+                <span class="image left"><img src="images/cajal_face.png" /></span>
+                <strong>Although statistically significant, the shift is unfortunately minor</strong>, to the extent
+                that it doesn't represent a practical or relevant change to strongly support your point.
+                Have you also considered the fact that this slight difference in semantic shift is probably due to the
+                <strong>nature of finished paths</strong>, the last few articles being semantically close as the player
+                is refining his search towards the target.
+                On the contrary, unfinished paths do not get this final homing in phase, so have slightly higher
+                semantic shift.
             </p>
         </div>
-    
+
     </div>
 </section>
 
@@ -101,26 +137,218 @@
     <div class="modal">
         <div class="modal-content">
             <div style="overflow-y: scroll; height: 500px;">
-                
+
                 <h1> Semantic Similarity </h1>
-        
+
                 <p>
-                    <strong>Semantic similarity</strong> refers to the degree to which two concepts, words, or phrases are related in meaning, even if they are not identical. 
-                    In essence, it allows us to evaluate <strong>how similar words or sentences based on their meanings</strong> rather than exact matches.
+                    <strong>Semantic similarity</strong> refers to the degree to which two concepts, words, or phrases
+                    are related in meaning, even if they are not identical.
+                    In essence, it allows us to evaluate <strong>how similar words or sentences based on their
+                        meanings</strong> rather than exact matches.
                 </p>
-        
+
                 <p>
-                    To quantify this value, Pepito is going to use <strong>SentenceTransformer</strong> a model that specializes in measuring semantic similarity by transforming sentences or words into high-dimensional vectors, which then allows for easy comparison of their meanings.
+                    To quantify this value, Pepito is going to use <strong>SentenceTransformer</strong> a model that
+                    specializes in measuring semantic similarity by transforming sentences or words into
+                    high-dimensional vectors, which then allows for easy comparison of their meanings.
                 </p>
-        
+
                 <img src="images/semantic_similarity_example.png" style="width: 500px; height: auto">
-        
+
                 <p>
-                    To ensure he understands how this metric works, Pepito is testing the model on a subset of words. 
-                    The results are <strong>generally intuitive</strong>: for example, "William Shakespeare" is semantically close to terms like "playwright" and "Romeo and Juliet" but has no relationship to "data analysis." 
-                    However, <strong>the model isn't perfect</strong>; it struggles with more nuanced relationships, such as between "Romeo and Juliet" and "love," which one might expect to be closely related but are not always picked up as such by the model.
+                    To ensure he understands how this metric works, Pepito is testing the model on a subset of words.
+                    The results are <strong>generally intuitive</strong>: for example, "William Shakespeare" is
+                    semantically close to terms like "playwright" and "Romeo and Juliet" but has no relationship to
+                    "data analysis."
+                    However, <strong>the model isn't perfect</strong>; it struggles with more nuanced relationships,
+                    such as between "Romeo and Juliet" and "love," which one might expect to be closely related but are
+                    not always picked up as such by the model.
                 </p>
             </div>
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+
+    // all links
+    var myChart = echarts.init(document.getElementById('img-category-change-count'));
+
+    var option = {
+        series: {
+            type: 'sankey',
+            layout: 'none',
+            emphasis: {
+                focus: 'adjacency'
+            },
+            label: {
+                formatter: (params) => {
+                    return params.name.slice(0, -1);},
+            },
+            data: [
+                { name: 'History1' },
+                { name: 'Geography1' },
+                { name: 'Citizenship1' },
+                { name: 'Religion1' },
+                { name: 'Science1' },
+                { name: 'People1' },
+                { name: 'Everyday life1' },
+                { name: 'Design and Technology1' },
+                { name: 'Language and literature1' },
+                { name: 'Music1' },
+
+                { name: 'History2' },
+                { name: 'Geography2' },
+                { name: 'Citizenship2' },
+                { name: 'Religion2' },
+                { name: 'Science2' },
+                { name: 'People2' },
+                { name: 'Everyday life2' },
+                { name: 'Design and Technology2' },
+                { name: 'Language and literature2' },
+                { name: 'Music2' },
+            ],
+            links: [{ source: 'History1', target: 'History2', value: 0 },
+            { source: 'History1', target: 'Geography2', value: 7564 },
+            { source: 'History1', target: 'Citizenship2', value: 2383 },
+            { source: 'History1', target: 'Religion2', value: 1255 },
+            { source: 'History1', target: 'Science2', value: 1774 },
+            { source: 'History1', target: 'People2', value: 3282 },
+            { source: 'History1', target: 'Everyday life2', value: 1206 },
+            { source: 'History1', target: 'Design and Technology2', value: 1154 },
+            { source: 'History1', target: 'Language and literature2', value: 1174 },
+            { source: 'History1', target: 'Music2', value: 212 },
+            { source: 'Geography1', target: 'History2', value: 7841 },
+            { source: 'Geography1', target: 'Geography2', value: 0 },
+            { source: 'Geography1', target: 'Citizenship2', value: 4621 },
+            { source: 'Geography1', target: 'Religion2', value: 1647 },
+            { source: 'Geography1', target: 'Science2', value: 9584 },
+            { source: 'Geography1', target: 'People2', value: 2650 },
+            { source: 'Geography1', target: 'Everyday life2', value: 4498 },
+            { source: 'Geography1', target: 'Design and Technology2', value: 1739 },
+            { source: 'Geography1', target: 'Language and literature2', value: 2222 },
+            { source: 'Geography1', target: 'Music2', value: 578 },
+            { source: 'Citizenship1', target: 'History2', value: 2239 },
+            { source: 'Citizenship1', target: 'Geography2', value: 3935 },
+            { source: 'Citizenship1', target: 'Citizenship2', value: 0 },
+            { source: 'Citizenship1', target: 'Religion2', value: 466 },
+            { source: 'Citizenship1', target: 'Science2', value: 1911 },
+            { source: 'Citizenship1', target: 'People2', value: 1810 },
+            { source: 'Citizenship1', target: 'Everyday life2', value: 1419 },
+            { source: 'Citizenship1', target: 'Design and Technology2', value: 1248 },
+            {
+                source: 'Citizenship1',
+                target: 'Language and literature2',
+                value: 817
+            },
+            { source: 'Citizenship1', target: 'Music2', value: 207 },
+            { source: 'Religion1', target: 'History2', value: 1446 },
+            { source: 'Religion1', target: 'Geography2', value: 1431 },
+            { source: 'Religion1', target: 'Citizenship2', value: 371 },
+            { source: 'Religion1', target: 'Religion2', value: 0 },
+            { source: 'Religion1', target: 'Science2', value: 724 },
+            { source: 'Religion1', target: 'People2', value: 1159 },
+            { source: 'Religion1', target: 'Everyday life2', value: 322 },
+            { source: 'Religion1', target: 'Design and Technology2', value: 35 },
+            { source: 'Religion1', target: 'Language and literature2', value: 782 },
+            { source: 'Religion1', target: 'Music2', value: 46 },
+            { source: 'Science1', target: 'History2', value: 2545 },
+            { source: 'Science1', target: 'Geography2', value: 10870 },
+            { source: 'Science1', target: 'Citizenship2', value: 2440 },
+            { source: 'Science1', target: 'Religion2', value: 998 },
+            { source: 'Science1', target: 'Science2', value: 0 },
+            { source: 'Science1', target: 'People2', value: 2646 },
+            { source: 'Science1', target: 'Everyday life2', value: 5990 },
+            { source: 'Science1', target: 'Design and Technology2', value: 1795 },
+            { source: 'Science1', target: 'Language and literature2', value: 1644 },
+            { source: 'Science1', target: 'Music2', value: 457 },
+            { source: 'People1', target: 'History2', value: 2846 },
+            { source: 'People1', target: 'Geography2', value: 4555 },
+            { source: 'People1', target: 'Citizenship2', value: 1689 },
+            { source: 'People1', target: 'Religion2', value: 1017 },
+            { source: 'People1', target: 'Science2', value: 2120 },
+            { source: 'People1', target: 'People2', value: 0 },
+            { source: 'People1', target: 'Everyday life2', value: 794 },
+            { source: 'People1', target: 'Design and Technology2', value: 514 },
+            { source: 'People1', target: 'Language and literature2', value: 1041 },
+            { source: 'People1', target: 'Music2', value: 405 },
+            { source: 'Everyday life1', target: 'History2', value: 1353 },
+            { source: 'Everyday life1', target: 'Geography2', value: 4895 },
+            { source: 'Everyday life1', target: 'Citizenship2', value: 1809 },
+            { source: 'Everyday life1', target: 'Religion2', value: 444 },
+            { source: 'Everyday life1', target: 'Science2', value: 6274 },
+            { source: 'Everyday life1', target: 'People2', value: 992 },
+            { source: 'Everyday life1', target: 'Everyday life2', value: 0 },
+            {
+                source: 'Everyday life1',
+                target: 'Design and Technology2',
+                value: 539
+            },
+            {
+                source: 'Everyday life1',
+                target: 'Language and literature2',
+                value: 1174
+            },
+            { source: 'Everyday life1', target: 'Music2', value: 240 },
+            { source: 'Design and Technology1', target: 'History2', value: 1481 },
+            { source: 'Design and Technology1', target: 'Geography2', value: 1932 },
+            { source: 'Design and Technology1', target: 'Citizenship2', value: 733 },
+            { source: 'Design and Technology1', target: 'Religion2', value: 75 },
+            { source: 'Design and Technology1', target: 'Science2', value: 2216 },
+            { source: 'Design and Technology1', target: 'People2', value: 518 },
+            {
+                source: 'Design and Technology1',
+                target: 'Everyday life2',
+                value: 949
+            },
+            {
+                source: 'Design and Technology1',
+                target: 'Design and Technology2',
+                value: 0
+            },
+            {
+                source: 'Design and Technology1',
+                target: 'Language and literature2',
+                value: 258
+            },
+            { source: 'Design and Technology1', target: 'Music2', value: 126 },
+            { source: 'Language and literature1', target: 'History2', value: 1481 },
+            { source: 'Language and literature1', target: 'Geography2', value: 3686 },
+            {
+                source: 'Language and literature1',
+                target: 'Citizenship2',
+                value: 1056
+            },
+            { source: 'Language and literature1', target: 'Religion2', value: 789 },
+            { source: 'Language and literature1', target: 'Science2', value: 635 },
+            { source: 'Language and literature1', target: 'People2', value: 874 },
+            {
+                source: 'Language and literature1',
+                target: 'Everyday life2',
+                value: 1258
+            },
+            {
+                source: 'Language and literature1',
+                target: 'Design and Technology2',
+                value: 622
+            },
+            {
+                source: 'Language and literature1',
+                target: 'Language and literature2',
+                value: 0
+            },
+            { source: 'Language and literature1', target: 'Music2', value: 213 },
+            { source: 'Music1', target: 'History2', value: 251 },
+            { source: 'Music1', target: 'Geography2', value: 684 },
+            { source: 'Music1', target: 'Citizenship2', value: 276 },
+            { source: 'Music1', target: 'Religion2', value: 38 },
+            { source: 'Music1', target: 'Science2', value: 332 },
+            { source: 'Music1', target: 'People2', value: 547 },
+            { source: 'Music1', target: 'Everyday life2', value: 183 },
+            { source: 'Music1', target: 'Design and Technology2', value: 97 },
+            { source: 'Music1', target: 'Language and literature2', value: 132 },
+            { source: 'Music1', target: 'Music2', value: 0 }]
+        }
+    };
+    myChart.setOption(option);
+</script>

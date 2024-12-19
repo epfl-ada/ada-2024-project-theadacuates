@@ -68,12 +68,12 @@
 
         <div class="row">
             <div class="col-6">
-                <div id="img-category-all-links" style="width: 40vw;height:30vw;"></div>
+                <div id="img-category-all-links" style="width: 100%; height:30vw;"></div>
                 <!-- <img src="images/position_distribution_of_target_links.png" alt="distribution of target links"
                     style="width: 90%;" /> -->
             </div>
             <div class="col-6">
-                <div id="img-category-finished-unfinished-links" style="width: 40vw;height:30vw;"></div>
+                <div id="img-category-finished-unfinished-links" style="width: 100%; height:30vw;"></div>
                 <!-- <img src="images/parent_categories_distribution.png" alt="distribution of parent categories"
                     style="width: 90%;" /> -->
             </div>
@@ -937,4 +937,11 @@
         ]
     };
     myChart4.setOption(option4);
+
+    $(window).on('resize', function(){
+        myChart.resize();
+        myChart2.resize();
+        myChart3.resize();
+        myChart4.resize();
+    });
 </script>

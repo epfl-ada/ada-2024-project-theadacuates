@@ -21,15 +21,22 @@
 <section class="wrapper style1 align-left">
     <div class="inner">
         <div class="content">
+
+            <h2 style="text-align: center;">Category Shift</h2>
+
             <p>
                 <span class="image left"><img src="images/pepito.jpg" /></span>
                 When alternative, task-unrelated stimuli are presented to a human, mental fatigue and attention are
-                negatively impacted <a href="https://pubmed.ncbi.nlm.nih.gov/26752733/" target="_blank">(Ref)</a>.
+                negatively impacted (<a href="https://pubmed.ncbi.nlm.nih.gov/26752733/" target="_blank">Ref</a>).
                 I believe that <strong>moving from one category of knowledge to another</strong> (e.g., from
                 science-related articles to arts-related articles) <strong>requires cognitive shifting</strong>, which
                 can <strong>negatively impact gameplay</strong>.
-                Below we see the categories for all edges of played games, with bigger connections meaning that going from the category on the left to the one on the right is more common.
-            </p>
+                <br>
+                
+                Below, we observe the shift in category from source to target link: 
+                the <strong>change in category is clearly visible</strong> even with this coarse analysis. 
+                Consider how many <strong>subtle shifts might be uncovered if we examine the entire paths</strong> in detail.           
+             </p>
         </div>
 
         <div class="row" style="text-align:center;">
@@ -42,7 +49,7 @@
             change.
             I will only select paths of length more than 3, as shorter paths do not have enough changes for the
             mental fatigue to be of any significance.
-            I will also remove the last shift of finished paths, as this is a necessary to get to the target
+            I will also <strong>remove the last shift of finished paths</strong>, as this is a necessary to get to the target
             articles's category.
         </p>
 
@@ -50,7 +57,7 @@
             style="width: 600px; height: auto; display: block; margin: 20px auto;">
 
         <p>
-            <i>Maravilloso!</i>, the category shift per link <strong>is higher in unfinished paths</strong> which shows
+            <i>Maravilloso!</i>, the category shift per link <strong>is higher in unfinished paths</strong> (t-test significant for each path length) which shows
             that a higher shift correlates with increased cognitive load and thus greater difficulty.
         </p>
 
@@ -62,17 +69,19 @@
                 Articles who have the same category could be completely unrelated, take for example Alexander the Great
                 and Einstein.
                 These two articles have category "People" but have close to nothing in common.
-                Now take Einstein and Physics, these articles have category "People" and "Physics" respectively, but are
-                very closely related.
-                Furthermore, are you sure you should be removing the final shift in finished paths?
+                <!-- Now take Einstein and Physics, these articles have category "People" and "Physics" respectively, but are
+                very closely related. -->
+                Furthermore, are you sure you should be <strong>removing the final shift in finished paths?</strong>
                 It is necessary, but still represents a change in category that should be accounted for if we consider
                 cognitive load.
-                Furthermore, this is only applied to finished paths, but unfinished paths might also have this necessary
-                shift.
+                In addition, the difference in cognitive shift appears to be 1 across all path lengths, 
+                which aligns with the value you have subtracted. 
+                This suggests that the <strong>initial data manipulation might be compromising your conclusions.</strong>
             </p>
         </div>
 
-        <br>
+        <h2 style="text-align: center;">Semantic Shift</h2>
+
 
         <div class="content">
             <p>
@@ -122,7 +131,7 @@
             <p>
                 <span class="image left"><img src="images/cajal_face.png" /></span>
                 <strong>Although statistically significant, the shift is unfortunately minor</strong>, to the extent
-                that it doesn't represent a practical or relevant change to strongly support your point.
+                that it doesn't represent a practical or relevant change to support your point.
                 Have you also considered the fact that this slight difference in semantic shift is probably due to the
                 <strong>nature of finished paths</strong>, the last few articles being semantically close as the player
                 is refining his search towards the target.

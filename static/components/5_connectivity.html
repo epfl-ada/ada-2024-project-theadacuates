@@ -39,16 +39,18 @@
           Instead, it works as an <b>indirect measure of the connectivity</b> of the articles that players are navigating.
 
           In simple terms, an article with high entropy doesn't necessarily indicate that players are taking various
-          different links from it (which would show high uncertainty in their choices).
+          different links from it.
           Instead, it just means that some articles naturally have more outgoing links than others, which <b>inflates the
           entropy value.</b>
+
+          <br>
 
           Additionally, the <b>highest correlation is found with closeness centrality</b>, which makes perfect sense, as players
           tend to select articles that are <b>highly connected</b>, helping them move efficiently
           from any starting article to the intended target.
           <br>
           After closeness centrality, <b>out-degree and degree centrality</b> have the highest correlation to entropy.
-          Nodes with higher outgoing connections tend to have higher entropy. These three metrics and their high correlation to entropy suggest that <b>nodes with high entropy are generally
+          These three metrics and their high correlation to entropy suggest that <b>nodes with high entropy are generally
             central and well-connected in the graph.</b>
           <br>
           <!-- Outgoing connections influence entropy more
@@ -65,7 +67,7 @@
         <button data-overlay-id="cc" class="button big wide smooth-scroll-middle">About Closeness Centrality</button>
         <button data-overlay-id="dc" class="button big wide smooth-scroll-middle">About Degree Centrality</button>
       </div>
-      <p><b>Let's see if players try to find these nodes during their game...</b></p>
+      <p>Let's see <strong>when</strong> players try to find these nodes during their game...</p>
     </div>
     <img src="images/ccEvolution.png" alt="Evolution of Closeness Centrality"
       style="width: 800px; height: auto; display: block; margin: 20px auto;">

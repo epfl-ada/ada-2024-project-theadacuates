@@ -107,7 +107,7 @@
 
                 <br>
 
-                The blue histogram shows the <b>expected distribution</b> of link clicks, if they were all clicked
+                The blue histogram shows the <b>normalized expected frequency distribution</b> of clicked links, if they were all clicked
                 with equal probability.
                 In contrast, the green one depicts the <b>actual distribution</b> of the position of clicked
                 links in played games.
@@ -230,31 +230,23 @@
                 <h2>How Link Position is Quantified?</h2>
 
                 <p>
-                    Since <b>monitor resolution cannot be inferred from our dataset</b>, we cannot assume it is the same
+                    Since <b>monitor resolution cannot be inferred from our dataset</b>, Pepito cannot assume it is the same
                     for every player.
-                    Therefore, we are unable to determine the exact visual position of a link on a webpage a priori.
+                    Therefore, he is unable to determine the exact visual position of a link on a webpage a priori.
+                    Thus he decided to use the <b>order of link appearance on the page as a metric for position</b>.
                 </p>
                 <p>
-                    However, we decided to use the <b>order of link appearance on the page as a metric for position</b>.
-                </p>
-                <p>
-                    Similarly, we assume that users exhibit no bias in their selection of links, and all links on a page
-                    have an equal probability of being clicked. If users have no bias toward link positions, the
-                    distribution of clicked links should resemble
-                    the distribution of all links on the page.
-                </p>
+                    In addition, Pepito cannot know from the dataset which link has been cliked in the case
+                    where </b>same link is present multiple times inside the same webpage</b>,
+                    To address this problem Pepito decided to assign them the same probability of being clicked.
 
-                <p>
-                    For instance, when analyzing the distribution of all link positions on a page, if there is only one
-                    link, we assign a weight of 1 to the link at position 1. If there are ten links, we assign equal
-                    weights of 0.1 to links in positions 1 through 10.
-                </p>
                 <p>
                     For a target link clicked by a user, if it appears in multiple positions on the page (e.g.,
                     positions 1
                     and 30), we consider the user to have clicked the link 0.5 times at position 1 and 0.5 times at
                     position
-                    30.</p>
+                    30.
+                </p>
 
 
             </div>

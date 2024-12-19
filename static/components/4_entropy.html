@@ -110,10 +110,10 @@
                 
                 <p>
                     Where:
-                    <dl style="list-style-type: none; padding-left: 0;">
-                        <li style="display: inline; margin-right: 5px;"><span class="formula_small">$$H(X)$$ </span> represents the Shannon entropy of the variable <strong>X</strong>.</li>
-                        <li style="display: inline; margin-right: 5px;"><span class="formula_small">$$p(x_i)$$</span> is the probability of transitioning to a specific subsequent article.</li>
-                        <li style="display: inline; margin-right: 5px;"><span class="formula_small">$$n$$</span> is the total number of possible next articles.</li>
+                    <dl>
+                        <li>\( H(X) \):represents the Shannon entropy of the variable <strong>X</strong>.</li>
+                        <li>\( p(x_i) \):probability of transitioning to a subsequent article.</li>
+                        <li>\( n \):is the total number of possible next articles.</li>
                     </dl>
                 </p>
                 
@@ -126,10 +126,8 @@
                     For example, consider the article <strong>"Dante Alighieri"</strong>. 
                     It has a high entropy because many different paths can be taken from it, each with similar probabilities.
 
-                    <img src="images/dante_entropy.png" alt="Image related to Entropy" style="width: 600px;">
-                </p>
-                    
-                <p>
+                    <img src="images/dante_entropy.png" alt="Image related to Entropy" style="width: 100%;">
+
                     After calculating the entropy for each article, the <strong>entropy for the entire path</strong> 
                     (i.e., the mean of the single entropies of the articles that make up the path) was determined. 
                     Pepito’s hypothesis is that <strong>paths with higher entropy are more likely to remain unfinished</strong>, 

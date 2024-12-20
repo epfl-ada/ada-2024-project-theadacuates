@@ -48,11 +48,11 @@
           Additionally, the <b>highest correlation is found with closeness centrality</b>, which makes perfect sense, as players
           tend to select articles that are <b>highly connected</b>, helping them move efficiently
           from any starting article to the intended target.
-          <br>
+          <!-- <br>
           After closeness centrality, <b>out-degree and degree centrality</b> have the highest correlation to entropy.
           These three metrics and their high correlation to entropy suggest that <b>nodes with high entropy are generally
             central and well-connected in the graph.</b>
-          <br>
+          <br> -->
           <!-- Outgoing connections influence entropy more
           than incoming connections,
           because entropy could be related to a node's ability to link "out" to many other nodes, providing more options. -->
@@ -65,9 +65,13 @@
     <div>
       <div style="margin-bottom: 20px; margin-top: 20px; text-align: center;">
         <button data-overlay-id="cc" class="button big wide smooth-scroll-middle">About Closeness Centrality</button>
-        <button data-overlay-id="dc" class="button big wide smooth-scroll-middle">About Degree Centrality</button>
+        <!-- <button data-overlay-id="dc" class="button big wide smooth-scroll-middle">About Degree Centrality</button> -->
       </div>
-      <p>Let's see <strong>when</strong> players try to find these nodes during their game...</p>
+      <p>From the previous point, it emerged that players are strategically choosing links with higher entropy (and thus connectivity)
+        to better reach the target article.
+        <br>
+        Let's try to anlayze this startegy further:
+        <strong>when</strong> do players try to use these highly connected articles during their game?</p>
     </div>
     <img src="images/ccEvolution.png" alt="Evolution of Closeness Centrality"
       style="width: 800px; height: auto; display: block; margin: 20px auto;">

@@ -185,9 +185,9 @@
 <script type="text/javascript">
 
     // all links
-    var myChart = echarts.init(document.getElementById('img-category-change-count'));
+    var myChartSankey = echarts.init(document.getElementById('img-category-change-count'));
 
-    var option = {
+    var optionSankey = {
         series: {
             type: 'sankey',
             layout: 'none',
@@ -363,5 +363,9 @@
             { source: 'Music1', target: 'Music2', value: 0 }]
         }
     };
-    myChart.setOption(option);
+    myChartSankey.setOption(optionSankey);
+
+    $(window).on('resize', function(){
+        myChartSankey.resize();
+    });
 </script>

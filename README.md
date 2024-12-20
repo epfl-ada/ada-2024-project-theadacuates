@@ -47,6 +47,24 @@ The main themes presented by Pepito and Dr. Cajal will focus on the following me
     - Humans are naturally inclined to conserve energy, a behavior that can be observed in their choice of where to click. We hypothesize that links at the beginning of a page will be clicked more often, reflecting a neurological bias toward selecting direct, less effortful paths rather than optimal ones.
     - Lastly, we will analyze the HTML structure to understand the distribution of clicked links across different webpage elements (e.g., tables, paragraphs). Since images and color naturally capture human attention, we suspect that players may be biased toward clicking on links within these elements, even if they are not the most optimal choices for reaching the target link.
 
+## Conclusion
+
+Pepito tested a variety of methods to validate cognitive overload and associated biases but was ultimately unable to defend his argument. The approaches he employed included:
+
+- Path Length and Duration  
+- Readability Metrics  
+- Shannon Entropy  
+- Graph Connectivity  
+- Cognitive Shifts  
+- Webpage Structural Elements  
+- Sentiment Analysis  
+
+Despite these efforts, none of the methods provided conclusive evidence to validate his point.  
+It seems the poor results he achieved were **simply due to a lack of knowledge**, nothing more.  
+
+Pepito’s arguments were thoroughly dismantled by Dr. Cajal, who employed **impeccable data analysis techniques.**  
+
+
 ## Additional Datasets
 There are no direct additional datasets.
 

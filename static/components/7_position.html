@@ -107,7 +107,8 @@
 
                 <br>
 
-                The blue histogram shows the <b>normalized expected frequency distribution</b> of clicked links, if they were all clicked
+                The blue histogram shows the <b>normalized expected frequency distribution</b> of clicked links, if they
+                were all clicked
                 with equal probability.
                 In contrast, the green one depicts the <b>actual distribution</b> of the position of clicked
                 links in played games.
@@ -136,16 +137,16 @@
             </div>
 
             <p>
-                After performing the KS test, the results indicated a <b>significant change,</b> 
-                but the p-value was <b>uncomfortably close to 0.05 </b>(p-value = 0.03). 
-                Dr. Cajal will likely reject this result, not only due to its borderline significance 
-                but also because of the very <b>similar distributions (see image above)</b> and 
+                After performing the KS test, the results indicated a <b>significant change,</b>
+                but the p-value was <b>uncomfortably close to 0.05 </b>(p-value = 0.03).
+                Dr. Cajal will likely reject this result, not only due to its borderline significance
+                but also because of the very <b>similar distributions (see image above)</b> and
                 the presence of <b>many confounding factors</b> affecting the analysis.
 
                 <br>
 
-                For instance, the <b>distance between two links can vary greatly</b> between different pages. 
-                On one page, the second link might be immediately visible, while on another, 
+                For instance, the <b>distance between two links can vary greatly</b> between different pages.
+                On one page, the second link might be immediately visible, while on another,
                 accessing it may require extensive scrolling, making it far less viable.
             </p>
             <p>
@@ -172,7 +173,6 @@
                     influence
                     player navigation choices:
                 </p>
-
 
                 <button data-overlay-id="description-elements"
                     style="background-image:url('images/description_elements.png'); background-size: 100%; width: 300px; height: 187.5px; margin: 5px;">
@@ -206,16 +206,20 @@
 </div>
 
 <div data-overlay-id="description-elements" class="overlay hidden">
-    <div class="modal"
-        style="background-image: url('images/description_elements.png'); background-size: 100%; height: 50vw; max-width: 80vw; width: 80vw;">
+    <div class="modal">
         <div class="modal-content">
+            <a href="images/description_elements.png" target="_blank">
+                <img src="images/description_elements.png" alt="description elements" style="width: 100%; height: 100%;">
+            </a>
         </div>
     </div>
 </div>
 <div data-overlay-id="description-footer" class="overlay hidden">
-    <div class="modal"
-        style="background-image: url('images/description_footer.png'); background-size: 100%; height: 50vw; max-width: 80vw; width: 80vw;">
+    <div class="modal">
         <div class="modal-content">
+            <a href="images/description_footer.png" target="_blank">
+                <img src="images/description_footer.png" alt="description elements" style="width: 100%; height: 100%;">
+            </a>
         </div>
     </div>
 </div>
@@ -230,7 +234,8 @@
                 <h2>How Link Position is Quantified?</h2>
 
                 <p>
-                    Since <b>monitor resolution cannot be inferred from our dataset</b>, Pepito cannot assume it is the same
+                    Since <b>monitor resolution cannot be inferred from our dataset</b>, Pepito cannot assume it is the
+                    same
                     for every player.
                     Therefore, he is unable to determine the exact visual position of a link on a webpage a priori.
                     Thus he decided to use the <b>order of link appearance on the page as a metric for position</b>.
@@ -930,7 +935,7 @@
     };
     myChart4.setOption(option4);
 
-    $(window).on('resize', function(){
+    $(window).on('resize', function () {
         myChart.resize();
         myChart2.resize();
         myChart3.resize();

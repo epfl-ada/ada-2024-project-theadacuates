@@ -76,7 +76,7 @@ Each member worked on a distinct section, pperfoming EDA, data analysis and webp
 - **Daniela Correa**: Connectivity Analysis, Network Analysis
 - **Gabriele Dall'Aglio**: Entropy, Sentiment,
 - **Feifan Wang**: Structural element of html file, Link position
-- **Adam Chahedouzzani**: Path length, path duration
+- **Adam Chahed Ouazzani**: Path length, path duration
 
 We met once or twice a week to collaborate and ensure progress.
 
